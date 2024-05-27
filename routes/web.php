@@ -41,6 +41,9 @@ Route::get('/about-us', function () {
     return view('front.about');
 });
 
+Route::get('/detail-loker/{id}', [App\Http\Controllers\Front\LokerController::class, 'detailloker']);
+Route::get('/submit-loker/{id}', [App\Http\Controllers\Front\LokerController::class, 'submitloker']);
+
 // Route::get('/', function () {
 //     return view('front.pages.home');
 // });
