@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Kriteria Pekerjaan</title>
-    <link rel="stylesheet" href="style.css">
+
 
 
     <style>
@@ -72,18 +72,21 @@
     <div class="form-container">
     <h2>Form Rekomendasi Pekerjaan</h2>
 
-    <form action="/kriteria" method="post">
+    <form action="{{route('kriteria.store')}}" method="POST">
+        @csrf
         <div class="form-group">
             <label for="jk">Apa jenis kelamin anda?</label>
+            <input type="hidden" name="idkriteria" value="">
             <select id="jk" name="jk"   required>
                 <option value="" disabled selected>Pilih</option> 
-                <option value=""> Laki-laki</option>
-                <option value="SD">Perempuan</option>
+                <option value="laki-laki"> Laki-laki</option>
+                <option value="perempuan">Perempuan</option>
               
             </select>
         </div>
         <div class="form-group">
             <label for="bidang">Bidang Apa Yang Sedang Anda Cari?</label>
+            <input type="hidden" name="idkriteria" value="">
             <select id="bidang" name="bidang" required>
                 <option value="" disabled selected>Pilih</option> <!-- Placeholder -->
                 <option value=""> Marketing</option>
@@ -97,6 +100,7 @@
         </div>
         <div class="form-group">
             <label for="lokasi">Kota Mana Yang Sedang Anda Cari?</label>
+            <input type="hidden" name="idkriteria" value="">
             <select id="lokasi" name="lokasi" required>
                 <option value="" disabled selected>Pilih</option> <!-- Placeholder -->
                 <option value="SD">SD</option>
@@ -109,6 +113,7 @@
         </div>
         <div class="form-group">
             <label for="pendidikan">Lulusan Apa Yang Sedang Anda Cari?</label>
+            <input type="hidden" name="idkriteria" value="">
             <select id="pendidikan" name="pendidikan" required>
                 <option value="" disabled selected>Pilih</option> <!-- Placeholder -->
                 <option value="SD">SD</option>
@@ -121,6 +126,7 @@
         </div>
         <div class="form-group">
             <label for="jam">jam Pekerjaan Apa Yang Sedang Anda Cari?</label>
+            <input type="hidden" name="idkriteria" value="">
             <select id="jam" name="jam" required>
                 <option value="" disabled selected>Pilih</option> <!-- Placeholder -->
                 <option value="Fulltime">Fulltime</option>

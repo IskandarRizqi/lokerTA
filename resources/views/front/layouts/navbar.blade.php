@@ -42,14 +42,11 @@
             <li>
               <a href="#">For Candidates <i class="fa fa-chevron-down"></i></a>
               <ul class="sub-menu">
-                <li><a href="browse-job.html" class="dez-page">Browse Job</a></li>
-                <li><a href="companies.html" class="dez-page">companies</a></li>
-                <li><a href="job-detail.html" class="dez-page">Job Detail</a></li>
+                <li><a href="browse-job.html" class="dez-page">Class Training</a></li>
+               
               </ul>
             </li>
-            <li>
-              <a href="#"> <i class="fa fa-chevron-down"></i></a>
-            </li>
+            
             <li>
               <a href="#">Pages <i class="fa fa-chevron-down"></i></a>
               <ul class="sub-menu">

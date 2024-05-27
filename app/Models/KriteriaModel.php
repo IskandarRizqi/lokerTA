@@ -9,7 +9,7 @@ class KriteriaModel extends Model
 {
     use HasFactory;
 
-    protected $table = "inputdata";
+    protected $table = "kriteria";
     protected $fillable = [
         'jk',
         'bidang',

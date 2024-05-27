@@ -65,4 +65,7 @@ route::get('gambar', function (Request $r) {
     return Storage::download($r->rf);
 });
 
+Route::get('/detailloker', function () {
+    return view('front.pages.detailcardloker');
+});
 

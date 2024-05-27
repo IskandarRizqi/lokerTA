@@ -361,18 +361,108 @@
                                         </div>
                                     </a>
                                 </li>
-                                </div>
+                              
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <li>
+                                    <a href="#" style="border-radius: 10px">
+                                        <div class="learning-card learning-card--vertical">
+                                        <div class="img-learning">
+                                            <img src="{{asset('front\images\inc\pp.png')}}" alt="">
+                                        </div>
+                                        <div class="learning-card_content">
+                                            <div class="learning-card_title-section">
+                                                <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai Fundamental Resolusi 2024</h5>
+                                                <h5 class="learning-card_author">ppp</h5>
+                                            </div>
+                                            <hr>
+                                            <div class="learning-card_bottom-section">
+                                                <div class="space-between">
+                                                    <div class="learning-card_price">
+                                                        <span>5.99</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        </div>
+                                    </a>
+                                </li>
+                              
                             </div>
                         </div>
-                        </ul>
+                    </ul>
+                    
+                </div>
+                <div class="col-lg-12">
+                    <ul class="learning">
+                        <div class="row">
+                            <div class="col-lg-6 mb-4">
+                                <li>
+                                    <a href="#" style="border-radius: 10px">
+                                        <div class="learning-card learning-card--vertical">
+                                        <div class="img-learning">
+                                            <img src="{{asset('front\images\inc\pp.png')}}" alt="">
+                                        </div>
+                                        <div class="learning-card_content">
+                                            <div class="learning-card_title-section">
+                                                <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai Fundamental Resolusi 2024</h5>
+                                                <h5 class="learning-card_author">ppp</h5>
+                                            </div>
+                                            <hr>
+                                            <div class="learning-card_bottom-section">
+                                                <div class="space-between">
+                                                    <div class="learning-card_price">
+                                                        <span>5.99</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        </div>
+                                    </a>
+                                </li>
+                              
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <li>
+                                    <a href="#" style="border-radius: 10px">
+                                        <div class="learning-card learning-card--vertical">
+                                        <div class="img-learning">
+                                            <img src="{{asset('front\images\inc\pp.png')}}" alt="">
+                                        </div>
+                                        <div class="learning-card_content">
+                                            <div class="learning-card_title-section">
+                                                <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai Fundamental Resolusi 2024</h5>
+                                                <h5 class="learning-card_author">ppp</h5>
+                                            </div>
+                                            <hr>
+                                            <div class="learning-card_bottom-section">
+                                                <div class="space-between">
+                                                    <div class="learning-card_price">
+                                                        <span>5.99</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        </div>
+                                    </a>
+                                </li>
+                              
+                            </div>
+                        </div>
+                    </ul>
                     <div class="m-t30">
-                        {{-- <div class="d-flex">
+                        <div class="d-flex">
                             <a class="site-button button-sm mr-auto" href="#"><i class="ti-arrow-left"></i> Prev</a>
                             <a class="site-button button-sm" href="#">Next <i class="ti-arrow-right"></i></a>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
+                
             </div>
+            
         </div>
     </div>
 

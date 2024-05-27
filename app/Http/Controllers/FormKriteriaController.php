@@ -18,16 +18,15 @@ class FormKriteriaController extends Controller
 
     public function create()
     {
-       
+        return view('front.pages.formkriteria'); 
     } 
 
     public function store(Request $request)
     {
-     
+    //   return $request->all();
+       
 
             $validator = Validator::make($request->all(), [
-               
-            
                 'jk'=> 'required',
                 'bidang'=> 'required',
                 'lokasi'=> 'required',
@@ -36,25 +35,23 @@ class FormKriteriaController extends Controller
             ]);
 
             if ($validator->fails()) {
-                return Redirect::back()->withErrors($validator)->withInput($request->all());
+                return Redirect::back()->withErrors($validator)->withInput();
             }
-            KriteriaModel::create([
+    
+            KriteriaModel::Create([
                 'id' => $request->idkriteria,
-               
                 'jk' => $request->jk,
                 'bidang' => $request->bidang,
                 'lokasi' => $request->lokasi,
                 'pendidikan' => $request->pendidikan,
                 'jam' => $request->jam,
-    
+                
             ]);
 
-                return redirect('/kriteria')->with('ss', 'Berhasil tambah');
-     
-
+            return redirect('/kriteria')->with('sukses', 'Berhasil disimpan');
+        }
        
-                
-    }
+    
 
     public function show(string $id)
     {
@@ -66,15 +63,43 @@ class FormKriteriaController extends Controller
         //
     }
 
-    public function update()
+    public function update(Request $request, string $id)
     {
      
-      
-    }
+            $validator = validator::make($request->all(), [
+               
+                'jk'=> 'required',
+                'bidang'=> 'required',
+                'lokasi'=> 'required',
+                'pendidikan'=> 'required',
+                'jam'=> 'required',
+            ]);
+            if ($validator->fails()) {
+                return redirect::back()->withErrors($validator)->withInput($request->all());
+            }
+         
+    
+            KriteriaModel::where('id', $id)->update([
+                'id' => $request->idkriteria,
+               
+                'jk' => $request->jk,
+                'bidang' => $request->bidang,
+                'lokasi' => $request->lokasi,
+                'pendidikan' => $request->pendidikan,
+                'jam' => $request->jam,
+    
+            ]);
 
-    public function destroy()
+                return redirect('/kriteria')->with('succes', 'Berhasil tambah');
+        }
+    
+
+    public function destroy( string $id)
     {
     
+        
+        KriteriaModel::where('id', $id)->delete();
+        return redirect('/kriteria')->with('success', 'Berhasil hapus data');
     
     }
 }
