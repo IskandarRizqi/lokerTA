@@ -19,7 +19,7 @@ use Illuminate\Http\Request;
 |
  */
 
- Route::get('/', function () {
+Route::get('/', function () {
     if (Auth::check()) {
         return redirect('/home');
     } else {
@@ -33,8 +33,12 @@ Route::group(['middleware' => ['log']], function () {
 });
 
 
- Route::get('/dashboard', function () {
+Route::get('/dashboard', function () {
     return view('admin.pages.dashboard');
+});
+
+Route::get('/about-us', function () {
+    return view('front.about');
 });
 
 // Route::get('/', function () {
@@ -68,4 +72,3 @@ route::get('gambar', function (Request $r) {
 Route::get('/detailloker', function () {
     return view('front.pages.detailcardloker');
 });
-
