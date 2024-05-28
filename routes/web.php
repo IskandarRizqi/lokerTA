@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InputdataController;
 use App\Http\Controllers\ListPekerjaanController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\IsAdmin;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
@@ -32,14 +33,18 @@ Route::group(['middleware' => ['log']], function () {
     ]);
 });
 
-
 Route::get('/dashboard', function () {
     return view('admin.pages.dashboard');
 });
 
-Route::get('/about-us', function () {
-    return view('front.about');
+// untuk admin
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/about-us', function () {
+        return view('front.about');
+    });
 });
+
+
 
 Route::get('/detail-loker/{id}', [App\Http\Controllers\Front\LokerController::class, 'detailloker']);
 Route::get('/submit-loker/{id}', [App\Http\Controllers\Front\LokerController::class, 'submitloker']);
