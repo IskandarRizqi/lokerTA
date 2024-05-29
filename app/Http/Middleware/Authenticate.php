@@ -15,7 +15,7 @@ class Authenticate extends Middleware
     {
         if (Auth::check()) {
             if (Auth::user()->role_id == 1) {
-                if (!Auth::user()->kriteria->id) {
+                if (!Auth::user()->kriteria_id) {
                     return route('/kriteria');
                 }
             }

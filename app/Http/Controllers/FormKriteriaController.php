@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helper\GlobalHelper;
 use App\Models\KriteriaModel;
 use App\Models\User;
 use Illuminate\Http\Request;
