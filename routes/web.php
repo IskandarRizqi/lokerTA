@@ -44,6 +44,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
     });
 });
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
+
 
 
 Route::get('/detail-loker/{id}', [App\Http\Controllers\Front\LokerController::class, 'detailloker']);
@@ -54,7 +58,6 @@ Route::get('/submit-loker/{id}', [App\Http\Controllers\Front\LokerController::cl
 // });
 
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('list_pekerjaan', ListPekerjaanController::class);
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
