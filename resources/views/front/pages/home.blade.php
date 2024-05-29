@@ -338,7 +338,9 @@
                                                 </ul>
                                             </div>
                                         </div>
+                                        <button>detail</button>
                                     </a>
+                                    
                                 </li>
 
                             </div>

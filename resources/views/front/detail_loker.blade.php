@@ -1,13 +1,21 @@
 @extends('front.layouts.main')
 
 @section('content')
+<style>
+     <style>
+        .card {
+            background-color:#FFB901;
+        }
+    </style>
+</style>
 <!-- About Us -->
 <div class="section-full job-categories content-inner-2 bg-white"
-    style="background-image:url(../images/pattern/pic1.html);">
+    style="background-image:url(../images/pattern/pic1.html);" >
     <div class="container clearfix">
         <div class="row">
             <div class="col-lg-9">
-                <div class="card">
+                <div class="card ">
+                    <ul class=" post-job-bxx">
                     <div class="card-body">
                         <div class="product">
                             <div class="row gutter-40">
@@ -88,6 +96,7 @@
                             </div>
                         </div>
                     </div>
+                    </ul>
                 </div>
             </div>
 
@@ -96,7 +105,7 @@
                     <h6>Loker Terbaru</h6>
                     @foreach($terbaru as $key => $v)
                     <a href="/detail-loker/{{$v->id}}">
-                        <div class="card mb-2" style="border-radius: 10px">
+                        <div class="card mb-2" style="border-radius: 10px;   background-color:#FFB901; ">
                             <div class="card-body">
                                 <p class="m-0">{{$v->namaperusahaan}}</p>
                                 <div class="d-flex">
