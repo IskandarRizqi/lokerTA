@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\InputdataModel;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
@@ -24,7 +27,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data['inputdata']= InputdataModel::get();
-        return view('front.pages.home',$data);
+        if (Auth::user()->role_id == 1) {
+            if (!Auth::user()->kriteria_id) {
+                return Redirect::to('/kriteria');
+            }
+        }
+        $data['inputdata'] = InputdataModel::get();
+        return view('front.pages.home', $data);
     }
 }

@@ -21,11 +21,11 @@ use Illuminate\Http\Request;
  */
 
 Route::get('/', function () {
-    if (Auth::check()) {
-        return redirect('/home');
-    } else {
-        return view('auth.login');
-    }
+    // if (Auth::check()) {
+    //     return redirect('/home');
+    // } else {
+    // }
+    return view('auth.login');
 });
 Route::group(['middleware' => ['log']], function () {
     Auth::routes([
@@ -86,4 +86,3 @@ Route::get('/privasi', function () {
 Route::get('/support', function () {
     return view('front.support');
 });
-

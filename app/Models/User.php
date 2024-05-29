@@ -28,6 +28,7 @@ class User extends Authenticatable
         'role_id',
         'email',
         'password',
+        'kriteria_id',
     ];
 
     // protected $appends = ['roles'];
@@ -67,7 +68,7 @@ class User extends Authenticatable
         return null;
     }
 
-        // public function getPermissionsAttribute()
+    // public function getPermissionsAttribute()
     // {
     //     $permission =  DB::table('permissions')
     //         ->select('permissions.*', 'model_has_permissions.model_id as pivot_user_id', 'model_has_permissions.permission_id as pivot_permission_id')
