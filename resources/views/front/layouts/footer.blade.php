@@ -6,7 +6,7 @@
                 <div class="col-xl-5 col-lg-4 col-md-12 col-sm-12">
                     <div class="widget">
                         <img src="images/logo-white.png" width="180" class="m-b15" alt=""/>
-                        <p class="text-capitalize m-b20">Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the..</p>
+                        <p class="text-capitalize m-b20">Temukan pekerjaan yang sesuai dengan minat dan kualifikasi Anda dengan cepat dan efisien, kami membantu Anda menuju langkah pertama menuju kesuksesan karir</p>
                         <div class="subscribe-form m-b20">
                             <form class="dzSubscribe" action="http://job-board.w3itexperts.com/xhtml/script/mailchamp.php" method="post">
                                 <div class="dzSubscribeMsg"></div>
@@ -19,43 +19,37 @@
                             </form>
                         </div>
                         <ul class="list-inline m-a0">
-                            <li><a href="#" class="site-button white facebook circle "><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="site-button white google-plus circle "><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#" class="site-button white linkedin circle "><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#" class="site-button white instagram circle "><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#" class="site-button white twitter circle "><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100051796514952" class="site-button white facebook circle "><i class="fa fa-facebook"></i></a></li>
+                        
+                            <li><a href="https://www.linkedin.com/in/muhammad-nur-iskandar-rizqi-265a00246/" class="site-button white linkedin circle "><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/iskandarrizqiit/?next=%2Faccounts%2Fsignup%2F" class="site-button white instagram circle "><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJteCI6IjIifQ%3D%3D%22%7D" class="site-button white twitter circle "><i class="fa fa-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-5 col-md-8 col-sm-8 col-12">
                     <div class="widget border-0">
-                        <h5 class="m-b30 text-white">Frequently Asked Questions</h5>
+                        <h5 class="m-b30 text-white">Perusahaan</h5>
                         <ul class="list-2 list-line">
-                            <li><a href="#">Privacy & Seurty</a></li>
-                            <li><a href="#">Terms of Serice</a></li>
-                            <li><a href="#">Communications</a></li>
-                            <li><a href="#">Referral Terms</a></li>
-                            <li><a href="#">Lending Licnses</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">How It Works</a></li>
-                            <li><a href="#">For Employers</a></li>
-                            <li><a href="#">Underwriting</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Lending Licnses</a></li>
-                            <li><a href="#">Support</a></li>
+                            <li><a href="/privasi">Privasi & Keamanan</a></li>  
+                            <li><a href="/support">Support</a></li>
+                            <li><a href="/about-us">Kontak Kami</a></li>
+                            <li><a href="/about-us">Kontak Kami</a></li>
+                           
+                   
                         </ul>
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-12">
                     <div class="widget border-0">
-                        <h5 class="m-b30 text-white">Find Jobs</h5>
+                        <h5 class="m-b30 text-white">Temukan Pekerjaan</h5>
                         <ul class="list-2 w10 list-line">
-                            <li><a href="#">US Jobs</a></li>
-                            <li><a href="#">Canada Jobs</a></li>
-                            <li><a href="#">UK Jobs</a></li>
-                            <li><a href="#">Emplois en Fnce</a></li>
-                            <li><a href="#">Jobs in Deuts</a></li>
-                            <li><a href="#">Vacatures China</a></li>
+                            <li><a href="/">Pencarian</a></li>
+                            <li><a href="/detailloker">Lowongan Terbaru</a></li>
+                            <li><a href="#">Training</a></li>
+                            <li><a href="#">create cv ATS</a></li>
+                            <li><a href="#">Membership</a></li>
+                            <li><a href="/about-us">Help Center</a></li>
                         </ul>
                     </div>
                 </div>
@@ -66,7 +60,7 @@
     <div class="footer-bottom">
         <div class="container">
            <div class="row">
-                <div class="col-lg-12 text-center"><span><a target="_blank" href="">Pasya Cantekk</a></span></div>
+                <div class="col-lg-12 text-center"><span><a target="_blank" href="">iskandarrizqi13</a></span></div>
             </div>
         </div>
     </div>

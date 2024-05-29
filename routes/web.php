@@ -75,3 +75,10 @@ route::get('gambar', function (Request $r) {
 Route::get('/detailloker', function () {
     return view('front.pages.detailcardloker');
 });
+Route::get('/privasi', function () {
+    return view('front.privasi');
+});
+Route::get('/support', function () {
+    return view('front.support');
+});
+
