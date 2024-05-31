@@ -5,12 +5,12 @@
 <!--  BEGIN CONTENT AREA  -->
 <div id="content" class="main-content">
     <div class="layout-px-spacing">
-        <form action="/categori" method="POST" enctype="multipart/form-data" style="width: 1340px; height: 2000px;">
+        <form action="/aksespengguna" method="POST" enctype="multipart/form-data" style="width: 1340px; height: 2000px;">
 
             @csrf
             <div class="page-header">
                 <div class="page-title">
-                    {{-- <a href="{{route('categori.index')}}" class="btn btn-primary btn-sm">Kembali</a> --}}
+                    <a href="{{route('aksespengguna.index')}}" class="btn btn-primary btn-sm">Kembali</a>
                     <button class="btn btn-success btn-sm" type="submit">Simpan</button>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                                    
                                 <div class="col-lg-6">
                                     <label for="form-control" style="color: black;">Nama </label>
-                                    <input type="hidden" name="idcategori" value="">
+                                    <input type="hidden" name="idaksespengguna" value="">
                                     <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" placeholder="" value="{{old('nama')}}">
                                     @error('nama')
                                     <span class="invalid-feedback" role="alert">
@@ -41,9 +41,9 @@
             
                                 <div class="col-lg-6">
                                     <label for="form-control" style="color: black;">Email</label>
-                                    <input type="hidden" name="idcategori" value="">
-                                    <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" placeholder="" value="{{old('nama')}}">
-                                    @error('nama')
+                                    <input type="hidden" name="idaksespengguna" value="">
+                                    <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="" value="{{old('email')}}">
+                                    @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -55,9 +55,9 @@
                                    
                                 <div class="col-lg-6">
                                     <label for="form-control" style="color: black;">password</label>
-                                    <input type="hidden" name="idcategori" value="">
-                                    <input type="text" name="harga" class="form-control @error('harga') is-invalid @enderror" placeholder="" value="{{old('harga')}}">
-                                    @error('harga')
+                                    <input type="hidden" name="idasksespengguna" value="">
+                                    <input type="text" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="" value="{{old('password')}}">
+                                    @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -65,18 +65,23 @@
                                 </div>
 
                                 <div class="col-lg-6">
-                                    <label for="form-control">Role</label>
-                                    <select name="role" id="rls" class="form-control @error('role') is-invalid @enderror">
-                                        <option></option>
-                                        {{-- @foreach($role as $key => $value)
-                                        <option @if(old('role')==null ) value="{{$value->id}}" @else value="{{old('role')}}" selected @endif>{{$value->name}}</option>
-                                        @endforeach --}}
+                                    <label for="role">Role</label>
+                                    <input type="hidden" name="idaksespengguna" value="">
+                                    <select name="role" class="form-control @error('role') is-invalid @enderror" placeholder="" value="{{old('role')}}">
+                                        <option value="">Pilih</option>
+                                        <option >ADMIN</option>
+                                        <option >USER</option>
+                                        <option >PARTNER</option>
+                                        
                                     </select>
                                     @error('role')
-                                    <small style="font-size: 12px; font-weight: bold" class="text-danger">{{$message}}</small>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                                     @enderror
                                 </div>
-
+                                
+                                
                             
                              
                          

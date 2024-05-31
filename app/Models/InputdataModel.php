@@ -12,8 +12,10 @@ class InputdataModel extends Model
     protected $table = "inputdata";
     protected $fillable = [
         'gambar',
+        'jk',
         'namaperusahaan',
         'kategori',
+        'pendidikan',
         'jam',
         'tempatperusahaan',
         'deskripsi',

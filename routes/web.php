@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AksesPenggunaController;
 use App\Http\Controllers\FormKriteriaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InputdataController;
@@ -63,7 +64,7 @@ Route::resource('list_pekerjaan', ListPekerjaanController::class);
 
 //routepagesadmin
 Route::resource('inputdata', InputdataController::class);
-Route::delete('/inputdata/{id}', [InputdataController::class, 'destroy']);
+Route::resource('aksespengguna', AksesPenggunaController::class);
 // Route::resource('data-pengguna', UserController::class);
 Route::get('/data-pengguna', function () {
     return view('admin.pages.user.tambahpengguna');
@@ -80,9 +81,9 @@ route::get('gambar', function (Request $r) {
     return Storage::download($r->rf);
 });
 
-Route::get('/detailloker', function () {
-    return view('front.pages.detailcardloker');
-});
+// Route::get('/detailloker', function () {
+//     return view('front.pages.detailcardloker');
+// });
 Route::get('/privasi', function () {
     return view('front.privasi');
 });

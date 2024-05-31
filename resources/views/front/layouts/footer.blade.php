@@ -45,7 +45,7 @@
                         <h5 class="m-b30 text-white">Temukan Pekerjaan</h5>
                         <ul class="list-2 w10 list-line">
                             <li><a href="/">Pencarian</a></li>
-                            <li><a href="/detailloker">Lowongan Terbaru</a></li>
+                            <li><a href="/home">Lowongan Terbaru</a></li>
                             <li><a href="#">Training</a></li>
                             <li><a href="#">create cv ATS</a></li>
                             <li><a href="#">Membership</a></li>

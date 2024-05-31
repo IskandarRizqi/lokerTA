@@ -29,10 +29,10 @@ class InputdataController extends Controller
             $validator = validator::make($request->all(), [
                
                 'gambar'=> 'required|image|mimes:jpeg,png,jpg|max:2048',
-                // 'jk'=> 'required',
+                'jk'=> 'required',
                 'namaperusahaan'=> 'required',
                 'kategori'=> 'required',
-                // 'pendidikan'=> 'required',
+                'pendidikan'=> 'required',
                 'jam'=> 'required',
                 'tempatperusahaan'=> 'required',
                 'deskripsi'=> 'required',
@@ -44,10 +44,10 @@ class InputdataController extends Controller
             InputdataModel::create([
                 'id' => $request->idinputdata,
                 'gambar' =>$file,
-                // 'jk' => $request->jk,
+                'jk' => $request->jk,
                 'namaperusahaan' => $request->namaperusahaan,
                 'kategori' => $request->kategori,
-                // 'pendidikan' => $request->pendidikan,
+                'pendidikan' => $request->pendidikan,
                 'jam' => $request->jam,
                 'tempatperusahaan' => $request->tempatperusahaan,
                 'deskripsi' => $request->deskripsi,
@@ -75,10 +75,10 @@ class InputdataController extends Controller
             $validator = validator::make($request->all(), [
                
                 'gambar'=> 'required|image|mimes:jpeg,png,jpg|max:2048',
-                // 'jk'=> 'required',
+                'jk'=> 'required',
                 'namaperusahaan'=> 'required',
                 'kategori'=> 'required',
-                // 'pendidikan'=> 'required',
+                'pendidikan'=> 'required',
                 'jam'=> 'required',
                 'tempatperusahaan'=> 'required',
                 'deskripsi'=> 'required',
@@ -92,10 +92,10 @@ class InputdataController extends Controller
             InputdataModel::where('id', $id)->update([
                 'id' => $request->idinputdata,
                 'gambar' =>$file,
-                // 'jk' => $request->jk,
+                'jk' => $request->jk,
                 'namaperusahaan' => $request->namaperusahaan,
                 'kategori' => $request->kategori,
-                // 'pendidikan' => $request->pendidikan,
+                'pendidikan' => $request->pendidikan,
                 'jam' => $request->jam,
                 'tempatperusahaan' => $request->tempatperusahaan,
                 'deskripsi' => $request->deskripsi,

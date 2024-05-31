@@ -24,12 +24,12 @@
                         <table id="zero-config" class="table dt-table-hover" style="width:100%">
                             <thead>
                                 <tr>
-
+                                    <th>No</th>
                                     <th>gambar</th>
-                                    {{-- <th>Jenis Kelamin</th> --}}
+                                    <th>Jenis Kelamin</th>
                                     <th>Nama Perusahaan</th>
                                     <th>Kategori</th>
-                                    {{-- <th>pendidikan</th> --}}
+                                    <th>pendidikan</th>
                                     <th>Jam</th>
                                     <th>Tempat Perusahaan</th>
                                     <th>Deskripsi</th>
@@ -38,13 +38,14 @@
                             </thead>
                             <tbody>
                                 @foreach($inputdata as $key => $value)
-                                <tr>             
+                                <tr>   
+                                    <td width="1%">{{$key + 1}}</td>          
                                     <td> <img width="120px" src="/gambar?rf={{$value->gambar}}"
                                     onclick="showImage('{{$value->gambar}}')"> </td>
-                                    {{-- <td>{{$value->jk}}</td> --}}
+                                    <td>{{$value->jk}}</td>
                                     <td>{{$value->namaperusahaan}}</td>
                                     <td>{{$value->kategori}}</td>
-                                    {{-- <td>{{$value->pendidikan}}</td> --}}
+                                    <td>{{$value->pendidikan}}</td>
                                     <td>{{$value->jam}}</td>
                                     <td>{{$value->tempatperusahaan}}</td>
                                     <td>{{$value->deskripsi}}</td>

@@ -38,10 +38,10 @@
                                   
                                 </div>
 
-                                {{-- <div class="col-lg-3">
+                                <div class="col-lg-3">
                                     <label for="form-control" style="color: black;">Jenis Kelamin</label>
                                     <input type="hidden" name="idinputdata" value="">
-                                    <select name="jk" class="form-control @error('kategori') is-invalid @enderror" placeholder="" value="{{old('jk')}}">
+                                    <select name="jk" class="form-control @error('jk') is-invalid @enderror" placeholder="" value="{{old('jk')}}">
                                         <option value="">Pilih </option>
                                         <option >Laki-laki</option>
                                         <option >Perempuan</option>
@@ -52,7 +52,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
-                                </div> --}}
+                                </div>
                                    
                                 <div class="col-lg-3">
                                     <label for="form-control" style="color: black;">Nama Perusahaan</label>
@@ -85,16 +85,25 @@
                             
                             <div class="row m-2">
 
-                                {{-- <div class="col-lg-4">
+                                <div class="col-lg-4">
                                     <label for="form-control" style="color: black;">Pendidikan</label>
                                     <input type="hidden" name="idinputdata" value="">
-                                    <input type="text" name="pendidikan" class="form-control @error('pendidikan') is-invalid @enderror" placeholder="" value="{{old('pendidikan')}}">
+                                    <select name="pendidikan" class="form-control @error('pendidikan') is-invalid @enderror" placeholder="" value="{{old('pendidikan')}}">
+                                        <option value="">Pilih pendidikan</option>
+                                        <option >SD</option>
+                                        <option >SMP</option>
+                                        <option >SMK</option>
+                                        <option >D3</option>
+                                        <option >D4/S1</option>
+                                        <option >Profesi</option>
+                                        <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
+                                    </select>
                                     @error('pendidikan')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
-                                </div> --}}
+                                </div>
                                    
                                 <div class="col-lg-4">
                                     <label for="jam" style="color: black;">jam kerja</label>
@@ -114,9 +123,17 @@
                                 </div>
 
                                 <div class="col-lg-4">
-                                    <label for="form-control" style="color: black;">Tempat Perusahaan</label>
+                                    <label for="form-control" style="color: black;">Tempat Peusahaan</label>
                                     <input type="hidden" name="idinputdata" value="">
-                                    <input type="text" name="tempatperusahaan" class="form-control @error('tempatperusahaan') is-invalid @enderror" placeholder="" value="{{old('tempatperusahaan')}}">
+                                    <select name="tempatperusahaan" class="form-control @error('tempatperusahaan') is-invalid @enderror" placeholder="" value="{{old('tempatperusahaan')}}">
+                                        <option value="">Pilih </option>
+                                        <option >Jakarta</option>
+                                        <option >semarang</option>
+                                        <option >Tanggerang</option>
+                                        <option >Yogyakarta</option>
+                                        <option >karawang</option>
+                                        <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
+                                    </select>
                                     @error('tempatperusahaan')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
