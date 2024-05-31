@@ -1,7 +1,11 @@
 @extends('front.layouts.main')
 
 @section('content')
-
+<style>
+    .owl-nav.disabled {
+        visibility: hidden;
+    }
+</style>
 <div class="page-content">
     <!-- ======= Hero Section ======= -->
     <section id="hero" style="background-color: white">
@@ -91,548 +95,563 @@
                 </div>
                 <div class="col-lg-8">
                     <ul class="post-job-bxx">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <li>
-                                    <a href="#" style="border-radius: 10px">
-                                        <div class="d-flex">
-                                            <div class="job-post-company">
-                                                <span class="mb-1"><img
-                                                        src="{{asset('front\images\inc\google.png')}}" /></span>
-                                                <h6>PT. Xyz</h6>
-                                                <h6>Data Analyst</h6>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mb-2">
-                                            <div class="job-time mr-auto">
-                                                <span>Full Time</span>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="job-post-info">
-                                                <ul>
-                                                    <li><i style="width: 15px;"
-                                                            class="fa fa-map-marker text-center"></i> Mampang, Jakarta
-                                                        Selatan</li>
-                                                    <li><i style="width: 15px;"
-                                                            class="fa fa-graduation-cap text-center"></i> Full Time</li>
-                                                    <li><i style="width: 15px;" class="fa fa-clock-o text-center"></i>
-                                                        Published 11 months ago</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        
-                                    </a>
-                                </li>
-                            </div>
-                            <div class="col-lg-4">
-                                <li>
-                                    <a href="#" style="border-radius: 10px">
-                                        <div class="d-flex">
-                                            <div class="job-post-company">
-                                                <span class="mb-1"><img
-                                                        src="{{asset('front\images\inc\google.png')}}" /></span>
-                                                <h6>PT. Xyz</h6>
-                                                <h6>Data Analyst</h6>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mb-2">
-                                            <div class="job-time mr-auto">
-                                                <span>Full Time</span>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="job-post-info">
-                                                <ul>
-                                                    <li><i style="width: 15px;"
-                                                            class="fa fa-map-marker text-center"></i> Mampang, Jakarta
-                                                        Selatan</li>
-                                                    <li><i style="width: 15px;"
-                                                            class="fa fa-graduation-cap text-center"></i> Full Time</li>
-                                                    <li><i style="width: 15px;" class="fa fa-clock-o text-center"></i>
-                                                        Published 11 months ago</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </div>
-                            <div class="col-lg-4">
-                                <li>
-                                    <a href="#" style="border-radius: 10px">
-                                        <div class="d-flex">
-                                            <div class="job-post-company">
-                                                <span class="mb-1"><img
-                                                        src="{{asset('front\images\inc\google.png')}}" /></span>
-                                                <h6>PT. Xyz</h6>
-                                                <h6>Data Analyst</h6>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mb-2">
-                                            <div class="job-time mr-auto">
-                                                <span>Full Time</span>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="job-post-info">
-                                                <ul>
-                                                    <li><i style="width: 15px;"
-                                                            class="fa fa-map-marker text-center"></i> Mampang, Jakarta
-                                                        Selatan</li>
-                                                    <li><i style="width: 15px;"
-                                                            class="fa fa-graduation-cap text-center"></i> Full Time</li>
-                                                    <li><i style="width: 15px;" class="fa fa-clock-o text-center"></i>
-                                                        Published 11 months ago</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </div>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="section-full bg-white content-inner-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 section-head text-center">
-                    <h2 class="m-b5">Lowongan Terbaru</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-lg-4">
-                    <div class="sticky-top">
-                        <div class="clearfix m-b30">
-                            <h5 class="widget-title font-weight-700 text-uppercase">Profesi</h5>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="product-brand">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="check8"
-                                                name="example1">
-                                            <label class="custom-control-label" for="check8">Developer</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="check9"
-                                                name="example1">
-                                            <label class="custom-control-label" for="check9">Marketing</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="check10"
-                                                name="example1">
-                                            <label class="custom-control-label" for="check10">Manajer</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="check6"
-                                                name="example1">
-                                            <label class="custom-control-label" for="check6">Arsitek</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="check7"
-                                                name="example1">
-                                            <label class="custom-control-label" for="check7">Lainnya</label>
+                        <div class="owl-carousel owl-theme">
+                            @foreach($rekomendasi as $key => $v)
+                            <div class="item">
+                                <a href="/detail-loker/{{$v->id}}" style="border-radius: 10px">
+                                    <div class="d-flex">
+                                        <div class="job-post-company">
+                                            <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}" /></span>
+                                            <h6>{{$v->tempatperusahaan}}</h6>
+                                            <h6>{{$v->kategori}}</h6>
                                         </div>
                                     </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                      
-                        <div class="clearfix m-b30">
-                            <h5 class="widget-title font-weight-700 text-uppercase">Lokasi</h5>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="product-brand">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="check11"
-                                                name="example1">
-                                            <label class="custom-control-label" for="check11">Jakarta Pusat</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="check12"
-                                                name="example1">
-                                            <label class="custom-control-label" for="check12">Semarang</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="check13"
-                                                name="example1">
-                                            <label class="custom-control-label" for="check13">Yogyakarta</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="check14"
-                                                name="example1">
-                                            <label class="custom-control-label" for="check14">Tanggerang</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="check15"
-                                                name="example1">
-                                            <label class="custom-control-label" for="check15">Lainnya</label>
+                                    <div class="d-flex mb-2">
+                                        <div class="job-time mr-auto">
+                                            <span>{{$v->jam}}</span>
                                         </div>
                                     </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="clearfix m-b30">
-                            <h5 class="widget-title font-weight-700 text-uppercase">Pendidikan</h5>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="product-brand">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="pen1"
-                                                name="example1">
-                                            <label class="custom-control-label" for="pen1">SD</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="pend2"
-                                                name="example1">
-                                            <label class="custom-control-label" for="pend2">SMP</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="pen3"
-                                                name="example1">
-                                            <label class="custom-control-label" for="pen3">SMA/SMK</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="pen4"
-                                                name="example1">
-                                            <label class="custom-control-label" for="pen4">D3</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="pen5"
-                                                name="example1">
-                                            <label class="custom-control-label" for="pen5">D4/S1</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="pen6"
-                                                name="example1">
-                                            <label class="custom-control-label" for="pen6">Profesi</label>
+                                    <div class="d-flex">
+                                        <div class="job-post-info">
+                                            <ul>
+                                                <li><i style="width: 15px;"
+                                                        class="fa fa-map-marker text-center"></i>{{$v->tempatperusahaan}}
+                                                </li>
+                                                <li><i style="width: 15px;"
+                                                        class="fa fa-graduation-cap text-center"></i>
+                                                    {{$v->jam}}
+                                                </li>
+                                                <li><i style="width: 15px;" class="fa fa-clock-o text-center"></i>
+                                                    Published {{$v->created_at->diffForHumans()}}</li>
+                                            </ul>
                                         </div>
                                     </div>
-                                </div>
-                               
-                            </div>
-                        </div>
-                        <div class="clearfix m-b30">
-                            <h5 class="widget-title font-weight-700 text-uppercase">Status Kerja</h5>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                    <div class="product-brand">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="stat1"
-                                                name="example1">
-                                            <label class="custom-control-label" for="stat1">Freelance</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="stat2"
-                                                name="example1">
-                                            <label class="custom-control-label" for="stat2">Full Time</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="stat3"
-                                                name="example1">
-                                            <label class="custom-control-label" for="stat3">Magang</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="stat4"
-                                                name="example1">
-                                            <label class="custom-control-label" for="stat4">Part Time</label>
-                                        </div>
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="stat5"
-                                                name="example1">
-                                            <label class="custom-control-label" for="stat5">Lainnya</label>
-                                        </div>
-                                    </div>
-                                </div>
-                               
-                            </div>
-                        </div>
-                        <input type="button" value="Submit" style="background-color: #FFB901; font-size:15px; border: none; color: white;  margin-top: -15px; border-radius: 5px;" />
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <ul class="post-job-bxx">
-                        <div class="row">
-                            @foreach($inputdata as $key => $v)
-                            <div class="col-lg-4 mb-4">
 
-                                <li>
-                                    <a href="/detail-loker/{{$v->id}}" style="border-radius: 10px">
-                                        <div class="d-flex">
-                                            <div class="job-post-company">
-                                                <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}" alt="Image"
-                                                        style="width: 100px; height: 100px;"></span>
-                                                <h6>{{$v->namaperusahaan}}</h6>
-                                                <h6>{{$v->kategori}}</h6>
-                                            </div>
-
-                                        </div>
-                                        <div class="d-flex mb-2">
-                                            <div class="job-time mr-auto">
-                                                <span>{{$v->jam}}</span>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="job-post-info">
-                                                <ul>
-                                                    <li><i style="width: 15px;"
-                                                            class="fa fa-map-marker text-center"></i>
-                                                        {{$v->tempatperusahaan}}</li>
-                                                    <br>
-                                                    <li><i style="width: 15px;"
-                                                            class="fa fa-graduation-cap text-center"></i>{{$v->pendidikan}}
-                                                    </li>
-                                                    <br>
-                                                    <li>
-                                                        <i style="width: 15px;" class="fa fa-clock-o text-center"></i>
-                                                        <span style="margin-right: 5px;">Published</span>&nbsp;{{\Carbon\Carbon::parse($v->created_at)->format('d-m-Y')}}
-                                                    </li>
-                                                    
-                                                    
-
-                                                </ul>
-                                            </div>
-                                        </div><br>
-                                        <input type="button" value="Detail" style="background-color: #FFB901; font-size:15px; border: none; color: white; float: right; margin-top: -15px; border-radius: 5px;" />
-
-                                    </a>
+                                </a>
                                 </li>
-
                             </div>
                             @endforeach
-
                         </div>
-                    </ul>
-                    <div class="m-t30">
-                        <div class="d-flex">
-                            <a class="site-button button-sm mr-auto" href="#"><i class="ti-arrow-left"></i> Prev</a>
-                            <a class="site-button button-sm" href="#">Next <i class="ti-arrow-right"></i></a>
+                        {{-- <div class="col-lg-4">
+                            <li>
+                                <a href="#" style="border-radius: 10px">
+                                    <div class="d-flex">
+                                        <div class="job-post-company">
+                                            <span class="mb-1"><img
+                                                    src="{{asset('front\images\inc\google.png')}}" /></span>
+                                            <h6>PT. Xyz</h6>
+                                            <h6>Data Analyst</h6>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <div class="job-time mr-auto">
+                                            <span>Full Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="job-post-info">
+                                            <ul>
+                                                <li><i style="width: 15px;" class="fa fa-map-marker text-center"></i>
+                                                    Mampang,
+                                                    Jakarta
+                                                    Selatan</li>
+                                                <li><i style="width: 15px;"
+                                                        class="fa fa-graduation-cap text-center"></i> Full Time
+                                                </li>
+                                                <li><i style="width: 15px;" class="fa fa-clock-o text-center"></i>
+                                                    Published 11 months ago</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
                         </div>
-                    </div>
+                        <div class="col-lg-4">
+                            <li>
+                                <a href="#" style="border-radius: 10px">
+                                    <div class="d-flex">
+                                        <div class="job-post-company">
+                                            <span class="mb-1"><img
+                                                    src="{{asset('front\images\inc\google.png')}}" /></span>
+                                            <h6>PT. Xyz</h6>
+                                            <h6>Data Analyst</h6>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <div class="job-time mr-auto">
+                                            <span>Full Time</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="job-post-info">
+                                            <ul>
+                                                <li><i style="width: 15px;" class="fa fa-map-marker text-center"></i>
+                                                    Mampang,
+                                                    Jakarta
+                                                    Selatan</li>
+                                                <li><i style="width: 15px;"
+                                                        class="fa fa-graduation-cap text-center"></i> Full Time
+                                                </li>
+                                                <li><i style="width: 15px;" class="fa fa-clock-o text-center"></i>
+                                                    Published 11 months ago</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </div> --}}
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="section-full bg-gray content-inner-2">
-        <div class="container">
-            {{-- <div class="d-flex job-title-bx section-head">
-                <div class="mr-auto">
-                    <h2 class="m-b5">Recent Jobs</h2>
-                    <h6 class="fw4 m-b0">20+ Recently Added Jobs</h5>
-                </div>
-                <div class="align-self-end">
-                    <a href="#" class="site-button button-sm">Browse All Jobs <i class="fa fa-long-arrow-right"></i></a>
-                </div>
-            </div> --}}
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="learning">
-                        <div class="row">
-                            <div class="col-lg-6 mb-4">
-                                <li>
-                                    <a href="#" style="border-radius: 10px">
-                                        <div class="learning-card learning-card--vertical">
-                                            <div class="img-learning">
-                                                <img src="{{asset('front\images\inc\pp.png')}}" alt="">
-                                            </div>
-                                            <div class="learning-card_content">
-                                                <div class="learning-card_title-section">
-                                                    <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai
-                                                        Fundamental Resolusi 2024</h5>
-                                                    <h5 class="learning-card_author">ppp</h5>
-                                                </div>
-                                                <hr>
-                                                <div class="learning-card_bottom-section">
-                                                    <div class="space-between">
-                                                        <div class="learning-card_price">
-                                                            <span>5.99</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </div>
-                            <div class="col-lg-6 mb-4">
-                                <li>
-                                    <a href="#" style="border-radius: 10px">
-                                        <div class="learning-card learning-card--vertical">
-                                            <div class="img-learning">
-                                                <img src="{{asset('front\images\inc\pp.png')}}" alt="">
-                                            </div>
-                                            <div class="learning-card_content">
-                                                <div class="learning-card_title-section">
-                                                    <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai
-                                                        Fundamental Resolusi 2024</h5>
-                                                    <h5 class="learning-card_author">ppp</h5>
-                                                </div>
-                                                <hr>
-                                                <div class="learning-card_bottom-section">
-                                                    <div class="space-between">
-                                                        <div class="learning-card_price">
-                                                            <span>5.99</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </div>
-                        </div>
-                    </ul>
-
-                </div>
-                <div class="col-lg-12">
-                    <ul class="learning">
-                        <div class="row">
-                            <div class="col-lg-6 mb-4">
-                                <li>
-                                    <a href="#" style="border-radius: 10px">
-                                        <div class="learning-card learning-card--vertical">
-                                            <div class="img-learning">
-                                                <img src="{{asset('front\images\inc\pp.png')}}" alt="">
-                                            </div>
-                                            <div class="learning-card_content">
-                                                <div class="learning-card_title-section">
-                                                    <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai
-                                                        Fundamental Resolusi 2024</h5>
-                                                    <h5 class="learning-card_author">ppp</h5>
-                                                </div>
-                                                <hr>
-                                                <div class="learning-card_bottom-section">
-                                                    <div class="space-between">
-                                                        <div class="learning-card_price">
-                                                            <span>5.99</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </div>
-                            <div class="col-lg-6 mb-4">
-                                <li>
-                                    <a href="#" style="border-radius: 10px">
-                                        <div class="learning-card learning-card--vertical">
-                                            <div class="img-learning">
-                                                <img src="{{asset('front\images\inc\pp.png')}}" alt="">
-                                            </div>
-                                            <div class="learning-card_content">
-                                                <div class="learning-card_title-section">
-                                                    <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai
-                                                        Fundamental Resolusi 2024</h5>
-                                                    <h5 class="learning-card_author">ppp</h5>
-                                                </div>
-                                                <hr>
-                                                <div class="learning-card_bottom-section">
-                                                    <div class="space-between">
-                                                        <div class="learning-card_price">
-                                                            <span>5.99</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </a>
-                                </li>
-
-                            </div>
-                        </div>
-                    </ul>
-                    <div class="m-t30">
-                        <div class="d-flex">
-                            <a class="site-button button-sm mr-auto" href="#"><i class="ti-arrow-left"></i> Prev</a>
-                            <a class="site-button button-sm" href="#">Next <i class="ti-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    {{-- <div class="section-full content-inner-2 overlay-white-middle"
-        style="background-image:url(images/lines.png); background-position:bottom; background-repeat:no-repeat; background-size: 100%;">
-        <div class="container">
-            <div class="section-head text-black text-center">
-                <h2 class="m-b0">Membership Plans</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy.</p>
-            </div>
-            <!-- Pricing table-1 Columns 3 with gap -->
-            <div class="section-content box-sort-in button-example m-t80">
-                <div class="pricingtable-row">
-                    <div class="row max-w1000 m-auto">
-                        <div class="col-sm-12 col-md-4 col-lg-4 p-lr0">
-                            <div class="pricingtable-wrapper style2 bg-white">
-                                <div class="pricingtable-inner">
-                                    <div class="pricingtable-price">
-                                        <h4 class="font-weight-300 m-t10 m-b0">Basic</h4>
-                                        <div class="pricingtable-bx"><span>Free</span></div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod tempors labore et
-                                        dolore magna siad enim aliqua</p>
-                                    <div class="m-t20">
-                                        <a href="#" class="site-button radius-xl"><span class="p-lr30">Sign
-                                                Up</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4 p-lr0">
-                            <div class="pricingtable-wrapper style2 bg-primary text-white active">
-                                <div class="pricingtable-inner">
-                                    <div class="pricingtable-price">
-                                        <h4 class="font-weight-300 m-t10 m-b0">Professional</h4>
-                                        <div class="pricingtable-bx"> $ <span>29</span> / Per Installation </div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod tempors labore et
-                                        dolore magna siad enim aliqua</p>
-                                    <div class="m-t20">
-                                        <a href="#" class="site-button white radius-xl"><span class="p-lr30">Sign
-                                                Up</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-4 col-lg-4 p-lr0">
-                            <div class="pricingtable-wrapper style2 bg-white">
-                                <div class="pricingtable-inner">
-                                    <div class="pricingtable-price">
-                                        <h4 class="font-weight-300 m-t10 m-b0">Extended</h4>
-                                        <div class="pricingtable-bx"> $ <span>29</span> / Per Installation </div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod tempors labore et
-                                        dolore magna siad enim aliqua</p>
-                                    <div class="m-t20">
-                                        <a href="#" class="site-button radius-xl"><span class="p-lr30">Sign
-                                                Up</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- Our Latest Blog -->
 </div>
+
+<div class="section-full bg-white content-inner-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 section-head text-center">
+                <h2 class="m-b5">Lowongan Terbaru</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-4">
+                <div class="sticky-top">
+                    <div class="clearfix m-b30">
+                        <h5 class="widget-title font-weight-700 text-uppercase">Profesi</h5>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="product-brand">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="check8" name="example1">
+                                        <label class="custom-control-label" for="check8">Developer</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="check9" name="example1">
+                                        <label class="custom-control-label" for="check9">Marketing</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="check10"
+                                            name="example1">
+                                        <label class="custom-control-label" for="check10">Manajer</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="check6" name="example1">
+                                        <label class="custom-control-label" for="check6">Arsitek</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="check7" name="example1">
+                                        <label class="custom-control-label" for="check7">Lainnya</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="clearfix m-b30">
+                        <h5 class="widget-title font-weight-700 text-uppercase">Lokasi</h5>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="product-brand">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="check11"
+                                            name="example1">
+                                        <label class="custom-control-label" for="check11">Jakarta Pusat</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="check12"
+                                            name="example1">
+                                        <label class="custom-control-label" for="check12">Semarang</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="check13"
+                                            name="example1">
+                                        <label class="custom-control-label" for="check13">Yogyakarta</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="check14"
+                                            name="example1">
+                                        <label class="custom-control-label" for="check14">Tanggerang</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="check15"
+                                            name="example1">
+                                        <label class="custom-control-label" for="check15">Lainnya</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="clearfix m-b30">
+                        <h5 class="widget-title font-weight-700 text-uppercase">Pendidikan</h5>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="product-brand">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="pen1" name="example1">
+                                        <label class="custom-control-label" for="pen1">SD</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="pend2" name="example1">
+                                        <label class="custom-control-label" for="pend2">SMP</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="pen3" name="example1">
+                                        <label class="custom-control-label" for="pen3">SMA/SMK</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="pen4" name="example1">
+                                        <label class="custom-control-label" for="pen4">D3</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="pen5" name="example1">
+                                        <label class="custom-control-label" for="pen5">D4/S1</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="pen6" name="example1">
+                                        <label class="custom-control-label" for="pen6">Profesi</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="clearfix m-b30">
+                        <h5 class="widget-title font-weight-700 text-uppercase">Status Kerja</h5>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="product-brand">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="stat1" name="example1">
+                                        <label class="custom-control-label" for="stat1">Freelance</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="stat2" name="example1">
+                                        <label class="custom-control-label" for="stat2">Full Time</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="stat3" name="example1">
+                                        <label class="custom-control-label" for="stat3">Magang</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="stat4" name="example1">
+                                        <label class="custom-control-label" for="stat4">Part Time</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="stat5" name="example1">
+                                        <label class="custom-control-label" for="stat5">Lainnya</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <input type="button" value="Submit"
+                        style="background-color: #FFB901; font-size:15px; border: none; color: white;  margin-top: -15px; border-radius: 5px;" />
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <ul class="post-job-bxx">
+                    <div class="row">
+                        @foreach($inputdata as $key => $v)
+                        <div class="col-lg-4 mb-4">
+
+                            <li>
+                                <a href="/detail-loker/{{$v->id}}" style="border-radius: 10px">
+                                    <div class="d-flex">
+                                        <div class="job-post-company">
+                                            <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}" alt="Image"
+                                                    style="width: 100px; height: 100px;"></span>
+                                            <h6>{{$v->namaperusahaan}}</h6>
+                                            <h6>{{$v->kategori}}</h6>
+                                        </div>
+
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <div class="job-time mr-auto">
+                                            <span>{{$v->jam}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="job-post-info">
+                                            <ul>
+                                                <li><i style="width: 15px;" class="fa fa-map-marker text-center"></i>
+                                                    {{$v->tempatperusahaan}}</li>
+                                                <br>
+                                                <li><i style="width: 15px;"
+                                                        class="fa fa-graduation-cap text-center"></i>{{$v->pendidikan}}
+                                                </li>
+                                                <br>
+                                                <li>
+                                                    <i style="width: 15px;" class="fa fa-clock-o text-center"></i>
+                                                    <span
+                                                        style="margin-right: 5px;">Published</span>&nbsp;{{\Carbon\Carbon::parse($v->created_at)->format('d-m-Y')}}
+                                                </li>
+
+
+
+                                            </ul>
+                                        </div>
+                                    </div><br>
+                                    <input type="button" value="Detail"
+                                        style="background-color: #FFB901; font-size:15px; border: none; color: white; float: right; margin-top: -15px; border-radius: 5px;" />
+
+                                </a>
+                            </li>
+
+                        </div>
+                        @endforeach
+
+                    </div>
+                </ul>
+                <div class="m-t30">
+                    <div class="d-flex">
+                        <a class="site-button button-sm mr-auto" href="#"><i class="ti-arrow-left"></i> Prev</a>
+                        <a class="site-button button-sm" href="#">Next <i class="ti-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section-full bg-gray content-inner-2">
+    <div class="container">
+        {{-- <div class="d-flex job-title-bx section-head">
+            <div class="mr-auto">
+                <h2 class="m-b5">Recent Jobs</h2>
+                <h6 class="fw4 m-b0">20+ Recently Added Jobs</h5>
+            </div>
+            <div class="align-self-end">
+                <a href="#" class="site-button button-sm">Browse All Jobs <i class="fa fa-long-arrow-right"></i></a>
+            </div>
+        </div> --}}
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="learning">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <li>
+                                <a href="#" style="border-radius: 10px">
+                                    <div class="learning-card learning-card--vertical">
+                                        <div class="img-learning">
+                                            <img src="{{asset('front\images\inc\pp.png')}}" alt="">
+                                        </div>
+                                        <div class="learning-card_content">
+                                            <div class="learning-card_title-section">
+                                                <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai
+                                                    Fundamental Resolusi 2024</h5>
+                                                <h5 class="learning-card_author">ppp</h5>
+                                            </div>
+                                            <hr>
+                                            <div class="learning-card_bottom-section">
+                                                <div class="space-between">
+                                                    <div class="learning-card_price">
+                                                        <span>5.99</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </li>
+
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <li>
+                                <a href="#" style="border-radius: 10px">
+                                    <div class="learning-card learning-card--vertical">
+                                        <div class="img-learning">
+                                            <img src="{{asset('front\images\inc\pp.png')}}" alt="">
+                                        </div>
+                                        <div class="learning-card_content">
+                                            <div class="learning-card_title-section">
+                                                <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai
+                                                    Fundamental Resolusi 2024</h5>
+                                                <h5 class="learning-card_author">ppp</h5>
+                                            </div>
+                                            <hr>
+                                            <div class="learning-card_bottom-section">
+                                                <div class="space-between">
+                                                    <div class="learning-card_price">
+                                                        <span>5.99</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </li>
+
+                        </div>
+                    </div>
+                </ul>
+
+            </div>
+            <div class="col-lg-12">
+                <ul class="learning">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <li>
+                                <a href="#" style="border-radius: 10px">
+                                    <div class="learning-card learning-card--vertical">
+                                        <div class="img-learning">
+                                            <img src="{{asset('front\images\inc\pp.png')}}" alt="">
+                                        </div>
+                                        <div class="learning-card_content">
+                                            <div class="learning-card_title-section">
+                                                <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai
+                                                    Fundamental Resolusi 2024</h5>
+                                                <h5 class="learning-card_author">ppp</h5>
+                                            </div>
+                                            <hr>
+                                            <div class="learning-card_bottom-section">
+                                                <div class="space-between">
+                                                    <div class="learning-card_price">
+                                                        <span>5.99</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </li>
+
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <li>
+                                <a href="#" style="border-radius: 10px">
+                                    <div class="learning-card learning-card--vertical">
+                                        <div class="img-learning">
+                                            <img src="{{asset('front\images\inc\pp.png')}}" alt="">
+                                        </div>
+                                        <div class="learning-card_content">
+                                            <div class="learning-card_title-section">
+                                                <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai
+                                                    Fundamental Resolusi 2024</h5>
+                                                <h5 class="learning-card_author">ppp</h5>
+                                            </div>
+                                            <hr>
+                                            <div class="learning-card_bottom-section">
+                                                <div class="space-between">
+                                                    <div class="learning-card_price">
+                                                        <span>5.99</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </li>
+
+                        </div>
+                    </div>
+                </ul>
+                <div class="m-t30">
+                    <div class="d-flex">
+                        <a class="site-button button-sm mr-auto" href="#"><i class="ti-arrow-left"></i> Prev</a>
+                        <a class="site-button button-sm" href="#">Next <i class="ti-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+{{-- <div class="section-full content-inner-2 overlay-white-middle"
+    style="background-image:url(images/lines.png); background-position:bottom; background-repeat:no-repeat; background-size: 100%;">
+    <div class="container">
+        <div class="section-head text-black text-center">
+            <h2 class="m-b0">Membership Plans</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy.</p>
+        </div>
+        <!-- Pricing table-1 Columns 3 with gap -->
+        <div class="section-content box-sort-in button-example m-t80">
+            <div class="pricingtable-row">
+                <div class="row max-w1000 m-auto">
+                    <div class="col-sm-12 col-md-4 col-lg-4 p-lr0">
+                        <div class="pricingtable-wrapper style2 bg-white">
+                            <div class="pricingtable-inner">
+                                <div class="pricingtable-price">
+                                    <h4 class="font-weight-300 m-t10 m-b0">Basic</h4>
+                                    <div class="pricingtable-bx"><span>Free</span></div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod tempors labore et
+                                    dolore magna siad enim aliqua</p>
+                                <div class="m-t20">
+                                    <a href="#" class="site-button radius-xl"><span class="p-lr30">Sign
+                                            Up</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 p-lr0">
+                        <div class="pricingtable-wrapper style2 bg-primary text-white active">
+                            <div class="pricingtable-inner">
+                                <div class="pricingtable-price">
+                                    <h4 class="font-weight-300 m-t10 m-b0">Professional</h4>
+                                    <div class="pricingtable-bx"> $ <span>29</span> / Per Installation </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod tempors labore et
+                                    dolore magna siad enim aliqua</p>
+                                <div class="m-t20">
+                                    <a href="#" class="site-button white radius-xl"><span class="p-lr30">Sign
+                                            Up</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 p-lr0">
+                        <div class="pricingtable-wrapper style2 bg-white">
+                            <div class="pricingtable-inner">
+                                <div class="pricingtable-price">
+                                    <h4 class="font-weight-300 m-t10 m-b0">Extended</h4>
+                                    <div class="pricingtable-bx"> $ <span>29</span> / Per Installation </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet adipiscing elit sed do eiusmod tempors labore et
+                                    dolore magna siad enim aliqua</p>
+                                <div class="m-t20">
+                                    <a href="#" class="site-button radius-xl"><span class="p-lr30">Sign
+                                            Up</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}
+<!-- Our Latest Blog -->
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    dots:false,
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+    });
+</script>
 @endsection

@@ -5,8 +5,9 @@
 <!--  BEGIN CONTENT AREA  -->
 <div id="content" class="main-content">
     <div class="layout-px-spacing">
-        <form action="{{route('inputdata.store')}}" method="post" enctype="multipart/form-data">
+        <form action="/inputdata/{{$edit['id']}}" method="post" enctype="multipart/form-data">
             @csrf
+            @method('put')
             <div class="page-header">
                 <div class="page-title">
                     <a href="{{route('inputdata.index')}}" class="btn btn-primary btn-sm">Kembali</a>
@@ -23,57 +24,99 @@
                                 <div class="col-lg-4">
                                     <label for="gambar" style="color: black;">Gambar</label>
                                     <input type="hidden" name="idinputdata" value="">
-                                    <input type="file" name="gambar" id="gambar" class="form-control @error('gambar') is-invalid @enderror" style="width: 50%; height: 50px;">
+                                    <input type="file" name="gambar" id="gambar"
+                                        class="form-control @error('gambar') is-invalid @enderror"
+                                        style="width: 50%; height: 50px;">
                                     @error('gambar')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>  
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                                     @enderror
-                                  
+
                                 </div>
-                                   
+
                                 <div class="col-lg-4">
                                     <label for="form-control" style="color: black;">Nama Perusahaan</label>
                                     <input type="hidden" name="idiinputdata" value="">
-                                    <input type="text" name="namaperusahaan" class="form-control @error('namaperusahaan') is-invalid @enderror"  placeholder="namaperusahaan"  value="{{$edit['namaperusahaan']}}">
+                                    <input type="text" name="namaperusahaan"
+                                        class="form-control @error('namaperusahaan') is-invalid @enderror"
+                                        placeholder="namaperusahaan" value="{{$edit['namaperusahaan']}}">
                                     @error('namaperusahaan')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
                                 </div>
-            
+
                                 <div class="col-lg-4">
                                     <label for="kategori" style="color: black;">Kategori</label>
                                     <input type="hidden" name="idinputdata" value="">
-                                    <select name="kategori" id="kategori" class="form-control @error('kategori') is-invalid @enderror" placeholder="kategori" value="{{$edit['kategori']}}">>
+                                    <select name="kategori" id="kategori"
+                                        class="form-control @error('kategori') is-invalid @enderror"
+                                        placeholder="kategori">
                                         <option value="">Pilih Kategori</option>
-                                        <option >marketing</option>
-                                        <option >developer</option>
-                                        <option >frontend</option>
+                                        <option {{$edit['kategori']=='Marketing' ? 'selected' : '' }}>marketing</option>
+                                        <option {{$edit['kategori']=='Developer' ? 'selected' : '' }}>developer</option>
+                                        <option {{$edit['kategori']=='Frontend' ? 'selected' : '' }}>frontend</option>
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>
-                                    @error('idkategori')
+                                    @error('kategori')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
                                 </div>
                             </div>
-                            
+
                             <div class="row m-2">
-                                   
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="jk">Prioritas Jenis Kelamin</label>
+                                        <select id="jk" name="jk" class="form-control" required>
+                                            <option value="" disabled selected>Pilih</option>
+                                            <option value="laki-laki" {{$edit['jk']=='laki-laki' ? 'selected' : '' }}>
+                                                Laki-laki</option>
+                                            <option value="perempuan" {{$edit['jk']=='perempuan' ? 'selected' : '' }}>
+                                                Perempuan</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="pendidikan">Minimal Penidikan</label>
+                                        <select id="pendidikan" name="pendidikan" class="form-control" required>
+                                            <option value="" disabled selected>Pilih</option> <!-- Placeholder -->
+                                            <option value="SD" {{$edit['pendidikan']=='SD' ? 'selected' : '' }}>SD
+                                            </option>
+                                            <option value="SMP" {{$edit['pendidikan']=='SMP' ? 'selected' : '' }}>SMP
+                                            </option>
+                                            <option value="SMA/SMK" {{$edit['pendidikan']=='SMA/SMK' ? 'selected' : ''
+                                                }}>SMA/SMK</option>
+                                            <option value="Diploma" {{$edit['pendidikan']=='Diploma' ? 'selected' : ''
+                                                }}>D3</option>
+                                            <option value="Diploma" {{$edit['pendidikan']=='Diploma' ? 'selected' : ''
+                                                }}>D4/S1</option>
+                                            <option value="Pascasarjana" {{$edit['pendidikan']=='Pascasarjana'
+                                                ? 'selected' : '' }}>Pascasarjana</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <div class="col-lg-6">
                                     <label for="kategori" style="color: black;">jam kerja</label>
                                     <input type="hidden" name="idinputdata" value="">
-                                    <select name="jam" id="jam" class="form-control @error('jam') is-invalid @enderror" placeholder="jam" value="{{$edit['jam']}}">
+                                    <select name="jam" id="jam" class="form-control @error('jam') is-invalid @enderror"
+                                        placeholder="jam">
                                         <option value="">Pilih jam kerja</option>
-                                        <option >parttime </option>
-                                        <option >fulltime </option>
-                                        <option >frelance</option>
+                                        <option {{$edit['jam']=='Parttime' ? 'selected' : '' }}>parttime </option>
+                                        <option {{$edit['jam']=='Fulltime' ? 'selected' : '' }}>fulltime </option>
+                                        <option {{$edit['jam']=='Frelance' ? 'selected' : '' }}>frelance</option>
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>
-                                    @error('idcategori')
+                                    @error('jam')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -83,7 +126,9 @@
                                 <div class="col-lg-6">
                                     <label for="form-control" style="color: black;">Tempat Perusahaan</label>
                                     <input type="hidden" name="idinputdata" value="">
-                                    <input type="text" name="tempatperusahaan" class="form-control @error('tempatperusahaan') is-invalid @enderror" placeholder="temmpatperusahaan" value="{{$edit['tempatperusahaan']}}">
+                                    <input type="text" name="tempatperusahaan"
+                                        class="form-control @error('tempatperusahaan') is-invalid @enderror"
+                                        placeholder="temmpatperusahaan" value="{{$edit['tempatperusahaan']}}">
                                     @error('tempatperusahaan')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -94,7 +139,9 @@
                                 <div class="col-lg-12">
                                     <label for="form-control" style="color: black;"> Deskripsi</label>
                                     <input type="hidden" name="inputdata" value="">
-                                    <textarea cols="30" rows="5" class="form-control  @error('deskripsi') is-invalid @enderror" placeholder="deskripsi"  name="deskripsi">{{old('deskripsi')}}</textarea>
+                                    <textarea cols="30" rows="5"
+                                        class="form-control  @error('deskripsi') is-invalid @enderror"
+                                        placeholder="deskripsi" name="deskripsi">{{old('deskripsi')}}</textarea>
                                     @error('deskripsi')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -102,7 +149,7 @@
                                     @enderror
                                 </div>
 
-                           
+
                             </div>
                         </div>
                     </div>

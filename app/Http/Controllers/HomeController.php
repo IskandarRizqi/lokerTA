@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helper\GlobalHelper;
 use App\Models\InputdataModel;
 
 use Illuminate\Http\Request;
@@ -32,6 +33,8 @@ class HomeController extends Controller
                 return Redirect::to('/kriteria');
             }
         }
+        $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
+        // return $data;
         $data['inputdata'] = InputdataModel::get();
         return view('front.pages.home', $data);
     }

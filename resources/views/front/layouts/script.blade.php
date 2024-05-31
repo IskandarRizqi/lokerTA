@@ -13,7 +13,6 @@
 
 
 <!-- JAVASCRIPT FILES ========================================= -->
-<script src="{{asset('front/js/jquery.min.js')}}"></script><!-- JQUERY.MIN JS -->
 <script src="{{asset('front/plugins/wow/wow.js')}}"></script><!-- WOW JS -->
 <script src="{{asset('front/plugins/bootstrap/js/popper.min.js')}}"></script><!-- BOOTSTRAP.MIN JS -->
 <script src="{{asset('front/plugins/bootstrap/js/bootstrap.min.js')}}"></script><!-- BOOTSTRAP.MIN JS -->
@@ -25,10 +24,10 @@
 <script src="{{asset('front/plugins/masonry/masonry-3.1.4.js')}}"></script><!-- MASONRY -->
 <script src="{{asset('front/plugins/masonry/masonry.filter.js')}}"></script><!-- MASONRY -->
 <script src="{{asset('front/plugins/owl-carousel/owl.carousel.js')}}"></script><!-- OWL SLIDER -->
-<script src="{{asset('front/plugins/rangeslider/rangeslider.js')}}" ></script><!-- Rangeslider -->
+<script src="{{asset('front/plugins/rangeslider/rangeslider.js')}}"></script><!-- Rangeslider -->
 <script src="{{asset('front/js/custom.js')}}"></script><!-- CUSTOM FUCTIONS  -->
 <script src="{{asset('front/js/dz.carousel.js')}}"></script><!-- SORTCODE FUCTIONS  -->
-<script src='{{asset('front/js/recaptcha/api.js')}}'></script> <!-- Google API For Recaptcha  -->
+<script src='{{asset(' front/js/recaptcha/api.js')}}'></script> <!-- Google API For Recaptcha  -->
 <script src="{{asset('front/js/dz.ajax.js')}}"></script><!-- CONTACT JS  -->
 <script src="{{asset('front/plugins/paroller/skrollr.min.js')}}"></script><!-- PAROLLER -->
-<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
