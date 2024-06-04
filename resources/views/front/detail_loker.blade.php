@@ -46,13 +46,7 @@
                                                         d="M11 9h2v5h-2zM9 2h6v2H9zm10.293 5.707-2-2 1.414-1.414 2 2z">
                                                     </path>
                                                 </svg>
-                                                @if($loker->jam == 0)
-                                                Parttime
-                                                @elseif($loker->jam == 1)
-                                                Fulltime
-                                                @else
-                                                Freelance
-                                                @endif
+                                                <span class="text-capitalize">{{$loker->jam}}</span>
                                             </div>
                                             <div class="pekerjaan ml-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -62,13 +56,7 @@
                                                         d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zm-5-2v2H9V4h6zM8 8h12v3H4V8h4zM4 19v-6h6v2h4v-2h6l.001 6H4z">
                                                     </path>
                                                 </svg>
-                                                @if($loker->kategori == 0)
-                                                Marketing
-                                                @elseif($loker->kategori == 1)
-                                                Developer
-                                                @else
-                                                Frontend
-                                                @endif
+                                                <span class="text-capitalize">{{$loker->kategori}}</span>
                                             </div>
                                             <div class="alamat ml-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -141,7 +129,7 @@
                                             <path d="M11 9h2v5h-2zM9 2h6v2H9zm10.293 5.707-2-2 1.414-1.414 2 2z">
                                             </path>
                                         </svg>
-                                        <p class="m-0 text-capitalize">{{$loker->jam}}</p>
+                                        <span class="text-capitalize">{{$v->jam}}</span>
                                     </div>
                                     <div class="pekerjaan ml-2" style="font-size: 12px">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
@@ -150,13 +138,7 @@
                                                 d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zm-5-2v2H9V4h6zM8 8h12v3H4V8h4zM4 19v-6h6v2h4v-2h6l.001 6H4z">
                                             </path>
                                         </svg>
-                                        @if($loker->kategori == 0)
-                                        Marketing
-                                        @elseif($loker->kategori == 1)
-                                        Developer
-                                        @else
-                                        Frontend
-                                        @endif
+                                        <span class="text-capitalize">{{$v->kategori}}</span>
                                     </div>
                                     <div class="alamat ml-2" style="font-size: 12px">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
