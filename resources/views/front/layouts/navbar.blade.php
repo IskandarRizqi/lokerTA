@@ -38,7 +38,7 @@
         <div class="header-nav navbar-collapse collapse justify-content-start" id="navbarNavDropdown">
           <ul class="nav navbar-nav">
             <li class="active">
-              <a href="/">Home</a>
+              <a href="/">Dashboard</a>
             </li>
             <li>
               <a href="#">For Candidates <i class="fa fa-chevron-down"></i></a>
@@ -49,19 +49,13 @@
             </li>
 
             <li>
-              <a href="#">Pages <i class="fa fa-chevron-down"></i></a>
-              <ul class="sub-menu">
-                <li><a href="/about-us" class="dez-page">About Us</a></li>
-                <li><a href="#" class="dez-page">CV ATS</a></li>
-              </ul>
+             
+                <a href="#" class="dez-page">CV ATS</a>
+              
             </li>
             <li>
-              <a href="#">Blog <i class="fa fa-chevron-down"></i></a>
-              <ul class="sub-menu">
-                <li><a href="blog-classic.html" class="dez-page">Classic</a></li>
-                <li><a href="blog-classic-sidebar.html" class="dez-page">Classic Sidebar</a></li>
-
-              </ul>
+              <a href="/about-us">About Us <i ></i></a>
+              
             </li>
           </ul>
         </div>

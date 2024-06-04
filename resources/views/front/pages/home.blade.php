@@ -102,7 +102,7 @@
                                 <a href="/detail-loker/{{$v->id}}" style="border-radius: 10px">
                                     <div class="d-flex">
                                         <div class="job-post-company">
-                                            <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}" /></span>
+                                            <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}"  style="width: 100px; height: 100px;"/ ></span>
                                             <h6>{{$v->tempatperusahaan}}</h6>
                                             <h6>{{$v->kategori}}</h6>
                                         </div>
@@ -120,88 +120,24 @@
                                                 </li>
                                                 <li><i style="width: 15px;"
                                                         class="fa fa-graduation-cap text-center"></i>
-                                                    {{$v->jam}}
+                                                    {{$v->pendidikan}}
                                                 </li>
                                                 <li><i style="width: 15px;" class="fa fa-clock-o text-center"></i>
                                                     Published {{$v->created_at->diffForHumans()}}</li>
                                             </ul>
                                         </div>
                                     </div>
+                                
 
                                 </a>
                                 </li>
+                                
                             </div>
                             @endforeach
                         </div>
-                        {{-- <div class="col-lg-4">
-                            <li>
-                                <a href="#" style="border-radius: 10px">
-                                    <div class="d-flex">
-                                        <div class="job-post-company">
-                                            <span class="mb-1"><img
-                                                    src="{{asset('front\images\inc\google.png')}}" /></span>
-                                            <h6>PT. Xyz</h6>
-                                            <h6>Data Analyst</h6>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mb-2">
-                                        <div class="job-time mr-auto">
-                                            <span>Full Time</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="job-post-info">
-                                            <ul>
-                                                <li><i style="width: 15px;" class="fa fa-map-marker text-center"></i>
-                                                    Mampang,
-                                                    Jakarta
-                                                    Selatan</li>
-                                                <li><i style="width: 15px;"
-                                                        class="fa fa-graduation-cap text-center"></i> Full Time
-                                                </li>
-                                                <li><i style="width: 15px;" class="fa fa-clock-o text-center"></i>
-                                                    Published 11 months ago</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </div>
-                        <div class="col-lg-4">
-                            <li>
-                                <a href="#" style="border-radius: 10px">
-                                    <div class="d-flex">
-                                        <div class="job-post-company">
-                                            <span class="mb-1"><img
-                                                    src="{{asset('front\images\inc\google.png')}}" /></span>
-                                            <h6>PT. Xyz</h6>
-                                            <h6>Data Analyst</h6>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mb-2">
-                                        <div class="job-time mr-auto">
-                                            <span>Full Time</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="job-post-info">
-                                            <ul>
-                                                <li><i style="width: 15px;" class="fa fa-map-marker text-center"></i>
-                                                    Mampang,
-                                                    Jakarta
-                                                    Selatan</li>
-                                                <li><i style="width: 15px;"
-                                                        class="fa fa-graduation-cap text-center"></i> Full Time
-                                                </li>
-                                                <li><i style="width: 15px;" class="fa fa-clock-o text-center"></i>
-                                                    Published 11 months ago</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </div> --}}
+                        
                 </div>
+                
             </div>
         </div>
     </div>
@@ -389,8 +325,6 @@
                                                     <span
                                                         style="margin-right: 5px;">Published</span>&nbsp;{{\Carbon\Carbon::parse($v->created_at)->format('d-m-Y')}}
                                                 </li>
-
-
 
                                             </ul>
                                         </div>

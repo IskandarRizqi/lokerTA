@@ -76,6 +76,12 @@
                                     <select name="kategori" class="form-control @error('kategori') is-invalid @enderror"
                                         placeholder="" value="{{old('kategori')}}">
                                         <option value="">Pilih Kategori</option>
+                                        <option value="Administrasi ">Administrasi </option>
+                                        <option value="Hukum ">Hukum </option>
+                                        <option value="Akuntansi">Akuntansi</option>
+                                        <option value="Kesehatan ">Kesehatan </option>
+                                        <option value="operator produksi">operator produksi</option>
+                                        <option value="QC">QC</option>
                                         <option value="Marketing">marketing</option>
                                         <option value="Developer">developer</option>
                                         <option value="Frontend">frontend</option>
@@ -143,6 +149,18 @@
                                         <option value="Tanggerang">Tanggerang</option>
                                         <option value="Yogyakarta">Yogyakarta</option>
                                         <option value="Karawang">karawang</option>
+                                        <option value="surabaya">surabaya</option>
+                                        <option value="tanggerang">tanggerang</option>
+                                        <option value="bandung">bandung</option>
+                                        <option value="palembang">palembang</option>
+                                        <option value="batam">batam</option>
+                                        <option value="kalimantan">kalimantan</option>
+                                        <option value="bekasi">bekasi</option>
+                                        <option value="cikarang">cikarang</option>
+                                        <option value="cirebon">cirebon</option>
+                                        <option value="tegal">tegal</option>
+                                        <option value="cilacap">cilacap</option>
+                                        <option value="solo">solo</option>
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>
                                     @error('tempatperusahaan')

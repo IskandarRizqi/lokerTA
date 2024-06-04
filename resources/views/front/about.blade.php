@@ -8,7 +8,7 @@
 
         <div class="row align-items-center col-mb-50">
             <div class="col-md-4 center">
-                <img data-animate="fadeInLeft" src="{{asset('front/images/gallery/pic1.jpg')}}" alt="Iphone">
+                <img data-animate="fadeInLeft" src="{{asset('front/images/gallery/about.png')}}" alt="Iphone">
             </div>
 
             <div class="col-md-8 text-center text-md-left">
@@ -26,9 +26,9 @@
                         San Francisco, CA 94107<br>
                     </address>
                     <div class="hubungikami col-lg-6">
-                        <abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
-                        <abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
-                        <abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+                        <abbr title="Phone Number"><strong>Phone:</strong></abbr> (62) 85772637432 <br>
+                        <abbr title="Fax"><strong>Fax:</strong></abbr> (62) 88888822222<br>
+                        <abbr title="Email Address"><strong>Email:</strong></abbr> lokertegal@gmail.com
                     </div>
                 </div>
             </div>

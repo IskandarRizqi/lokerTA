@@ -40,10 +40,10 @@ Route::get('/dashboard', function () {
 
 // untuk admin
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/about-us', function () {
-        return view('front.about');
-    });
+  
 });
+
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -71,9 +71,6 @@ Route::get('/data-pengguna', function () {
 });
 Route::resource('/', HomeController::class);
 
-// Route::get('/kriteria', function () {
-//     return view('front.pages.formkriteria');
-// });
 Route::resource('kriteria', FormKriteriaController::class);
 
 
@@ -90,3 +87,6 @@ Route::get('/privasi', function () {
 Route::get('/support', function () {
     return view('front.support');
 });
+  Route::get('/about-us', function () {
+        return view('front.about');
+    });

@@ -76,14 +76,14 @@
     <div class="dez-bnr-inr overlay-black-middle bg-pt" style="background-image:url({{asset('front/images/banner/bnr2.jpg')}});">
         <div class="container">
             <div class="dez-bnr-inr-entry">
-                <h1 class="text-white">Login</h1>
+                {{-- <h1 class="text-white">Login</h1> --}}
                 <!-- Breadcrumb row -->
-                <div class="breadcrumb-row">
+                {{-- <div class="breadcrumb-row">
                     <ul class="list-inline">
                         <li><a href="#">Home</a></li>
                         <li>Login</li>
                     </ul>
-                </div>
+                </div> --}}
                 <!-- Breadcrumb row END -->
             </div>
         </div>

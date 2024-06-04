@@ -34,7 +34,7 @@
                             <li><a href="/privasi">Privasi & Keamanan</a></li>  
                             <li><a href="/support">Support</a></li>
                             <li><a href="/about-us">Kontak Kami</a></li>
-                            <li><a href="/about-us">Kontak Kami</a></li>
+                  
                            
                    
                         </ul>
