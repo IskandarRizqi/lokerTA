@@ -20,8 +20,19 @@
         <!-- extra nav -->
         <div class="extra-nav">
           <div class="extra-cell">
+            @if(Auth::check())
+            <a href="{{ route('logout') }}" class="btn btn-warning text-white"
+              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+              <i class="fa fa-lock"></i> logout
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none" hidden>
+                @csrf
+              </form>
+            </a>
+            <a href="/register" class="btn btn-warning text-white"><i class="fa fa-user"></i> Profile</a>
+            @else
             <a href="/register" class="site-button"><i class="fa fa-user"></i> Sign Up</a>
             <a href="/login" class="site-button"><i class="fa fa-lock"></i> login</a>
+            @endif
             <div class="dropdown-item">
 
             </div>
@@ -49,13 +60,13 @@
             </li>
 
             <li>
-             
-                <a href="#" class="dez-page">CV ATS</a>
-              
+
+              <a href="#" class="dez-page">CV ATS</a>
+
             </li>
             <li>
-              <a href="/about-us">About Us <i ></i></a>
-              
+              <a href="/about-us">About Us <i></i></a>
+
             </li>
           </ul>
         </div>
