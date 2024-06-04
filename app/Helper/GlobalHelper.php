@@ -9,10 +9,6 @@ class GlobalHelper
 {
     public static function getrecomend($id)
     {
-        if (!$id) {
-            return [];
-        }
-        $auth = User::where('id', $id)->with('kriteria')->first();
         // $loker = InputdataModel::select()
         // ->where('kategori', $auth->kriteria->bidang)
         // ->where('jam', $auth->kriteria->jam)
@@ -27,6 +23,11 @@ class GlobalHelper
             ->orderBy('created_at', 'ASC')
             ->get();
         $jmlloker = count($l);
+
+        if (!$id) {
+            return $l;
+        }
+        $auth = User::where('id', $id)->with('kriteria')->first();
 
         $l0 = [];
         $l1 = [];

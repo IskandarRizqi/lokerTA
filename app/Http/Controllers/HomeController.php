@@ -28,12 +28,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->role_id == 1) {
+        $id = null;
+        if (Auth::user()->role_id > 0) {
             if (!Auth::user()->kriteria_id) {
                 return Redirect::to('/kriteria');
             }
         }
-        $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
+        $data['rekomendasi'] = GlobalHelper::getrecomend($id);
         // return $data;
         $data['inputdata'] = InputdataModel::get();
         return view('front.pages.home', $data);
