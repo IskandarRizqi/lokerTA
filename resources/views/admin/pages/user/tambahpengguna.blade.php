@@ -29,10 +29,10 @@
                               
                                    
                                 <div class="col-lg-6">
-                                    <label for="form-control" style="color: black;">Nama </label>
-                                    <input type="hidden" name="idaksespengguna" value="">
-                                    <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" placeholder="" value="{{old('nama')}}">
-                                    @error('nama')
+                                    <label for="form-control" style="color: black;">name </label>
+                                    <input type="hidden" name="" value="">
+                                    <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="" value="{{old('name')}}">
+                                    @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -41,7 +41,7 @@
             
                                 <div class="col-lg-6">
                                     <label for="form-control" style="color: black;">Email</label>
-                                    <input type="hidden" name="idaksespengguna" value="">
+                                    <input type="hidden" name="" value="">
                                     <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="" value="{{old('email')}}">
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -55,7 +55,7 @@
                                    
                                 <div class="col-lg-6">
                                     <label for="form-control" style="color: black;">password</label>
-                                    <input type="hidden" name="idasksespengguna" value="">
+                                    <input type="hidden" name="" value="">
                                     <input type="text" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="" value="{{old('password')}}">
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -66,16 +66,16 @@
 
                                 <div class="col-lg-6">
                                     <label for="role">Role</label>
-                                    <input type="hidden" name="idaksespengguna" value="">
-                                    <select name="role" class="form-control @error('role') is-invalid @enderror" placeholder="" value="{{old('role')}}">
+                                    <input type="hidden" name="" value="">
+                                    <select name="role_id" class="form-control @error('role_id') is-invalid @enderror" placeholder="" value="{{old('role_id')}}">
                                         <option value="">Pilih</option>
-                                        <option >ADMIN</option>
-                                        <option >USER</option>
-                                        <option >PARTNER</option>
+                                        <option >0</option>
+                                        <option >1</option>
+                                        <option >2</option>
                                         
                                     </select>
-                                    @error('role')
-                                    <span class="invalid-feedback" role="alert">
+                                    @error('role_id')
+                                    <span class="invalid-feedback" role_id="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
