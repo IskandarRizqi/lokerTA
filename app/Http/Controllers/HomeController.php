@@ -34,9 +34,16 @@ class HomeController extends Controller
                 return Redirect::to('/kriteria');
             }
         }
+        if (Auth::user()->role_id < 1) {
+            if (!Auth::user()->kriteria_id) {
+                return redirect::to('/dashboard');
+            }
+        }
+
         $data['rekomendasi'] = GlobalHelper::getrecomend($id);
         // return $data;
         $data['inputdata'] = InputdataModel::get();
         return view('front.pages.home', $data);
+    
     }
 }

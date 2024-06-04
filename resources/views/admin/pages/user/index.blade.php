@@ -33,10 +33,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($aksespengguna as $key => $value)
+                                @foreach($users as $key => $value)
                                     <tr>
                                         <td width="1%">{{$key + 1}}</td>
-                                        <td>{{$value->nama}}</td>
+                                        <td>{{$value->name}}</td>
                                         <td>{{$value->email}}</td>
                                         <td>{{$value->password}}</td>
                                         <td>{{$value->role}}</td>

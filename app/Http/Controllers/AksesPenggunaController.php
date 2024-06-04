@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AksesPenggunaModel;
+use App\Models\user;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
+use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class AksesPenggunaController extends Controller
 {
     public function index()
     {
-        $data['aksespengguna']= AksesPenggunaModel::get();
+        $data['users']= user::get();
         return view('admin.pages.user.index', $data);
     }
 
@@ -26,23 +30,26 @@ class AksesPenggunaController extends Controller
             $validator = validator::make($request->all(), [
                
                 
-                'nama'=> 'required',
+                'name'=> 'required',
                 'email'=> 'required',
                 'password'=> 'required',
-                'role'=> 'required',
+                'role_id'=> 'required',
                 
             ]);
 
             if ($validator->fails()) {
                 return redirect::back()->withErrors($validator)->withInput($request->all());
             }
-            AksesPenggunaModel::create([
-                'id' => $request->idaksespengguna,
-                'nama' => $request->nama,
+       
+            $user = User::create([
+                'uid'=>Str::uuid(),
+                'name' => $request->name,
+                'password' => Hash::make($request->password),
                 'email' => $request->email,
-                'password' => $request->password,
-                'role' => $request->role,
+                'role_id' => $request->role_id
             ]);
+    
+        
 
                 return redirect('/aksespengguna')->with('ss', 'Berhasil tambah');
      
@@ -52,7 +59,7 @@ class AksesPenggunaController extends Controller
 
     public function show(string $id)
     {
-        $data['edit'] = AksesPenggunaModel::where('id', $id)->first();
+        $data['edit'] = User::where('id', $id)->first();
         return view('admin.pages.user.edit',$data);
     }
 
@@ -66,22 +73,22 @@ class AksesPenggunaController extends Controller
      
             $validator = validator::make($request->all(), [
                
-                'nama'=> 'required',
+                'name'=> 'required',
                 'email'=> 'required',
                 'password'=> 'required',
-                'role'=> 'required',
+                'role_id'=> 'required',
                
             ]);
             if ($validator->fails()) {
                 return redirect::back()->withErrors($validator)->withInput($request->all());
             }
            
-            AksesPenggunaModel::where('id', $id)->update([
-                'id' => $request->idaksespengguna,
-                'nama' => $request->nama,
+            User::where('id', $id)->update([
+                'id' => $request->idusers,
+                'name' => $request->name,
                 'email' => $request->email,
                 'password' => $request->password,
-                'role' => $request->role,
+                'role_id' => $request->role_id,
               
             ]);
 
@@ -92,7 +99,7 @@ class AksesPenggunaController extends Controller
     public function destroy(string $id)
     {
     
-        AksesPenggunaModel::where('id', $id)->delete();
+        User::where('id', $id)->delete();
         return redirect('/aksespengguna')->with('success', 'Berhasil hapus data');
     }
 
