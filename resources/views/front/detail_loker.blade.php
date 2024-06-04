@@ -2,15 +2,14 @@
 
 @section('content')
 <style>
-     <style>
-        .card {
-            background-color:#FFB901;
-        }
-    </style>
+    <style>.card {
+        background-color: #FFB901;
+    }
+</style>
 </style>
 <!-- About Us -->
 <div class="section-full job-categories content-inner-2 bg-white"
-    style="background-image:url(../images/pattern/pic1.html);" >
+    style="background-image:url(../images/pattern/pic1.html);">
     <div class="container clearfix">
         <div class="row">
             <div class="col-lg-9">
@@ -142,13 +141,7 @@
                                             <path d="M11 9h2v5h-2zM9 2h6v2H9zm10.293 5.707-2-2 1.414-1.414 2 2z">
                                             </path>
                                         </svg>
-                                        @if($loker->jam == 0)
-                                        Parttime
-                                        @elseif($loker->jam == 1)
-                                        Fulltime
-                                        @else
-                                        Freelance
-                                        @endif
+                                        <p class="m-0 text-capitalize">{{$loker->jam}}</p>
                                     </div>
                                     <div class="pekerjaan ml-2" style="font-size: 12px">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
