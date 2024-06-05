@@ -140,7 +140,7 @@
                                 </div>
 
                                 <div class="col-lg-4">
-                                    <label for="form-control" style="color: black;">Tempat Peusahaan</label>
+                                    <label for="form-control" style="color: black;">Tempat Perusahaan</label>
                                     <input type="hidden" name="idinputdata" value="">
                                     <select name="tempatperusahaan"
                                         class="form-control @error('tempatperusahaan') is-invalid @enderror"

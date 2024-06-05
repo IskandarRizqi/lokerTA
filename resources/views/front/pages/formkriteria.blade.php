@@ -84,8 +84,9 @@
                 <input type="hidden" name="idkriteria" value="">
                 <select id="jk" name="jk" required>
                     <option value="" disabled selected>Pilih</option>
-                    <option value="laki-laki"> Laki-laki</option>
+                    <option value="laki-laki">Laki-laki</option>
                     <option value="perempuan">Perempuan</option>
+                    <option value="lp">Male & Female</option>
 
                 </select>
             </div>
@@ -94,13 +95,15 @@
                 <input type="hidden" name="idkriteria" value="">
                 <select id="bidang" name="bidang" required>
                     <option value="" disabled selected>Pilih</option> <!-- Placeholder -->
-                    <option value="Marketing"> Marketing</option>
-                    <option value="SD">SD</option>
-                    <option value="SMP">SMP</option>
-                    <option value="SMA/SMK">SMA/SMK</option>
-                    <option value="Diploma">Diploma</option>
-                    <option value="Sarjana">Sarjana</option>
-                    <option value="Pascasarjana">Pascasarjana</option>
+                    <option value="Administrasi ">Administrasi </option>
+                    <option value="Hukum ">Hukum </option>
+                    <option value="Akuntansi">Akuntansi</option>
+                    <option value="Kesehatan ">Kesehatan </option>
+                    <option value="operator produksi">operator produksi</option>
+                    <option value="QC">QC</option>
+                    <option value="Marketing">marketing</option>
+                    <option value="Developer">developer</option>
+                    <option value="Frontend">frontend</option>
                 </select>
             </div>
             <div class="form-group">
@@ -108,25 +111,37 @@
                 <input type="hidden" name="idkriteria" value="">
                 <select id="lokasi" name="lokasi" required>
                     <option value="" disabled selected>Pilih</option> <!-- Placeholder -->
-                    <option value="SD">SD</option>
-                    <option value="SMP">SMP</option>
-                    <option value="SMA/SMK">SMA/SMK</option>
-                    <option value="Diploma">Diploma</option>
-                    <option value="Sarjana">Sarjana</option>
-                    <option value="Pascasarjana">Pascasarjana</option>
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Semarang">semarang</option>
+                    <option value="Tanggerang">Tanggerang</option>
+                    <option value="Yogyakarta">Yogyakarta</option>
+                    <option value="Karawang">karawang</option>
+                    <option value="surabaya">surabaya</option>
+                    <option value="tanggerang">tanggerang</option>
+                    <option value="bandung">bandung</option>
+                    <option value="palembang">palembang</option>
+                    <option value="batam">batam</option>
+                    <option value="kalimantan">kalimantan</option>
+                    <option value="bekasi">bekasi</option>
+                    <option value="cikarang">cikarang</option>
+                    <option value="cirebon">cirebon</option>
+                    <option value="tegal">tegal</option>
+                    <option value="cilacap">cilacap</option>
+                    <option value="solo">solo</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="pendidikan">Lulusan Apa Yang Sedang Anda Cari?</label>
                 <input type="hidden" name="idkriteria" value="">
                 <select id="pendidikan" name="pendidikan" required>
-                    <option value="" disabled selected>Pilih</option> <!-- Placeholder -->
+                    <option value="">Pilih pendidikan</option>
                     <option value="SD">SD</option>
                     <option value="SMP">SMP</option>
-                    <option value="SMA/SMK">SMA/SMK</option>
-                    <option value="Diploma">D3</option>
-                    <option value="Diploma">D4/S1</option>
-                    <option value="Pascasarjana">Pascasarjana</option>
+                    <option value="SMK">SMA</option>
+                    <option value="D3">D3</option>
+                    <option value="D4">D4</option>
+                    <option value="S1">S1</option>
+                    <option value="Profesi">Profesi</option>
                 </select>
             </div>
             <div class="form-group">
@@ -134,8 +149,9 @@
                 <input type="hidden" name="idkriteria" value="">
                 <select id="jam" name="jam" required>
                     <option value="" disabled selected>Pilih</option> <!-- Placeholder -->
-                    <option value="Fulltime">Fulltime</option>
-                    <option value="Parttime">Parttime</option>
+                    <option value="Parttime">parttime </option>
+                    <option value="Fulltime">fulltime </option>
+                    <option value="Frelance">frelance</option>
 
                 </select>
             </div>
