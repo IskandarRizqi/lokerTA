@@ -40,13 +40,13 @@ Route::get('/dashboard', function () {
 
 // untuk admin
 Route::middleware(['auth', 'admin'])->group(function () {
-  
 });
 
 
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/caripekerjaan', [App\Http\Controllers\HomeController::class, 'caripekerjaan']);
 });
 
 
@@ -87,6 +87,6 @@ Route::get('/privasi', function () {
 Route::get('/support', function () {
     return view('front.support');
 });
-  Route::get('/about-us', function () {
-        return view('front.about');
-    });
+Route::get('/about-us', function () {
+    return view('front.about');
+});

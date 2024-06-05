@@ -33,12 +33,13 @@
             <div class="row mb-5">
                 <div class="dez-bnr-inr-entry align-m ">
                     <div class="find-job-bx">
-                        <form class="dezPlaceAni">
+                        <form action="/caripekerjaan" class="dezPlaceAni">
+                            @csrf
                             <div class="row">
                                 <h5 class="m-b5 text-center">Cari Pekerjaan Anda Disini</h5>
                                 <div class="col-lg-3 col-md-6">
                                     <div class="form-group">
-                                        <select>
+                                        <select id="job_title" name="job_title">
                                             <option value="">Pilih Kategori</option>
                                             <option value="Administrasi ">Administrasi </option>
                                             <option value="Hukum ">Hukum </option>
@@ -54,7 +55,7 @@
                                 </div>
                                 <div class="col-lg-3 col-md-6">
                                     <div class="form-group">
-                                        <select>
+                                        <select id="lokasi" name="lokasi">
                                             <option value="">Lokasi </option>
                                             <option value="Jakarta">Jakarta</option>
                                             <option value="Semarang">semarang</option>
@@ -78,8 +79,8 @@
                                 </div>
                                 <div class="col-lg-3 col-md-6">
                                     <div class="form-group">
-                                        <select>
-                                            <option >Semua Lulusan</option>
+                                        <select id="lulusan" name="lulusan">
+                                            <option value="">Semua Lulusan</option>
                                             <option value="SD">SD</option>
                                             <option value="SMP">SMP</option>
                                             <option value="SMK">SMA</option>
@@ -125,7 +126,8 @@
                                 <a href="/detail-loker/{{$v->id}}" style="border-radius: 10px">
                                     <div class="d-flex">
                                         <div class="job-post-company">
-                                            <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}"  style="width: 100px; height: 100px;"/ ></span>
+                                            <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}"
+                                                    style="width: 100px; height: 100px;" /></span>
                                             <h6>{{$v->tempatperusahaan}}</h6>
                                             <h6>{{$v->kategori}}</h6>
                                         </div>
@@ -138,19 +140,22 @@
                                     <div class="d-flex">
                                         <div class="job-post-info">
                                             <ul>
-                                                <li style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 100%;">
-                                                <i style="color:black"><i style="width: 15px;"
-                                                        class="fa fa-map-marker text-center"></i>{{$v->tempatperusahaan}}
-                                                </i>
+                                                <li
+                                                    style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 100%;">
+                                                    <i style="color:black"><i style="width: 15px;"
+                                                            class="fa fa-map-marker text-center"></i>{{$v->tempatperusahaan}}
+                                                    </i>
                                                 </li>
                                                 <br>
-                                                <li style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 100%;">
-                                                <i style="color:black"><i style="width: 15px;"
-                                                        class="fa fa-graduation-cap text-center"></i>
-                                                    {{$v->pendidikan}}
-                                                </i>
+                                                <li
+                                                    style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 100%;">
+                                                    <i style="color:black"><i style="width: 15px;"
+                                                            class="fa fa-graduation-cap text-center"></i>
+                                                        {{$v->pendidikan}}
+                                                    </i>
                                                 </li>
-                                                <li style="color:black"><i style="width: 15px;" class="fa fa-clock-o text-center"></i>
+                                                <li style="color:black"><i style="width: 15px;"
+                                                        class="fa fa-clock-o text-center"></i>
                                                     Published {{$v->created_at->diffForHumans()}}</li>
                                             </ul>
                                         </div>
@@ -160,13 +165,13 @@
                                         style="background-color: #FFB901; font-size:15px; border: none; color: white; float: right; margin-top: -15px; border-radius: 5px;" />
                                 </a>
                                 </li>
-                                
+
                             </div>
                             @endforeach
                         </div>
-                        
+
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -208,8 +213,10 @@
                                         <input type="checkbox" class="custom-control-input" id="check7" name="example1">
                                         <label class="custom-control-label" for="check7">developer</label>
                                     </div>
-                                    <div style="margin-top: 10px;"> <!-- Tambahkan margin untuk jarak di atasnya -->
-                                        <a href="halaman_lainnya.html">Lainnya</a> <!-- Ganti halaman_lainnya.html dengan URL halaman tujuan -->
+                                    <div style="margin-top: 10px;">
+                                        <!-- Tambahkan margin untuk jarak di atasnya -->
+                                        <a href="halaman_lainnya.html">Lainnya</a>
+                                        <!-- Ganti halaman_lainnya.html dengan URL halaman tujuan -->
                                     </div>
                                 </div>
                             </div>
@@ -243,12 +250,13 @@
                                         <label class="custom-control-label" for="check14">Yogyakarta</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check0"
-                                            name="example1">
+                                        <input type="checkbox" class="custom-control-input" id="check0" name="example1">
                                         <label class="custom-control-label" for="check0">tegal</label>
                                     </div>
-                                    <div style="margin-top: 10px;"> <!-- Tambahkan margin untuk jarak di atasnya -->
-                                        <a href="halaman_lainnya.html">Lainnya</a> <!-- Ganti halaman_lainnya.html dengan URL halaman tujuan -->
+                                    <div style="margin-top: 10px;">
+                                        <!-- Tambahkan margin untuk jarak di atasnya -->
+                                        <a href="halaman_lainnya.html">Lainnya</a>
+                                        <!-- Ganti halaman_lainnya.html dengan URL halaman tujuan -->
                                     </div>
                                 </div>
                             </div>
@@ -298,7 +306,7 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <div class="product-brand">
-                                  
+
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="stat2" name="example1">
                                         <label class="custom-control-label" for="stat2">fulltime</label>
@@ -311,10 +319,12 @@
                                         <input type="checkbox" class="custom-control-input" id="stat4" name="example1">
                                         <label class="custom-control-label" for="stat4">frelance</label>
                                     </div>
-                                    <div style="margin-top: 10px;"> <!-- Tambahkan margin untuk jarak di atasnya -->
-                                        <a href="halaman_lainnya.html">Lainnya</a> <!-- Ganti halaman_lainnya.html dengan URL halaman tujuan -->
+                                    <div style="margin-top: 10px;">
+                                        <!-- Tambahkan margin untuk jarak di atasnya -->
+                                        <a href="halaman_lainnya.html">Lainnya</a>
+                                        <!-- Ganti halaman_lainnya.html dengan URL halaman tujuan -->
                                     </div>
-                                   
+
                                 </div>
                             </div>
 
@@ -349,15 +359,18 @@
                                     <div class="d-flex">
                                         <div class="job-post-info">
                                             <ul>
-                                                <li style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 130%;">
-                                                <i style="color:black"><i style="width: 15px;" class="fa fa-map-marker text-center"></i>
-                                                    {{$v->tempatperusahaan}}</i>
+                                                <li
+                                                    style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 130%;">
+                                                    <i style="color:black"><i style="width: 15px;"
+                                                            class="fa fa-map-marker text-center"></i>
+                                                        {{$v->tempatperusahaan}}</i>
                                                 </li>
                                                 <br>
-                                                <li style="color: black; border-bottom: 1px solid black; padding-bottom: 4px;  width: 130%;">
-                                                <i style="color:black"><i style="width: 15px;"
-                                                        class="fa fa-graduation-cap text-center"></i>{{$v->pendidikan}}
-                                                </i>
+                                                <li
+                                                    style="color: black; border-bottom: 1px solid black; padding-bottom: 4px;  width: 130%;">
+                                                    <i style="color:black"><i style="width: 15px;"
+                                                            class="fa fa-graduation-cap text-center"></i>{{$v->pendidikan}}
+                                                    </i>
                                                 </li>
                                                 <br>
                                                 <li style="color:black">
