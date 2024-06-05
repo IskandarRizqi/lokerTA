@@ -8,22 +8,29 @@
 
         <div class="row align-items-center col-mb-50">
             <div class="col-md-4 center">
-                <img data-animate="fadeInLeft" src="{{asset('front/images/gallery/about.png')}}" alt="Iphone">
+                <img data-animate="fadeInLeft" src="{{asset('front/images/gallery/bb.png')}}" alt="Iphone" style="height: 500px; width: 400px;">
             </div>
 
             <div class="col-md-8 text-center text-md-left">
                 <div class="heading-block border-bottom-0">
                     <h3>About US</h3>
                 </div>
-                <p>Di Asia, SEEK mengoperasikan Jobstreet dan Jobsdb di Indonesia, Hong Kong, Malaysia, Filipina,
-                    Singapura, dan Thailand. SEEK mendapatkan lebih dari 500 juta kunjungan setiap tahunnya. SEEK juga
-                    memiliki investasi minoritas di Korea (JobKorea), Bangladesh (BDJobs), dan Tiongkok (Zhaopin) di
-                    wilayah tersebut.</p>
+                <p>Tentang Kami <br> <br>
+
+                    Selamat datang di [Insert Website Name], portal lowongan kerja terkemuka di Indonesia. Kami berkomitmen untuk membantu Anda menemukan pekerjaan yang sesuai dengan keahlian dan minat Anda.
+                    <br> <br>
+                    Misi Kami
+                    <br> <br>
+                    Misi kami adalah untuk menjadi platform yang terpercaya dan efektif dalam membantu orang-orang menemukan pekerjaan yang sesuai dengan keahlian dan minat mereka. Kami berusaha untuk memberikan pengalaman yang lebih baik bagi para pencari kerja dan perusahaan yang ingin merekrut talenta terbaik.
+                    <br> <br>
+                    Visi Kami
+                    <br> <br>
+                    Visi kami adalah untuk menjadi portal lowongan kerja terkemuka di Indonesia, yang membantu meningkatkan kesempatan kerja dan meningkatkan kualitas hidup masyarakat.</p>
                 <div class="kontakkami row">
                     <address class="col-lg-6">
-                        <strong>Headquarters:</strong><br>
-                        795 Folsom Ave, Suite 600<br>
-                        San Francisco, CA 94107<br>
+                        <strong>Alamat Kami:</strong><br>
+                        jawa tengah<br>
+                        tegal<br>
                     </address>
                     <div class="hubungikami col-lg-6">
                         <abbr title="Phone Number"><strong>Phone:</strong></abbr> (62) 85772637432 <br>

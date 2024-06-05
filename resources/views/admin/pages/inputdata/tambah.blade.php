@@ -11,7 +11,7 @@
             <div class="page-header">
                 <div class="page-title">
                     <a href="{{route('inputdata.index')}}" class="btn btn-primary btn-sm">Kembali</a>
-                    <button class="btn btn-success btn-sm" type="submit">Simpan</button>
+                    <button class="btn  btn-sm" type="submit" style="background-color: #FFB901; color:white">Simpan</button>
                 </div>
             </div>
 
@@ -48,6 +48,7 @@
                                         <option value="">Pilih </option>
                                         <option value="laki-laki">Laki-laki</option>
                                         <option value="perempuan">Perempuan</option>
+                                        <option value="lp">Male & Female</option>
 
                                     </select>
                                     @error('kategori')
@@ -106,9 +107,10 @@
                                         <option value="">Pilih pendidikan</option>
                                         <option value="SD">SD</option>
                                         <option value="SMP">SMP</option>
-                                        <option value="SMK">SMK</option>
+                                        <option value="SMK">SMA</option>
                                         <option value="D3">D3</option>
-                                        <option value="D4">D4/S1</option>
+                                        <option value="D4">D4</option>
+                                        <option value="S1">S1</option>
                                         <option value="Profesi">Profesi</option>
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>

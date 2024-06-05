@@ -9,7 +9,7 @@
         <div class="page-header">
             <div class="page-title">
 
-                <a href="/aksespengguna/create" class="btn btn-primary btn-sm">Tambah</a>
+                <a href="/aksespengguna/create" class="btn  btn-sm" style="background-color: #FFB901; color:white ">Tambah</a>
 
             </div>
         </div>

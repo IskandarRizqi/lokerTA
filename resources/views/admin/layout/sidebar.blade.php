@@ -3,7 +3,8 @@
 
     <div id="dismiss" class="d-lg-none"><i class="flaticon-cancel-12"></i></div>
 
-    <nav id="sidebar">
+    <nav id="sidebar" style="background-color: #FFB901;">
+
     
             <ul class="list-unstyled menu-categories" id="accordionExample">
     

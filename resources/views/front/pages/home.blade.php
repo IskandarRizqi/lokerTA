@@ -36,34 +36,57 @@
                         <form class="dezPlaceAni">
                             <div class="row">
                                 <h5 class="m-b5 text-center">Cari Pekerjaan Anda Disini</h5>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control"
-                                                placeholder="Job Title, Keywords, or Phrase">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text"><i class="fa fa-search"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="col-lg-3 col-md-6">
                                     <div class="form-group">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Lokasi">
-                                            <div class="input-group-append">
-                                                <span class="input-group-text"><i class="fa fa-map-marker"></i></span>
-                                            </div>
-                                        </div>
+                                        <select>
+                                            <option value="">Pilih Kategori</option>
+                                            <option value="Administrasi ">Administrasi </option>
+                                            <option value="Hukum ">Hukum </option>
+                                            <option value="Akuntansi">Akuntansi</option>
+                                            <option value="Kesehatan ">Kesehatan </option>
+                                            <option value="operator produksi">operator produksi</option>
+                                            <option value="QC">QC</option>
+                                            <option value="Marketing">marketing</option>
+                                            <option value="Developer">developer</option>
+                                            <option value="Frontend">frontend</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-md-6">
                                     <div class="form-group">
                                         <select>
-                                            <option>Semua Lulusan</option>
-                                            <option>SMA</option>
-                                            <option>S1</option>
-                                            <option>D3</option>
+                                            <option value="">Lokasi </option>
+                                            <option value="Jakarta">Jakarta</option>
+                                            <option value="Semarang">semarang</option>
+                                            <option value="Tanggerang">Tanggerang</option>
+                                            <option value="Yogyakarta">Yogyakarta</option>
+                                            <option value="Karawang">karawang</option>
+                                            <option value="surabaya">surabaya</option>
+                                            <option value="tanggerang">tanggerang</option>
+                                            <option value="bandung">bandung</option>
+                                            <option value="palembang">palembang</option>
+                                            <option value="batam">batam</option>
+                                            <option value="kalimantan">kalimantan</option>
+                                            <option value="bekasi">bekasi</option>
+                                            <option value="cikarang">cikarang</option>
+                                            <option value="cirebon">cirebon</option>
+                                            <option value="tegal">tegal</option>
+                                            <option value="cilacap">cilacap</option>
+                                            <option value="solo">solo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-group">
+                                        <select>
+                                            <option >Semua Lulusan</option>
+                                            <option value="SD">SD</option>
+                                            <option value="SMP">SMP</option>
+                                            <option value="SMK">SMA</option>
+                                            <option value="D3">D3</option>
+                                            <option value="D4">D4</option>
+                                            <option value="S1">S1</option>
+                                            <option value="S1">PROFESI</option>
                                         </select>
                                     </div>
                                 </div>
@@ -115,20 +138,26 @@
                                     <div class="d-flex">
                                         <div class="job-post-info">
                                             <ul>
-                                                <li><i style="width: 15px;"
+                                                <li style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 100%;">
+                                                <i style="color:black"><i style="width: 15px;"
                                                         class="fa fa-map-marker text-center"></i>{{$v->tempatperusahaan}}
+                                                </i>
                                                 </li>
-                                                <li><i style="width: 15px;"
+                                                <br>
+                                                <li style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 100%;">
+                                                <i style="color:black"><i style="width: 15px;"
                                                         class="fa fa-graduation-cap text-center"></i>
                                                     {{$v->pendidikan}}
+                                                </i>
                                                 </li>
-                                                <li><i style="width: 15px;" class="fa fa-clock-o text-center"></i>
+                                                <li style="color:black"><i style="width: 15px;" class="fa fa-clock-o text-center"></i>
                                                     Published {{$v->created_at->diffForHumans()}}</li>
                                             </ul>
                                         </div>
                                     </div>
-                                
-
+                                    <br>
+                                    <input type="button" value="Detail"
+                                        style="background-color: #FFB901; font-size:15px; border: none; color: white; float: right; margin-top: -15px; border-radius: 5px;" />
                                 </a>
                                 </li>
                                 
@@ -160,24 +189,27 @@
                                 <div class="product-brand">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="check8" name="example1">
-                                        <label class="custom-control-label" for="check8">Developer</label>
+                                        <label class="custom-control-label" for="check8">Administrasi</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="check9" name="example1">
-                                        <label class="custom-control-label" for="check9">Marketing</label>
+                                        <label class="custom-control-label" for="check9">Hukum</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="check10"
                                             name="example1">
-                                        <label class="custom-control-label" for="check10">Manajer</label>
+                                        <label class="custom-control-label" for="check10">Akuntansi</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="check6" name="example1">
-                                        <label class="custom-control-label" for="check6">Arsitek</label>
+                                        <label class="custom-control-label" for="check6">Kesehatan</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="check7" name="example1">
-                                        <label class="custom-control-label" for="check7">Lainnya</label>
+                                        <label class="custom-control-label" for="check7">developer</label>
+                                    </div>
+                                    <div style="margin-top: 10px;"> <!-- Tambahkan margin untuk jarak di atasnya -->
+                                        <a href="halaman_lainnya.html">Lainnya</a> <!-- Ganti halaman_lainnya.html dengan URL halaman tujuan -->
                                     </div>
                                 </div>
                             </div>
@@ -193,27 +225,30 @@
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="check11"
                                             name="example1">
-                                        <label class="custom-control-label" for="check11">Jakarta Pusat</label>
+                                        <label class="custom-control-label" for="check11">Jakarta</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="check12"
                                             name="example1">
-                                        <label class="custom-control-label" for="check12">Semarang</label>
+                                        <label class="custom-control-label" for="check12">semarang</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="check13"
                                             name="example1">
-                                        <label class="custom-control-label" for="check13">Yogyakarta</label>
+                                        <label class="custom-control-label" for="check13">Tanggerang</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="check14"
                                             name="example1">
-                                        <label class="custom-control-label" for="check14">Tanggerang</label>
+                                        <label class="custom-control-label" for="check14">Yogyakarta</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check15"
+                                        <input type="checkbox" class="custom-control-input" id="check0"
                                             name="example1">
-                                        <label class="custom-control-label" for="check15">Lainnya</label>
+                                        <label class="custom-control-label" for="check0">tegal</label>
+                                    </div>
+                                    <div style="margin-top: 10px;"> <!-- Tambahkan margin untuk jarak di atasnya -->
+                                        <a href="halaman_lainnya.html">Lainnya</a> <!-- Ganti halaman_lainnya.html dengan URL halaman tujuan -->
                                     </div>
                                 </div>
                             </div>
@@ -243,7 +278,11 @@
                                     </div>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="pen5" name="example1">
-                                        <label class="custom-control-label" for="pen5">D4/S1</label>
+                                        <label class="custom-control-label" for="pen5">D4</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="pen0" name="example1">
+                                        <label class="custom-control-label" for="pen0">S1</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="pen6" name="example1">
@@ -259,26 +298,23 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                                 <div class="product-brand">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="stat1" name="example1">
-                                        <label class="custom-control-label" for="stat1">Freelance</label>
-                                    </div>
+                                  
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="stat2" name="example1">
-                                        <label class="custom-control-label" for="stat2">Full Time</label>
+                                        <label class="custom-control-label" for="stat2">fulltime</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="stat3" name="example1">
-                                        <label class="custom-control-label" for="stat3">Magang</label>
+                                        <label class="custom-control-label" for="stat3">parttime</label>
                                     </div>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="stat4" name="example1">
-                                        <label class="custom-control-label" for="stat4">Part Time</label>
+                                        <label class="custom-control-label" for="stat4">frelance</label>
                                     </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="stat5" name="example1">
-                                        <label class="custom-control-label" for="stat5">Lainnya</label>
+                                    <div style="margin-top: 10px;"> <!-- Tambahkan margin untuk jarak di atasnya -->
+                                        <a href="halaman_lainnya.html">Lainnya</a> <!-- Ganti halaman_lainnya.html dengan URL halaman tujuan -->
                                     </div>
+                                   
                                 </div>
                             </div>
 
@@ -313,14 +349,18 @@
                                     <div class="d-flex">
                                         <div class="job-post-info">
                                             <ul>
-                                                <li><i style="width: 15px;" class="fa fa-map-marker text-center"></i>
-                                                    {{$v->tempatperusahaan}}</li>
-                                                <br>
-                                                <li><i style="width: 15px;"
-                                                        class="fa fa-graduation-cap text-center"></i>{{$v->pendidikan}}
+                                                <li style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 130%;">
+                                                <i style="color:black"><i style="width: 15px;" class="fa fa-map-marker text-center"></i>
+                                                    {{$v->tempatperusahaan}}</i>
                                                 </li>
                                                 <br>
-                                                <li>
+                                                <li style="color: black; border-bottom: 1px solid black; padding-bottom: 4px;  width: 130%;">
+                                                <i style="color:black"><i style="width: 15px;"
+                                                        class="fa fa-graduation-cap text-center"></i>{{$v->pendidikan}}
+                                                </i>
+                                                </li>
+                                                <br>
+                                                <li style="color:black">
                                                     <i style="width: 15px;" class="fa fa-clock-o text-center"></i>
                                                     <span
                                                         style="margin-right: 5px;">Published</span>&nbsp;{{\Carbon\Carbon::parse($v->created_at)->format('d-m-Y')}}
