@@ -5,6 +5,29 @@
     .owl-nav.disabled {
         visibility: hidden;
     }
+    .additional-content {
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: top; /* Atur posisi vertikal ke atas */
+        max-height: 200px; /* Atur tinggi maksimum */
+        overflow-y: auto; /* Aktifkan scrollbar jika konten lebih panjang dari container */
+        margin-left: 10px; /* Atur jarak dari teks "Lainnya" */
+    }
+
+    /* Styling untuk teks "Lainnya" */
+    #showContent1 {
+        cursor: pointer;
+        color: blue; /* Warna teks biru */
+    }
+    #showContent {
+        cursor: pointer;
+        color: blue; /* Warna teks biru */
+    }
+
+    /* Styling untuk tautan */
+    a {
+        text-decoration: none; /* Hilangkan garis bawah tautan */
+    }
 </style>
 <div class="page-content">
     <!-- ======= Hero Section ======= -->
@@ -213,10 +236,32 @@
                                         <input type="checkbox" class="custom-control-input" id="check7" name="example1">
                                         <label class="custom-control-label" for="check7">developer</label>
                                     </div>
-                                    <div style="margin-top: 10px;">
-                                        <!-- Tambahkan margin untuk jarak di atasnya -->
-                                        <a href="halaman_lainnya.html">Lainnya</a>
-                                        <!-- Ganti halaman_lainnya.html dengan URL halaman tujuan -->
+
+                                    <div class="mt-2">
+                                    <span id="showContent1">Lainnya</span> <!-- ID showContent untuk mengontrol visibilitas konten tambahan -->
+                                            <div id="additionalContent1" class="additional-content" style="display: none;"> <!-- Area untuk konten tambahan -->
+                                                <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="21" name="example1">
+                                                <label class="custom-control-label" for="21">operator produksi</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="22" name="example1">
+                                                <label class="custom-control-label" for="22">marketing</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="23"
+                                                    name="example1">
+                                                <label class="custom-control-label" for="23">frontend</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="24" name="example1">
+                                                <label class="custom-control-label" for="24">tekniksipil</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="25" name="example1">
+                                                <label class="custom-control-label" for="25">teknikmesin</label>
+                                            </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -251,12 +296,69 @@
                                     </div>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="check0" name="example1">
-                                        <label class="custom-control-label" for="check0">tegal</label>
+                                        <label class="custom-control-label" for="check0">karawang</label>
                                     </div>
-                                    <div style="margin-top: 10px;">
-                                        <!-- Tambahkan margin untuk jarak di atasnya -->
-                                        <a href="halaman_lainnya.html">Lainnya</a>
-                                        <!-- Ganti halaman_lainnya.html dengan URL halaman tujuan -->
+                                    <div class="mt-2">
+                                        <span id="showContent">Lainnya</span> <!-- ID showContent untuk mengontrol visibilitas konten tambahan -->
+                                        <div id="additionalContent" class="additional-content" style="display: none;"> <!-- Area untuk konten tambahan -->
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="00"
+                                                    name="example1">
+                                                <label class="custom-control-label" for="00">surabaya</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="01"
+                                                    name="example1">
+                                                <label class="custom-control-label" for="01">tanggerang</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="03"
+                                                    name="example1">
+                                                <label class="custom-control-label" for="03">bandung</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="04"
+                                                    name="example1">
+                                                <label class="custom-control-label" for="04">palembang</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="05" name="example1">
+                                                <label class="custom-control-label" for="05">batam</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="06"
+                                                    name="example1">
+                                                <label class="custom-control-label" for="06">kalimantan</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="07"
+                                                    name="example1">
+                                                <label class="custom-control-label" for="07">cikarang</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="08"
+                                                    name="example1">
+                                                <label class="custom-control-label" for="08">bekasi</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="09"
+                                                    name="example1">
+                                                <label class="custom-control-label" for="09">cikarang</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="11" name="example1">
+                                                <label class="custom-control-label" for="11">cirebon</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="12"
+                                                    name="example1">
+                                                <label class="custom-control-label" for="12">cilacap</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="13" name="example1">
+                                                <label class="custom-control-label" for="33">solo</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -319,11 +421,7 @@
                                         <input type="checkbox" class="custom-control-input" id="stat4" name="example1">
                                         <label class="custom-control-label" for="stat4">frelance</label>
                                     </div>
-                                    <div style="margin-top: 10px;">
-                                        <!-- Tambahkan margin untuk jarak di atasnya -->
-                                        <a href="halaman_lainnya.html">Lainnya</a>
-                                        <!-- Ganti halaman_lainnya.html dengan URL halaman tujuan -->
-                                    </div>
+                                    
 
                                 </div>
                             </div>
@@ -639,6 +737,29 @@
         }
     }
 })
+    });
+</script>
+
+<script>
+    // Fungsi untuk menampilkan atau menyembunyikan konten tambahan
+    document.getElementById('showContent').addEventListener('click', function() {
+        var additionalContent = document.getElementById('additionalContent');
+        if (additionalContent.style.display === 'none') {
+            additionalContent.style.display = 'inline-block'; // Tampilkan konten tambahan
+        } else {
+            additionalContent.style.display = 'none'; // Sembunyikan konten tambahan
+        }
+    });
+</script>
+<script>
+    // Fungsi untuk menampilkan atau menyembunyikan konten tambahan
+    document.getElementById('showContent1').addEventListener('click', function() {
+        var additionalContent1 = document.getElementById('additionalContent1');
+        if (additionalContent1.style.display === 'none') {
+            additionalContent1.style.display = 'inline-block'; // Tampilkan konten tambahan
+        } else {
+            additionalContent1.style.display = 'none'; // Sembunyikan konten tambahan
+        }
     });
 </script>
 @endsection

@@ -52,16 +52,26 @@ class HomeController extends Controller
         $x = [];
         $x['data'] = InputdataModel::select()
             ->where(function ($q) use ($request) {
-                if ($request->job_title) {
-                    // $q->where('kategori', 'like', '%' . $request->job_title . '%');
-                    $q->whereRaw('LOWER(`kategori`) LIKE ? ', ['%' . trim(strtolower($request->job_title)) . '%']);
+                // if ($request->job_title) {
+                //     // $q->where('kategori', 'like', '%' . $request->job_title . '%');
+                //     $q->whereRaw('LOWER(`kategori`) LIKE ? ', ['%' . trim(strtolower($request->job_title)) . '%']);
+                // }
+                // if ($request->lokasi) {
+                //     // $q->where('tempatperusahaan', 'like', '%' . $request->lokasi . '%');
+                //     $q->whereRaw('LOWER(`tempatperusahaan`) LIKE ? ', ['%' . trim(strtolower($request->lokasi)) . '%']);
+                // }
+                // if ($request->lulusan) {
+                //     $q->where('pendidikan', 'like', '%' . $request->lulusan . '%');
+                // }
+                   if ($request->job_title) {
+                    $q->where("kategori","ilike", '%' . $request->job_title . '%' );
                 }
                 if ($request->lokasi) {
-                    // $q->where('tempatperusahaan', 'like', '%' . $request->lokasi . '%');
-                    $q->whereRaw('LOWER(`tempatperusahaan`) LIKE ? ', ['%' . trim(strtolower($request->lokasi)) . '%']);
+                  
+                    $q->where("tempatperusahaan","ilike", '%' . $request->Lokasi . '%');
                 }
                 if ($request->lulusan) {
-                    $q->where('pendidikan', 'like', '%' . $request->lulusan . '%');
+                    $q->where('pendidikan', 'ilike', '%' . $request->lulusan . '%');
                 }
             })
             ->paginate(8);

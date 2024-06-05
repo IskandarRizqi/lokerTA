@@ -99,11 +99,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{$loker->deskripsi}}
+                                    <div style="text-align: justify;">{{$loker->deskripsi}}</div>
+                                    
                                 </div>
-                                <div class="col-md-4 center">
+                                <div class="col-md-4 right">
                                     <img data-animate="fadeInLeft" src="/gambar?rf={{$loker->gambar}}"
-                                        alt="Gambar loker" style="border-radius: 10px">
+                                        alt="Gambar loker" style="border-radius: 10px; width:150px; height:100px;">
                                 </div>
                             </div>
                         </div>

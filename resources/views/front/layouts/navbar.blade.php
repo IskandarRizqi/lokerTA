@@ -61,7 +61,7 @@
 
             <li>
 
-              <a href="#" class="dez-page">CV ATS</a>
+              <a href="/templatecv" class="dez-page">CV ATS</a>
 
             </li>
             <li>

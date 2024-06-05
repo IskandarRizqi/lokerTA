@@ -90,3 +90,6 @@ Route::get('/support', function () {
 Route::get('/about-us', function () {
     return view('front.about');
 });
+Route::get('/templatecv', function () {
+    return view('front.templatecv');
+});
