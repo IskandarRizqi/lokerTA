@@ -47,6 +47,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/caripekerjaan', [App\Http\Controllers\HomeController::class, 'caripekerjaan']);
+    Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'profile']);
 });
 
 

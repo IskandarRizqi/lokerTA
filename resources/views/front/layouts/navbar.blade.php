@@ -28,7 +28,7 @@
                 @csrf
               </form>
             </a>
-            <a href="/register" class="btn btn-warning text-white"><i class="fa fa-user"></i> Profile</a>
+            <a href="/profile" class="btn btn-warning text-white"><i class="fa fa-user"></i> Profile</a>
             @else
             <a href="/register" class="site-button"><i class="fa fa-user"></i> Sign Up</a>
             <a href="/login" class="site-button"><i class="fa fa-lock"></i> login</a>

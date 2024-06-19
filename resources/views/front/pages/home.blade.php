@@ -565,7 +565,7 @@
                             {{-- <a class="site-button button-sm mr-auto" href="#"><i class="ti-arrow-left"></i>
                                 Prev</a>
                             --}}
-                            <a class="site-button button-sm mr-auto" href="/selengkapnya"
+                            <a class="site-button button-sm mr-auto" href="/caripekerjaan#kontenpekerjaan"
                                 style="font-size: 13px;">Selengkapnya<i></i> </a>
                             {{-- <a class="site-button button-sm mr-auto" href="/selengkapnya"> <i>Selengkapnya</i></a>
                             --}}

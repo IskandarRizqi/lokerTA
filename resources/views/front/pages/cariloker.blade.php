@@ -126,7 +126,7 @@
 
 </div>
 
-<div class="section-full bg-white content-inner-2">
+<div class="section-full bg-white content-inner-2" id="kontenpekerjaan">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 section-head text-center">
