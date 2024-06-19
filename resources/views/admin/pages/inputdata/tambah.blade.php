@@ -105,13 +105,11 @@
                                         class="form-control @error('pendidikan') is-invalid @enderror" placeholder=""
                                         value="{{old('pendidikan')}}">
                                         <option value="">Pilih pendidikan</option>
-                                        <option value="SD">SD</option>
-                                        <option value="SMP">SMP</option>
                                         <option value="SMK">SMA</option>
                                         <option value="D3">D3</option>
                                         <option value="D4">D4</option>
                                         <option value="S1">S1</option>
-                                        <option value="Profesi">Profesi</option>
+                                      
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>
                                     @error('pendidikan')

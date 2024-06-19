@@ -118,13 +118,11 @@
                                     <div class="form-group">
                                         <select id="lulusan" name="lulusan">
                                             <option value="">Semua Lulusan</option>
-                                            <option value="SD">SD</option>
-                                            <option value="SMP">SMP</option>
                                             <option value="SMK">SMA</option>
                                             <option value="D3">D3</option>
                                             <option value="D4">D4</option>
                                             <option value="S1">S1</option>
-                                            <option value="S1">PROFESI</option>
+
                                         </select>
                                     </div>
                                 </div>
@@ -201,11 +199,11 @@
                                     <input type="button" value="Detail"
                                         style="background-color: #FFB901; font-size:15px; border: none; color: white; float: right; margin-top: -15px; border-radius: 5px;" />
                                 </a>
-                                </li>
-
                             </div>
                             @endforeach
                         </div>
+
+
 
                 </div>
 
@@ -495,74 +493,96 @@
                             style="background-color: #FFB901; font-size:15px; border: none; color: white;  margin-top: -15px; border-radius: 5px;">Submit</button>
                     </div>
                 </div>
-        </form>
-        <div class="col-lg-9">
-            <ul class="post-job-bxx">
-                <div class="row">
-                    @foreach($inputdata as $key => $v)
-                    <div class="col-lg-4 mb-4">
+            </div>
+            <div class="col-lg-9">
+                @if($inputdata->count() > 0)
+                <ul class="post-job-bxx">
+                    <div class="row">
 
-                        <li>
-                            <a href="/detail-loker/{{$v->id}}" style="border-radius: 10px">
-                                <div class="d-flex">
-                                    <div class="job-post-company">
-                                        <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}" alt="Image"
-                                                style="width: 100px; height: 100px;"></span>
-                                        <h6>{{$v->namaperusahaan}}</h6>
-                                        <h6>{{$v->kategori}}</h6>
+                        @foreach($inputdata->slice(0,15) as $key => $v)
+                        <div class="col-lg-4 mb-4">
+
+                            <li>
+                                <a href="/detail-loker/{{$v->id}}" style="border-radius: 10px">
+                                    <div class="d-flex">
+                                        <div class="job-post-company">
+                                            <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}" alt="Image"
+                                                    style="width: 100px; height: 100px;"></span>
+                                            <h6>{{$v->namaperusahaan}}</h6>
+                                            <h6>{{$v->kategori}}</h6>
+                                        </div>
+
+                            <li>
+                                <a href="/detail-loker/{{$v->id}}" style="border-radius: 10px">
+                                    <div class="d-flex">
+                                        <div class="job-post-company">
+                                            <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}" alt="Image"
+                                                    style="width: 100px; height: 100px;"></span>
+                                            <h6>{{$v->namaperusahaan}}</h6>
+                                            <h6>{{$v->kategori}}</h6>
+                                        </div>
+
                                     </div>
-
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <div class="job-time mr-auto">
-                                        <span>{{$v->jam}}</span>
+                                    <div class="d-flex mb-2">
+                                        <div class="job-time mr-auto">
+                                            <span>{{$v->jam}}</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="job-post-info">
-                                        <ul>
-                                            <li
-                                                style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 130%;">
-                                                <i style="color:black"><i style="width: 15px;"
-                                                        class="fa fa-map-marker text-center"></i>
-                                                    {{$v->tempatperusahaan}}</i>
-                                            </li>
-                                            <br>
-                                            <li
-                                                style="color: black; border-bottom: 1px solid black; padding-bottom: 4px;  width: 130%;">
-                                                <i style="color:black"><i style="width: 15px;"
-                                                        class="fa fa-graduation-cap text-center"></i>{{$v->pendidikan}}
-                                                </i>
-                                            </li>
-                                            <br>
-                                            <li style="color:black">
-                                                <i style="width: 15px;" class="fa fa-clock-o text-center"></i>
-                                                <span
-                                                    style="margin-right: 5px;">Published</span>&nbsp;{{\Carbon\Carbon::parse($v->created_at)->format('d-m-Y')}}
-                                            </li>
+                                    <div class="d-flex">
+                                        <div class="job-post-info">
+                                            <ul>
+                                                <li
+                                                    style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 130%;">
+                                                    <i style="color:black"><i style="width: 15px;"
+                                                            class="fa fa-map-marker text-center"></i>
+                                                        {{$v->tempatperusahaan}}</i>
+                                                </li>
+                                                <br>
+                                                <li
+                                                    style="color: black; border-bottom: 1px solid black; padding-bottom: 4px;  width: 130%;">
+                                                    <i style="color:black"><i style="width: 15px;"
+                                                            class="fa fa-graduation-cap text-center"></i>{{$v->pendidikan}}
+                                                    </i>
+                                                </li>
+                                                <br>
+                                                <li style="color:black">
+                                                    <i style="width: 15px;" class="fa fa-clock-o text-center"></i>
+                                                    <span
+                                                        style="margin-right: 5px;">Published</span>&nbsp;{{\Carbon\Carbon::parse($v->created_at)->format('d-m-Y')}}
+                                                </li>
 
-                                        </ul>
-                                    </div>
-                                </div><br>
-                                <input type="button" value="Detail"
-                                    style="background-color: #FFB901; font-size:15px; border: none; color: white; float: right; margin-top: -15px; border-radius: 5px;" />
+                                            </ul>
+                                        </div>
+                                    </div><br>
+                                    <input type="button" value="Detail"
+                                        style="background-color: #FFB901; font-size:15px; border: none; color: white; float: right; margin-top: -15px; border-radius: 5px;" />
 
-                            </a>
-                        </li>
+                                </a>
+                            </li>
+
+                        </div>
+                        @endforeach
+
 
                     </div>
-                    @endforeach
-
-                </div>
-            </ul>
-            <div class="m-t30">
-                <div class="d-flex">
-                    <a class="site-button button-sm mr-auto" href="#"><i class="ti-arrow-left"></i> Prev</a>
-                    <a class="site-button button-sm" href="#">Next <i class="ti-arrow-right"></i></a>
+                </ul>
+                @else
+                {{-- <button>
+                    <a href="/page-with-all-data" class="btn btn-primary">Selengkapnya</a>
+                </button> --}}
+                @endif
+                <div class="m-t30">
+                    <div class="d-flex">
+                        {{-- <a class="site-button button-sm mr-auto" href="#"><i class="ti-arrow-left"></i> Prev</a>
+                        --}}
+                        <a class="site-button button-sm mr-auto" href="/selengkapnya"
+                            style="font-size: 13px;">Selengkapnya<i></i> </a>
+                        {{-- <a class="site-button button-sm mr-auto" href="/selengkapnya"> <i>Selengkapnya</i></a> --}}
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
+</div>
 </div>
 </div>
 
