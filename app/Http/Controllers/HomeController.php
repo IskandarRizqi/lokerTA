@@ -63,21 +63,40 @@ class HomeController extends Controller
                 // if ($request->lulusan) {
                 //     $q->where('pendidikan', 'like', '%' . $request->lulusan . '%');
                 // }
-                   if ($request->job_title) {
-                    $q->where("kategori","ilike", '%' . $request->job_title . '%' );
-                }
-                if ($request->lokasi) {
-                  
-                    $q->where("tempatperusahaan","ilike", '%' . $request->Lokasi . '%');
-                }
-                if ($request->lulusan) {
-                    $q->where('pendidikan', 'ilike', '%' . $request->lulusan . '%');
+
+                if ($request->formberanda) {
+                    if ($request->job_title) {
+                        $q->whereIn('kategori',  $request->job_title);
+                    }
+                    if ($request->lokasi) {
+                        $q->whereIn('tempatperusahaan',  $request->lokasi);
+                    }
+                    if ($request->lulusan) {
+                        $q->whereIn('pendidikan',  $request->lulusan);
+                    }
+                    if ($request->jam) {
+                        $q->whereIn('jam',  $request->jam);
+                    }
+                } else {
+                    if ($request->job_title) {
+                        $q->where('kategori', 'ilike', '%' . $request->job_title . '%');
+                    }
+                    if ($request->lokasi) {
+                        $q->where('tempatperusahaan', 'ilike', '%' . $request->Lokasi . '%');
+                    }
+                    if ($request->lulusan) {
+                        $q->where('pendidikan', 'ilike', '%' . $request->lulusan . '%');
+                    }
                 }
             })
             ->paginate(8);
         $x['job_title'] = '';
         $x['lokasi'] = '';
         $x['lulusan'] = '';
+        $x['jt'] = [];
+        $x['lk'] = [];
+        $x['ll'] = [];
+        $x['jm'] = [];
         if ($request->job_title) {
             $x['job_title'] = $request->job_title;
         }
@@ -86,6 +105,12 @@ class HomeController extends Controller
         }
         if ($request->lulusan) {
             $x['lulusan'] = $request->lulusan;
+        }
+        if ($request->formberanda) {
+            $x['jt'] = $request->job_title;
+            $x['lk'] = $request->lokasi;
+            $x['ll'] = $request->lulusan;
+            $x['jm'] = $request->jam;
         }
         // return $x;
         return view('front.pages.cariloker', $x);

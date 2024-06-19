@@ -5,28 +5,42 @@
     .owl-nav.disabled {
         visibility: hidden;
     }
+
+    .owl-prev,
+    .owl-next {
+        background-color: #FFB901;
+    }
+
     .additional-content {
         font-size: 14px;
         display: inline-block;
-        vertical-align: top; /* Atur posisi vertikal ke atas */
-        max-height: 200px; /* Atur tinggi maksimum */
-        overflow-y: auto; /* Aktifkan scrollbar jika konten lebih panjang dari container */
-        margin-left: 10px; /* Atur jarak dari teks "Lainnya" */
+        vertical-align: top;
+        /* Atur posisi vertikal ke atas */
+        max-height: 200px;
+        /* Atur tinggi maksimum */
+        overflow-y: auto;
+        /* Aktifkan scrollbar jika konten lebih panjang dari container */
+        margin-left: 10px;
+        /* Atur jarak dari teks "Lainnya" */
     }
 
     /* Styling untuk teks "Lainnya" */
     #showContent1 {
         cursor: pointer;
-        color: blue; /* Warna teks biru */
+        color: blue;
+        /* Warna teks biru */
     }
+
     #showContent {
         cursor: pointer;
-        color: blue; /* Warna teks biru */
+        color: blue;
+        /* Warna teks biru */
     }
 
     /* Styling untuk tautan */
     a {
-        text-decoration: none; /* Hilangkan garis bawah tautan */
+        text-decoration: none;
+        /* Hilangkan garis bawah tautan */
     }
 </style>
 <div class="page-content">
@@ -207,299 +221,349 @@
                 <h2 class="m-b5">Lowongan Terbaru</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xl-3 col-lg-4">
-                <div class="sticky-top">
-                    <div class="clearfix m-b30">
-                        <h5 class="widget-title font-weight-700 text-uppercase">Profesi</h5>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                <div class="product-brand">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check8" name="example1">
-                                        <label class="custom-control-label" for="check8">Administrasi</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check9" name="example1">
-                                        <label class="custom-control-label" for="check9">Hukum</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check10"
-                                            name="example1">
-                                        <label class="custom-control-label" for="check10">Akuntansi</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check6" name="example1">
-                                        <label class="custom-control-label" for="check6">Kesehatan</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check7" name="example1">
-                                        <label class="custom-control-label" for="check7">developer</label>
-                                    </div>
+        <form action="/caripekerjaan" method="GET">
+            @csrf
+            <input type="text" name="formberanda" id="" value="true" hidden>
+            <div class="row">
+                <div class="col-xl-3 col-lg-4">
+                    <div class="sticky-top">
+                        <div class="clearfix m-b30">
+                            <h5 class="widget-title font-weight-700 text-uppercase">Profesi</h5>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="product-brand">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check8"
+                                                name="job_title[]" value="Administrasi">
+                                            <label class="custom-control-label" for="check8">Administrasi</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check9"
+                                                name="job_title[]" value="Hukum">
+                                            <label class="custom-control-label" for="check9">Hukum</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check10"
+                                                name="job_title[]" value="Akuntansi">
+                                            <label class="custom-control-label" for="check10">Akuntansi</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check6"
+                                                name="job_title[]" value="Kesehatan">
+                                            <label class="custom-control-label" for="check6">Kesehatan</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check7"
+                                                name="job_title[]" value="Developer">
+                                            <label class="custom-control-label" for="check7">Developer</label>
+                                        </div>
 
-                                    <div class="mt-2">
-                                    <span id="showContent1">Lainnya</span> <!-- ID showContent untuk mengontrol visibilitas konten tambahan -->
-                                            <div id="additionalContent1" class="additional-content" style="display: none;"> <!-- Area untuk konten tambahan -->
+                                        <div class="mt-2">
+                                            <span id="showContent1">Lainnya</span>
+                                            <!-- ID showContent untuk mengontrol visibilitas konten tambahan -->
+                                            <div id="additionalContent1" class="additional-content"
+                                                style="display: none;">
+                                                <!-- Area untuk konten tambahan -->
                                                 <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="21" name="example1">
-                                                <label class="custom-control-label" for="21">operator produksi</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="22" name="example1">
-                                                <label class="custom-control-label" for="22">marketing</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="23"
-                                                    name="example1">
-                                                <label class="custom-control-label" for="23">frontend</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="24" name="example1">
-                                                <label class="custom-control-label" for="24">tekniksipil</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="25" name="example1">
-                                                <label class="custom-control-label" for="25">teknikmesin</label>
-                                            </div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="clearfix m-b30">
-                        <h5 class="widget-title font-weight-700 text-uppercase">Lokasi</h5>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                <div class="product-brand">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check11"
-                                            name="example1">
-                                        <label class="custom-control-label" for="check11">Jakarta</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check12"
-                                            name="example1">
-                                        <label class="custom-control-label" for="check12">semarang</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check13"
-                                            name="example1">
-                                        <label class="custom-control-label" for="check13">Tanggerang</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check14"
-                                            name="example1">
-                                        <label class="custom-control-label" for="check14">Yogyakarta</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check0" name="example1">
-                                        <label class="custom-control-label" for="check0">karawang</label>
-                                    </div>
-                                    <div class="mt-2">
-                                        <span id="showContent">Lainnya</span> <!-- ID showContent untuk mengontrol visibilitas konten tambahan -->
-                                        <div id="additionalContent" class="additional-content" style="display: none;"> <!-- Area untuk konten tambahan -->
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="00"
-                                                    name="example1">
-                                                <label class="custom-control-label" for="00">surabaya</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="01"
-                                                    name="example1">
-                                                <label class="custom-control-label" for="01">tanggerang</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="03"
-                                                    name="example1">
-                                                <label class="custom-control-label" for="03">bandung</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="04"
-                                                    name="example1">
-                                                <label class="custom-control-label" for="04">palembang</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="05" name="example1">
-                                                <label class="custom-control-label" for="05">batam</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="06"
-                                                    name="example1">
-                                                <label class="custom-control-label" for="06">kalimantan</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="07"
-                                                    name="example1">
-                                                <label class="custom-control-label" for="07">cikarang</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="08"
-                                                    name="example1">
-                                                <label class="custom-control-label" for="08">bekasi</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="09"
-                                                    name="example1">
-                                                <label class="custom-control-label" for="09">cikarang</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="11" name="example1">
-                                                <label class="custom-control-label" for="11">cirebon</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="12"
-                                                    name="example1">
-                                                <label class="custom-control-label" for="12">cilacap</label>
-                                            </div>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="13" name="example1">
-                                                <label class="custom-control-label" for="33">solo</label>
+                                                    <input type="checkbox" class="custom-control-input" id="21"
+                                                        name="job_title[]" value="Operator Produksi">
+                                                    <label class="custom-control-label" for="21">Operator
+                                                        Produksi</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="22"
+                                                        name="job_title[]" value="Marketing">
+                                                    <label class="custom-control-label" for="22">Marketing</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="23"
+                                                        name="job_title[]" value="Frontend">
+                                                    <label class="custom-control-label" for="23">Frontend</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="24"
+                                                        name="job_title[]" value="Teknik Sipil">
+                                                    <label class="custom-control-label" for="24">Teknik Sipil</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="25"
+                                                        name="job_title[]" value="Teknik Sipil">
+                                                    <label class="custom-control-label" for="25">Teknik Mesin</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="clearfix m-b30">
-                        <h5 class="widget-title font-weight-700 text-uppercase">Pendidikan</h5>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                <div class="product-brand">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="pen1" name="example1">
-                                        <label class="custom-control-label" for="pen1">SD</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="pend2" name="example1">
-                                        <label class="custom-control-label" for="pend2">SMP</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="pen3" name="example1">
-                                        <label class="custom-control-label" for="pen3">SMA/SMK</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="pen4" name="example1">
-                                        <label class="custom-control-label" for="pen4">D3</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="pen5" name="example1">
-                                        <label class="custom-control-label" for="pen5">D4</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="pen0" name="example1">
-                                        <label class="custom-control-label" for="pen0">S1</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="pen6" name="example1">
-                                        <label class="custom-control-label" for="pen6">Profesi</label>
+
+                        <div class="clearfix m-b30">
+                            <h5 class="widget-title font-weight-700 text-uppercase">Lokasi</h5>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="product-brand">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check11"
+                                                name="lokasi[]" value="Jakarta">
+                                            <label class="text-capitalize custom-control-label"
+                                                for="check11">Jakarta</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check12"
+                                                name="lokasi[]" value="semarang">
+                                            <label class="text-capitalize custom-control-label"
+                                                for="check12">semarang</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check13"
+                                                name="lokasi[]" value="Tanggerang">
+                                            <label class="text-capitalize custom-control-label"
+                                                for="check13">Tanggerang</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check14"
+                                                name="lokasi[]" value="Yogyakarta">
+                                            <label class="text-capitalize custom-control-label"
+                                                for="check14">Yogyakarta</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="check0"
+                                                name="lokasi[]" value="karawang">
+                                            <label class="text-capitalize custom-control-label"
+                                                for="check0">karawang</label>
+                                        </div>
+                                        <div class="mt-2">
+                                            <span id="showContent">Lainnya</span>
+                                            <!-- ID showContent untuk mengontrol visibilitas konten tambahan -->
+                                            <div id="additionalContent" class="additional-content"
+                                                style="display: none;">
+                                                <!-- Area untuk konten tambahan -->
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="00"
+                                                        name="lokasi[]" value="surabaya">
+                                                    <label class="text-capitalize custom-control-label"
+                                                        for="00">surabaya</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="01"
+                                                        name="lokasi[]" value="tanggerang">
+                                                    <label class="text-capitalize custom-control-label"
+                                                        for="01">tanggerang</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="03"
+                                                        name="lokasi[]" value="bandung">
+                                                    <label class="text-capitalize custom-control-label"
+                                                        for="03">bandung</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="04"
+                                                        name="lokasi[]" value="palembang">
+                                                    <label class="text-capitalize custom-control-label"
+                                                        for="04">palembang</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="05"
+                                                        name="lokasi[]" value="batam">
+                                                    <label class="text-capitalize custom-control-label"
+                                                        for="05">batam</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="06"
+                                                        name="lokasi[]" value="kalimantan">
+                                                    <label class="text-capitalize custom-control-label"
+                                                        for="06">kalimantan</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="07"
+                                                        name="lokasi[]" value="cikarang">
+                                                    <label class="text-capitalize custom-control-label"
+                                                        for="07">cikarang</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="08"
+                                                        name="lokasi[]" value="bekasi">
+                                                    <label class="text-capitalize custom-control-label"
+                                                        for="08">bekasi</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="09"
+                                                        name="lokasi[]" value="cikarang">
+                                                    <label class="text-capitalize custom-control-label"
+                                                        for="09">cikarang</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="11"
+                                                        name="lokasi[]" value="cirebon">
+                                                    <label class="text-capitalize custom-control-label"
+                                                        for="11">cirebon</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="12"
+                                                        name="lokasi[]" value="cilacap">
+                                                    <label class="text-capitalize custom-control-label"
+                                                        for="12">cilacap</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="13"
+                                                        name="lokasi[]" value="solo">
+                                                    <label class="text-capitalize custom-control-label"
+                                                        for="33">solo</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
-
                         </div>
-                    </div>
-                    <div class="clearfix m-b30">
-                        <h5 class="widget-title font-weight-700 text-uppercase">Status Kerja</h5>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                <div class="product-brand">
-
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="stat2" name="example1">
-                                        <label class="custom-control-label" for="stat2">fulltime</label>
+                        <div class="clearfix m-b30">
+                            <h5 class="widget-title font-weight-700 text-uppercase">Pendidikan</h5>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="product-brand">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="pen1"
+                                                name="lulusan[]" value="SD">
+                                            <label class="custom-control-label" for="pen1">SD</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="pend2"
+                                                name="lulusan[]" value="SMP">
+                                            <label class="custom-control-label" for="pend2">SMP</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="pen3"
+                                                name="lulusan[]" value="SMA/SMK">
+                                            <label class="custom-control-label" for="pen3">SMA/SMK</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="pen4"
+                                                name="lulusan[]" value="D3">
+                                            <label class="custom-control-label" for="pen4">D3</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="pen5"
+                                                name="lulusan[]" value="D4">
+                                            <label class="custom-control-label" for="pen5">D4</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="pen0"
+                                                name="lulusan[]" value="S1">
+                                            <label class="custom-control-label" for="pen0">S1</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="pen6"
+                                                name="lulusan[]" value="Profesi">
+                                            <label class="custom-control-label" for="pen6">Profesi</label>
+                                        </div>
                                     </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="stat3" name="example1">
-                                        <label class="custom-control-label" for="stat3">parttime</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="stat4" name="example1">
-                                        <label class="custom-control-label" for="stat4">frelance</label>
-                                    </div>
-                                    
-
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
+                        <div class="clearfix m-b30">
+                            <h5 class="widget-title font-weight-700 text-uppercase">Status Kerja</h5>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div class="product-brand">
+
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="stat2" name="jam[]"
+                                                value="fulltime">
+                                            <label class="custom-control-label" for="stat2">fulltime</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="stat3" name="jam[]"
+                                                value="parttime">
+                                            <label class="custom-control-label" for="stat3">parttime</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="stat4" name="jam[]"
+                                                value="frelance">
+                                            <label class="custom-control-label" for="stat4">frelance</label>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button type="submit"
+                            style="background-color: #FFB901; font-size:15px; border: none; color: white;  margin-top: -15px; border-radius: 5px;">Submit</button>
                     </div>
-                    <input type="button" value="Submit"
-                        style="background-color: #FFB901; font-size:15px; border: none; color: white;  margin-top: -15px; border-radius: 5px;" />
                 </div>
-            </div>
-            <div class="col-lg-9">
-                <ul class="post-job-bxx">
-                    <div class="row">
-                        @foreach($inputdata as $key => $v)
-                        <div class="col-lg-4 mb-4">
+        </form>
+        <div class="col-lg-9">
+            <ul class="post-job-bxx">
+                <div class="row">
+                    @foreach($inputdata as $key => $v)
+                    <div class="col-lg-4 mb-4">
 
-                            <li>
-                                <a href="/detail-loker/{{$v->id}}" style="border-radius: 10px">
-                                    <div class="d-flex">
-                                        <div class="job-post-company">
-                                            <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}" alt="Image"
-                                                    style="width: 100px; height: 100px;"></span>
-                                            <h6>{{$v->namaperusahaan}}</h6>
-                                            <h6>{{$v->kategori}}</h6>
-                                        </div>
-
+                        <li>
+                            <a href="/detail-loker/{{$v->id}}" style="border-radius: 10px">
+                                <div class="d-flex">
+                                    <div class="job-post-company">
+                                        <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}" alt="Image"
+                                                style="width: 100px; height: 100px;"></span>
+                                        <h6>{{$v->namaperusahaan}}</h6>
+                                        <h6>{{$v->kategori}}</h6>
                                     </div>
-                                    <div class="d-flex mb-2">
-                                        <div class="job-time mr-auto">
-                                            <span>{{$v->jam}}</span>
-                                        </div>
+
+                                </div>
+                                <div class="d-flex mb-2">
+                                    <div class="job-time mr-auto">
+                                        <span>{{$v->jam}}</span>
                                     </div>
-                                    <div class="d-flex">
-                                        <div class="job-post-info">
-                                            <ul>
-                                                <li
-                                                    style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 130%;">
-                                                    <i style="color:black"><i style="width: 15px;"
-                                                            class="fa fa-map-marker text-center"></i>
-                                                        {{$v->tempatperusahaan}}</i>
-                                                </li>
-                                                <br>
-                                                <li
-                                                    style="color: black; border-bottom: 1px solid black; padding-bottom: 4px;  width: 130%;">
-                                                    <i style="color:black"><i style="width: 15px;"
-                                                            class="fa fa-graduation-cap text-center"></i>{{$v->pendidikan}}
-                                                    </i>
-                                                </li>
-                                                <br>
-                                                <li style="color:black">
-                                                    <i style="width: 15px;" class="fa fa-clock-o text-center"></i>
-                                                    <span
-                                                        style="margin-right: 5px;">Published</span>&nbsp;{{\Carbon\Carbon::parse($v->created_at)->format('d-m-Y')}}
-                                                </li>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="job-post-info">
+                                        <ul>
+                                            <li
+                                                style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 130%;">
+                                                <i style="color:black"><i style="width: 15px;"
+                                                        class="fa fa-map-marker text-center"></i>
+                                                    {{$v->tempatperusahaan}}</i>
+                                            </li>
+                                            <br>
+                                            <li
+                                                style="color: black; border-bottom: 1px solid black; padding-bottom: 4px;  width: 130%;">
+                                                <i style="color:black"><i style="width: 15px;"
+                                                        class="fa fa-graduation-cap text-center"></i>{{$v->pendidikan}}
+                                                </i>
+                                            </li>
+                                            <br>
+                                            <li style="color:black">
+                                                <i style="width: 15px;" class="fa fa-clock-o text-center"></i>
+                                                <span
+                                                    style="margin-right: 5px;">Published</span>&nbsp;{{\Carbon\Carbon::parse($v->created_at)->format('d-m-Y')}}
+                                            </li>
 
-                                            </ul>
-                                        </div>
-                                    </div><br>
-                                    <input type="button" value="Detail"
-                                        style="background-color: #FFB901; font-size:15px; border: none; color: white; float: right; margin-top: -15px; border-radius: 5px;" />
+                                        </ul>
+                                    </div>
+                                </div><br>
+                                <input type="button" value="Detail"
+                                    style="background-color: #FFB901; font-size:15px; border: none; color: white; float: right; margin-top: -15px; border-radius: 5px;" />
 
-                                </a>
-                            </li>
-
-                        </div>
-                        @endforeach
+                            </a>
+                        </li>
 
                     </div>
-                </ul>
-                <div class="m-t30">
-                    <div class="d-flex">
-                        <a class="site-button button-sm mr-auto" href="#"><i class="ti-arrow-left"></i> Prev</a>
-                        <a class="site-button button-sm" href="#">Next <i class="ti-arrow-right"></i></a>
-                    </div>
+                    @endforeach
+
+                </div>
+            </ul>
+            <div class="m-t30">
+                <div class="d-flex">
+                    <a class="site-button button-sm mr-auto" href="#"><i class="ti-arrow-left"></i> Prev</a>
+                    <a class="site-button button-sm" href="#">Next <i class="ti-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <div class="section-full bg-gray content-inner-2">
@@ -721,10 +785,11 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('.owl-carousel').owlCarousel({
-    loop:true,
+    loop:false,
     margin:10,
     dots:false,
-    nav:false,
+    nav:true,
+    navText: ["<span class='ti-arrow-left'></span>","<span class='ti-arrow-right'></span'>"],
     responsive:{
         0:{
             items:1
