@@ -12,6 +12,8 @@
 <link rel="stylesheet" type="text/css" href="{{asset('admin/plugins/table/datatable/datatables.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('admin/plugins/table/datatable/dt-global_style.css')}}">
 
+
+
 {{-- <script src="script.js" defer></script> --}}
 
 

@@ -29,36 +29,17 @@
         text-decoration: none; /* Hilangkan garis bawah tautan */
     }
 </style>
-<div class="page-content">
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" style="background-color: white">
-        <div class="container">
-            <div class="row d-flex align-items-center">
-                <div class=" col-lg-6 py-5 py-lg-0 order-2 order-lg-1" data-aos="fade-right">
-                    <h5>Anda Sedang Mencari Pekerjaan Terbaru?</h5>
-                    <h1><span style="color: #FFB901;">TEMUKAN</span> KARIRMU</h1>
-                    <h1>MULAI <span style="color: #FFB901;">DARI SINI!!</span></h1>
-                    <h5>Temukan pekerjaan yang sesuai dengan minat dan kualifikasi Anda dengan cepat dan efisien, kami
-                        membantu Anda menuju langkah pertama menuju kesuksesan karir</h5>
-                    <button type="submit" class="site-button">Pasang Lowongan Anda</button>
-                </div>
-                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
-                    <img src="{{asset('front\images\inc\slide.png')}}" class="img-fluid" alt="img">
-                </div>
-            </div>
-        </div>
 
-    </section><!-- End Hero -->
+
     <!-- About Us -->
     <div class="section-full job-categories content-inner-2 bg-white"
-        style="background-image:url(../images/pattern/pic1.html);">
+        style="background-image:url(../images/pattern/pic1.html); ">
         <div class="container">
-            <div class="row mb-5">
-                <div class="dez-bnr-inr-entry align-m ">
-                    <div class="find-job-bx">
+            
+                    <div class="find-job-bx" style="margin-bottom:10px; ">
                         <form action="/caripekerjaan" class="dezPlaceAni">
                             @csrf
-                            <div class="row">
+                            <div class="row" >
                                 <h5 class="m-b5 text-center">Cari Pekerjaan Anda Disini</h5>
                                 <div class="col-lg-3 col-md-6">
                                     <div class="form-group">
@@ -103,7 +84,7 @@
                                 <div class="col-lg-3 col-md-6">
                                     <div class="form-group">
                                         <select id="lulusan" name="lulusan">
-                                            <option value="">Semua Lulusan</option>
+                                            <option value="">Pendidikan</option>
                                             <option value="SMK">SMA</option>
                                             <option value="D3">D3</option>
                                             <option value="D4">D4</option>
@@ -118,95 +99,19 @@
                             </div>
                         </form>
                     </div>
-                </div>
-            </div>
+               
         </div>
     </div>
 
-    <div class="section-full bg-gray content-inner-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 section-head text-center"
-                    style="display: flex; justify-content: center; align-items: flex-start;">
-                    <h2 class="m-b5">Rekomendasi Untuk Anda</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="">
-                        <img src="{{asset('front\images\inc\Rectangle 9.png')}}" alt="">
-
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <ul class="post-job-bxx">
-
-                        <div class="owl-carousel owl-theme">
-                            @foreach($rekomendasi as $key => $v)
-                            <div class="item">
-                                <a href="/detail-loker/{{$v->id}}" style="border-radius: 10px">
-                                    <div class="d-flex">
-                                        <div class="job-post-company">
-                                            <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}"
-                                                    style="width: 100px; height: 100px;" /></span>
-                                            <h6>{{$v->tempatperusahaan}}</h6>
-                                            <h6>{{$v->kategori}}</h6>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex mb-2">
-                                        <div class="job-time mr-auto">
-                                            <span>{{$v->jam}}</span>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex">
-                                        <div class="job-post-info">
-                                            <ul>
-                                                <li
-                                                    style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 100%;">
-                                                    <i style="color:black"><i style="width: 15px;"
-                                                            class="fa fa-map-marker text-center"></i>{{$v->tempatperusahaan}}
-                                                    </i>
-                                                </li>
-                                                <br>
-                                                <li
-                                                    style="color: black; border-bottom: 1px  solid black; padding-bottom: 4px;  width: 100%;">
-                                                    <i style="color:black"><i style="width: 15px;"
-                                                            class="fa fa-graduation-cap text-center"></i>
-                                                        {{$v->pendidikan}}
-                                                    </i>
-                                                </li>
-                                                <li style="color:black"><i style="width: 15px;"
-                                                        class="fa fa-clock-o text-center"></i>
-                                                    Published {{$v->created_at->diffForHumans()}}</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <br> 
-                                    <input type="button" value="Detail"
-                                        style="background-color: #FFB901; font-size:15px; border: none; color: white; float: right; margin-top: -15px; border-radius: 5px;" />
-                                </a>
-                            </div>
-                            @endforeach
-                        </div>
-                      
-                        
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="section-full bg-white content-inner-2">
     <div class="container">
-        <div class="row">
+        
             <div class="col-lg-12 section-head text-center">
-                <h2 class="m-b5">Lowongan Terbaru</h2>
+                <h2 class="m-b5" style="margin-top: 0;">Semua Lowongan </h2>
             </div>
-        </div>
         <div class="row">
-            <div class="col-xl-3 col-lg-4">
+            {{-- <div class="col-xl-3 col-lg-4">
                 <div class="sticky-top">
                     <div class="clearfix m-b30">
                         <h5 class="widget-title font-weight-700 text-uppercase">Profesi</h5>
@@ -429,14 +334,14 @@
                     <input type="button" value="Submit"
                         style="background-color: #FFB901; font-size:15px; border: none; color: white;  margin-top: -15px; border-radius: 5px;" />
                 </div>
-            </div>
-            <div class="col-lg-9">
-                @if($inputdata->count() > 0)
+            </div> --}}
+            <div class="col-lg-12">
+
                 <ul class="post-job-bxx">
                     <div class="row">
                        
-                        @foreach($inputdata->slice(0,15) as $key => $v)
-                        <div class="col-lg-4 mb-4">
+                        @foreach($inputdata as $key => $v)
+                        <div class="col-lg-3 mb-4">
 
                             <li>
                                 <a href="/detail-loker/{{$v->id}}" style="border-radius: 10px">
@@ -492,18 +397,8 @@
 
                     </div>
                 </ul>
-                 @else
-                        {{-- <button>
-                            <a href="/page-with-all-data" class="btn btn-primary">Selengkapnya</a>
-                        </button> --}}
-                    @endif
-                <div class="m-t30">
-                    <div class="d-flex">
-                        {{-- <a class="site-button button-sm mr-auto" href="#"><i class="ti-arrow-left"></i> Prev</a> --}}
-                        <a class="site-button button-sm mr-auto" href="/selengkapnya" style="font-size: 13px;">Selengkapnya<i></i> </a>
-                        {{-- <a class="site-button button-sm mr-auto" href="/selengkapnya"> <i >Selengkapnya</i></a> --}}
-                    </div>
-                </div>
+               
+                
             </div>
         </div>
     </div>
@@ -520,140 +415,7 @@
                 <a href="#" class="site-button button-sm">Browse All Jobs <i class="fa fa-long-arrow-right"></i></a>
             </div>
         </div> --}}
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="learning">
-                    <div class="row">
-                        <div class="col-lg-6 mb-4">
-                            <li>
-                                <a href="#" style="border-radius: 10px">
-                                    <div class="learning-card learning-card--vertical">
-                                        <div class="img-learning">
-                                            <img src="{{asset('front\images\inc\pp.png')}}" alt="">
-                                        </div>
-                                        <div class="learning-card_content">
-                                            <div class="learning-card_title-section">
-                                                <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai
-                                                    Fundamental Resolusi 2024</h5>
-                                                <h5 class="learning-card_author">ppp</h5>
-                                            </div>
-                                            <hr>
-                                            <div class="learning-card_bottom-section">
-                                                <div class="space-between">
-                                                    <div class="learning-card_price">
-                                                        <span>5.99</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </a>
-                            </li>
-
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <li>
-                                <a href="#" style="border-radius: 10px">
-                                    <div class="learning-card learning-card--vertical">
-                                        <div class="img-learning">
-                                            <img src="{{asset('front\images\inc\pp.png')}}" alt="">
-                                        </div>
-                                        <div class="learning-card_content">
-                                            <div class="learning-card_title-section">
-                                                <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai
-                                                    Fundamental Resolusi 2024</h5>
-                                                <h5 class="learning-card_author">ppp</h5>
-                                            </div>
-                                            <hr>
-                                            <div class="learning-card_bottom-section">
-                                                <div class="space-between">
-                                                    <div class="learning-card_price">
-                                                        <span>5.99</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </a>
-                            </li>
-
-                        </div>
-                    </div>
-                </ul>
-
-            </div>
-            <div class="col-lg-12">
-                <ul class="learning">
-                    <div class="row">
-                        <div class="col-lg-6 mb-4">
-                            <li>
-                                <a href="#" style="border-radius: 10px">
-                                    <div class="learning-card learning-card--vertical">
-                                        <div class="img-learning">
-                                            <img src="{{asset('front\images\inc\pp.png')}}" alt="">
-                                        </div>
-                                        <div class="learning-card_content">
-                                            <div class="learning-card_title-section">
-                                                <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai
-                                                    Fundamental Resolusi 2024</h5>
-                                                <h5 class="learning-card_author">ppp</h5>
-                                            </div>
-                                            <hr>
-                                            <div class="learning-card_bottom-section">
-                                                <div class="space-between">
-                                                    <div class="learning-card_price">
-                                                        <span>5.99</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </a>
-                            </li>
-
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <li>
-                                <a href="#" style="border-radius: 10px">
-                                    <div class="learning-card learning-card--vertical">
-                                        <div class="img-learning">
-                                            <img src="{{asset('front\images\inc\pp.png')}}" alt="">
-                                        </div>
-                                        <div class="learning-card_content">
-                                            <div class="learning-card_title-section">
-                                                <h5 class="learning-card_title">Membangun Ekosistem UKM BPR Sebagai
-                                                    Fundamental Resolusi 2024</h5>
-                                                <h5 class="learning-card_author">ppp</h5>
-                                            </div>
-                                            <hr>
-                                            <div class="learning-card_bottom-section">
-                                                <div class="space-between">
-                                                    <div class="learning-card_price">
-                                                        <span>5.99</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </a>
-                            </li>
-
-                        </div>
-                    </div>
-                </ul>
-                <div class="m-t30">
-                    <div class="d-flex">
-                        <a class="site-button button-sm mr-auto" href="#"><i class="ti-arrow-left"></i> Prev</a>
-                        <a class="site-button button-sm" href="#">Next <i class="ti-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+     
 
     </div>
 </div>

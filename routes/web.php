@@ -93,3 +93,8 @@ Route::get('/about-us', function () {
 Route::get('/templatecv', function () {
     return view('front.templatecv');
 });
+Route::get('/selengkapnya', [App\Http\Controllers\HomeSelengkapnyaController::class, 'index']);
+
+Route::get('/templatesrt', function () {
+    return view('front.templsuratlamaran');
+});

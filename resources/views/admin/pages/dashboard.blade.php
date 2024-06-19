@@ -12,7 +12,6 @@
        border-radius: .375rem;
        background-color: #fff;
        background-clip: border-box;
-       
    }
 
    .cards-body {
@@ -130,26 +129,7 @@
          </div>
      </div>
      <div class="row layout-top-spacing">
-         <div class="col-lg-6">
-             <div class="widget widget-chart-one">
-                 <div class="widget-heading">
-                 </div>
-                 <div class="widget-content">
-                     <div id="s-line-area"></div>
-                 </div>
-             </div>
-         </div>
-     
-         <div class="col-lg-6">
-             <div class="widget widget-chart-one" style="height: 422px !important;">
-                 <div class="widget-heading">
-                 </div>
-                 <div class="widget-content justify-content-center">
-                     <div id="chartbar"></div>
-                 </div>
-             </div>
-         </div>
-     </div>
+         
      <div class="row layout-top-spacing">
          <div class="col-xl-12 col-lg-12 col-md-12">
              <div class="statbox widget box box-shadow">
@@ -163,4 +143,32 @@
    </div>
 </div>
 <!--  END CONTENT AREA  -->
+
+<script>
+   $(document).ready(function() {
+       var calendarEl = document.getElementById('calendars');
+       var calendar = new FullCalendar.Calendar(calendarEl, {
+           headerToolbar: {
+               left: 'prev,next today',
+               center: 'title',
+               right: 'dayGridMonth,timeGridWeek,timeGridDay'
+           },
+           initialView: 'dayGridMonth', // Tampilan awal saat kalender dimuat
+           events: [
+               // Daftar acara dimasukkan di sini
+               {
+                   title: 'Acara 1',
+                   start: '2024-06-05'
+               },
+               {
+                   title: 'Acara 2',
+                   start: '2024-06-07',
+                   end: '2024-06-10'
+               }
+           ]
+       });
+
+       calendar.render(); // Render kalender
+   });
+</script>
 @endsection

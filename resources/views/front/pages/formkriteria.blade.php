@@ -135,13 +135,10 @@
                 <input type="hidden" name="idkriteria" value="">
                 <select id="pendidikan" name="pendidikan" required>
                     <option value="">Pilih pendidikan</option>
-                    <option value="SD">SD</option>
-                    <option value="SMP">SMP</option>
                     <option value="SMK">SMA</option>
                     <option value="D3">D3</option>
                     <option value="D4">D4</option>
                     <option value="S1">S1</option>
-                    <option value="Profesi">Profesi</option>
                 </select>
             </div>
             <div class="form-group">
