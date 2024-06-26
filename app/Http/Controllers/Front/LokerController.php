@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\InputdataModel;
+use App\Models\LamaranModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -31,6 +32,18 @@ class LokerController extends Controller
             return Redirect::to('/')->with('info', 'Silahkan login terlebih dahulu');
         }
 
-        return 'Submit Loker';
+        $check = LamaranModel::where('loker_id', $id)->where('user_id', Auth::id())->first();
+        if ($check) {
+            return Redirect::back()->with('info', 'Lamaran sudah terkirim');
+        }
+
+        $lamar = LamaranModel::create([
+            'loker_id' => $id,
+            'user_id' => Auth::id(),
+        ]);
+        if ($lamar) {
+            return Redirect::back()->with('info', 'Lamaran berhasil terkirim');
+        }
+        return Redirect::back()->with('info', 'Lamaran gagal terkirim');
     }
 }

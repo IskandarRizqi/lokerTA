@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Helper\GlobalHelper;
 use App\Models\InputdataModel;
-
+use App\Models\KriteriaModel;
+use App\Models\LamaranModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
 {
@@ -114,5 +116,48 @@ class HomeController extends Controller
         }
         // return $x;
         return view('front.pages.cariloker', $x);
+    }
+
+    public function historylamaran()
+    {
+        $data = [];
+        $data['data'] = LamaranModel::select()
+            ->with('loker')
+            ->where('user_id', Auth::id())
+            ->get();
+        // return $data;
+        return view('front.profile.historylamaran', $data);
+    }
+
+    public function editkriteria()
+    {
+        $data = [];
+        $data['data'] = KriteriaModel::where('id', Auth::user()->kriteria_id)->first();
+        return view('front.profile.kriteria', $data);
+    }
+
+    public function updatekriteria(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'jk' => 'required',
+            'bidang' => 'required',
+            'lokasi' => 'required',
+            'pendidikan' => 'required',
+            'jam' => 'required',
+        ]);
+        if ($validator->fails()) {
+            return redirect::back()->withErrors($validator)->withInput($request->all());
+        }
+        $k = KriteriaModel::where('id', Auth::user()->kriteria_id)->update([
+            'jk' => $request->jk,
+            'bidang' => $request->bidang,
+            'lokasi' => $request->lokasi,
+            'pendidikan' => $request->pendidikan,
+            'jam' => $request->jam,
+        ]);
+        if ($k) {
+            return Redirect::back()->with('info', 'Kriteria telah diperbarui');
+        }
+        return Redirect::back()->with('info', 'Kriteria gagal diperbarui');
     }
 }

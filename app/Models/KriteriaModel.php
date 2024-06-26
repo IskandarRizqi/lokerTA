@@ -16,6 +16,7 @@ class KriteriaModel extends Model
         'lokasi',
         'pendidikan',
         'jam',
-      
+        'user_id',
+
     ];
 }
