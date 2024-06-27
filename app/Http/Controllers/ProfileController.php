@@ -34,6 +34,10 @@ class ProfileController extends Controller
             $inp['password'] = bcrypt($r->password);
         }
 
+        if ($r->gambar) {
+            $file = $r->file('gambar')->store('profile/' . time());
+            $inp['gambar'] = $file;
+        }
         $u = User::where('id', $r->id)->update($inp);
         return Redirect::back()->with('info', 'Data Tersimpan');
     }

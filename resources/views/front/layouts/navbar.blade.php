@@ -1,3 +1,10 @@
+<style>
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    /* remove the gap so it doesn't close */
+  }
+</style>
 <!-- header -->
 <header class="site-header mo-left header fullwidth">
   <!-- main header -->
@@ -21,21 +28,27 @@
         <div class="extra-nav">
           <div class="extra-cell">
             @if(Auth::check())
-            <a href="{{ route('logout') }}" class="btn btn-warning text-white"
-              onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-              <i class="fa fa-lock"></i> logout
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none" hidden>
-                @csrf
-              </form>
-            </a>
-            <a href="/profile" class="btn btn-warning text-white"><i class="fa fa-user"></i> Profile</a>
+            <div class="dropdown">
+              <button class="btn btn-warning dropdown-toggle text-white pl-2 pr-2" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img @if(Auth::user()->gambar)
+                src="/gambar?rf={{Auth::user()->gambar}}"
+                @endif alt="" width="40px" style="border-radius:10px" class="mr-2">{{Auth::user()->name}}
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a href="/profile" class="dropdown-item">Profile</a>
+                <a href="{{ route('logout') }}" class="dropdown-item"
+                  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none" hidden>
+                    @csrf
+                  </form>
+                </a>
+              </div>
+            </div>
             @else
             <a href="/register" class="site-button"><i class="fa fa-user"></i> Sign Up</a>
             <a href="/login" class="site-button"><i class="fa fa-lock"></i> login</a>
             @endif
-            <div class="dropdown-item">
-
-            </div>
           </div>
         </div>
         <!-- Quik search -->
