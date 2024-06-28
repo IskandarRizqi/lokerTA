@@ -60,7 +60,7 @@
                                         Kriteria
                                     </div>
                                 </a>
-                                <a href="" class="menu-kiri btn-block">
+                                <a href="/informasipribadi" class="menu-kiri btn-block">
                                     <div class="p-2">
                                         CV ATS
                                     </div>
