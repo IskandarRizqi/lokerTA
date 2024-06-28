@@ -50,13 +50,13 @@
                                         Profile
                                     </div>
                                 </a>
-                                <a href="" class="menu-kiri btn-block">
-                                    <div class="p-2">
+                                <a href="/history-lamaran" class="menu-kiri btn-block">
+                                    <div class="p-2 {{Request::is('history-lamaran') ? 'active' : ''}}">
                                         History Lamaran
                                     </div>
                                 </a>
-                                <a href="" class="menu-kiri btn-block">
-                                    <div class="p-2">
+                                <a href="/edit-kriteria" class="menu-kiri btn-block">
+                                    <div class="p-2 {{Request::is('edit-kriteria') ? 'active' : ''}}">
                                         Kriteria
                                     </div>
                                 </a>

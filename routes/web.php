@@ -55,6 +55,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/caripekerjaan', [App\Http\Controllers\HomeController::class, 'caripekerjaan']);
     Route::resource('/profile', App\Http\Controllers\ProfileController::class);
+    Route::get('/history-lamaran', [App\Http\Controllers\HomeController::class, 'historylamaran']);
+    Route::get('/edit-kriteria', [App\Http\Controllers\HomeController::class, 'editkriteria']);
+    Route::post('/update-kriteria', [App\Http\Controllers\HomeController::class, 'updatekriteria']);
 });
 
 

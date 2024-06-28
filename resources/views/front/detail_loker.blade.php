@@ -100,13 +100,16 @@
                                         </div>
                                     </div>
                                     <div style="text-align: justify;">{{$loker->deskripsi}}</div>
-                                    
+
                                 </div>
                                 <div class="col-md-4 right">
                                     <img data-animate="fadeInLeft" src="/gambar?rf={{$loker->gambar}}"
                                         alt="Gambar loker" style="border-radius: 10px; width:150px; height:100px;">
                                 </div>
                             </div>
+                            <a href="/submit-loker/{{$loker->id}}" class="btn btn-warning btn-block mt-2">
+                                Lamar Sekarang
+                            </a>
                         </div>
                     </div>
                 </div>

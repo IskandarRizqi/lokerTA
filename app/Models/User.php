@@ -30,6 +30,7 @@ class User extends Authenticatable
         'email',
         'password',
         'kriteria_id',
+        'gambar',
     ];
 
     // protected $appends = ['roles'];
