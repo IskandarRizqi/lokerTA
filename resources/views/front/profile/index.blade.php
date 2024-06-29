@@ -39,7 +39,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             @endif
-            <div class="container mb-2">
+            <div class="container mb-2" style="margin-top: 100px;">
                 <div class="row">
                     {{-- Menu user --}}
                     <div class="col-lg-3">
@@ -60,7 +60,7 @@
                                         Kriteria
                                     </div>
                                 </a>
-                                <a href="/informasipribadi" class="menu-kiri btn-block">
+                                <a href="/informasipribadi" class="menu-kiri btn-block" >
                                     <div class="p-2">
                                         CV ATS
                                     </div>
@@ -74,6 +74,10 @@
                 </div>
             </div>
         </main>
+        <br>
+        <br>
+        <br>
+        <br>
         @include('front.layouts.footer')
 
         <!-- scroll top button -->
