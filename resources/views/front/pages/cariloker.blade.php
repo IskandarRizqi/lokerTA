@@ -422,8 +422,8 @@
                             <a href="/detail-loker/{{$v->id}}" style="border-radius: 10px">
                                 <div class="d-flex">
                                     <div class="job-post-company">
-                                        <span class="mb-1"><img src="{{asset('front/images/gallery/about.png')}}"
-                                                alt="Image" style="width: 100px; height: 100px;"></span>
+                                        <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}" alt="Image"
+                                                style="width: 100px; height: 100px;"></span>
                                         <h6>{{$v->namaperusahaan}}</h6>
                                         <h6>{{$v->kategori}}</h6>
                                     </div>

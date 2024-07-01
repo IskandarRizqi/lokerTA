@@ -33,7 +33,8 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img @if(Auth::user()->gambar)
                 src="/gambar?rf={{Auth::user()->gambar}}"
-                @endif alt="" width="0px" style="border-radius:10px; font-size: 12px;" class="mr-2">{{Auth::user()->name}}
+                @endif alt="" width="20px" style="border-radius:10px; font-size: 12px;"
+                class="mr-2">{{Auth::user()->name}}
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a href="/profile" class="dropdown-item">Profile</a>
