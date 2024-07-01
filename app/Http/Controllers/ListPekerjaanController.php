@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\LamaranModel;
 use App\Models\ListPekerjaanModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -49,7 +50,6 @@ class ListPekerjaanController extends Controller
         ]);
 
         return redirect('/list_pekerjaan')->with('success', 'Berhasil tambah list pekerjaan');
-
     }
 
     /**
@@ -82,5 +82,39 @@ class ListPekerjaanController extends Controller
     public function destroy(ListPekerjaanModel $listPekerjaanModel)
     {
         //
+    }
+
+    public function listlamaran(Request $r)
+    {
+        $x = [];
+        $x['data'] = LamaranModel::select(
+            'lamaran_models.*',
+            'users.name',
+            'inputdata.gambar',
+            'inputdata.jk',
+            'inputdata.namaperusahaan',
+            'inputdata.kategori',
+            'inputdata.pendidikan',
+            'inputdata.jam',
+            'inputdata.tempatperusahaan',
+            'inputdata.deskripsi',
+        )
+            ->leftJoin('users', 'users.id', 'lamaran_models.user_id')
+            ->leftJoin('inputdata', 'inputdata.id', 'lamaran_models.loker_id')
+            ->orderBy('lamaran_models.created_at', 'DESC')
+            ->get();
+        // return $x;
+        return view('admin.pages.lamaran.index', $x);
+    }
+    public function statuslamaran(Request $r, $id, $status)
+    {
+        try {
+            LamaranModel::where('id', $id)->update([
+                'status' => $status
+            ]);
+            return Redirect::back()->with('info', 'Update status berhasil');
+        } catch (\Throwable $th) {
+            return Redirect::back()->with('info', 'Update status gagal');
+        }
     }
 }
