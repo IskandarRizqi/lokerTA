@@ -596,7 +596,7 @@
                     <div class="row">
                         <div class="col-lg-6 mb-4">
                             <li>
-                                <a href="#" style="border-radius: 10px">
+                                <a href="https://bankiracademy.com/" target="_blank" style="border-radius: 10px">
                                     <div class="learning-card learning-card--vertical">
                                         <div class="img-learning">
                                             <img src="{{asset('front\images\inc\pp.png')}}" alt="">
@@ -624,7 +624,7 @@
                         </div>
                         <div class="col-lg-6 mb-4">
                             <li>
-                                <a href="#" style="border-radius: 10px">
+                                <a href="https://bankiracademy.com/" target="_blank" style="border-radius: 10px">
                                     <div class="learning-card learning-card--vertical">
                                         <div class="img-learning">
                                             <img src="{{asset('front\images\inc\pp.png')}}" alt="">
@@ -659,7 +659,7 @@
                     <div class="row">
                         <div class="col-lg-6 mb-4">
                             <li>
-                                <a href="#" style="border-radius: 10px">
+                                <a href="https://bankiracademy.com/" target="_blank" style="border-radius: 10px">
                                     <div class="learning-card learning-card--vertical">
                                         <div class="img-learning">
                                             <img src="{{asset('front\images\inc\pp.png')}}" alt="">
@@ -687,7 +687,7 @@
                         </div>
                         <div class="col-lg-6 mb-4">
                             <li>
-                                <a href="#" style="border-radius: 10px">
+                                <a href="https://bankiracademy.com/" target="_blank" style="border-radius: 10px">
                                     <div class="learning-card learning-card--vertical">
                                         <div class="img-learning">
                                             <img src="{{asset('front\images\inc\pp.png')}}" alt="">

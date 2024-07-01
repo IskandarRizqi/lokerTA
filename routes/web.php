@@ -34,12 +34,21 @@ Route::group(['middleware' => ['log']], function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
-    return view('admin.pages.dashboard');
-});
-
 // untuk admin
 Route::middleware(['auth', 'admin'])->group(function () {
+
+    Route::get('/dashboard', function () {
+        return view('admin.pages.dashboard');
+    });
+
+    Route::resource('inputdata', InputdataController::class);
+    Route::resource('aksespengguna', AksesPenggunaController::class);
+
+    Route::get('/data-pengguna', function () {
+        return view('admin.pages.user.tambahpengguna');
+    });
+    Route::get('/list-lamaran', [ListPekerjaanController::class, 'listlamaran']);
+    Route::get('/status-lamaran/{id}/{status}', [ListPekerjaanController::class, 'statuslamaran']);
 });
 
 
@@ -66,19 +75,13 @@ Auth::routes();
 Route::resource('list_pekerjaan', ListPekerjaanController::class);
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//routepagesadmin
-Route::resource('inputdata', InputdataController::class);
-Route::resource('aksespengguna', AksesPenggunaController::class);
 // Route::resource('data-pengguna', UserController::class);
-Route::get('/data-pengguna', function () {
-    return view('admin.pages.user.tambahpengguna');
-});
 Route::resource('/', HomeController::class);
 
 Route::resource('kriteria', FormKriteriaController::class);
 
 
-route::get('gambar', function (Request $r) {
+Route::get('gambar', function (Request $r) {
     return Storage::download($r->rf);
 });
 
