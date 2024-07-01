@@ -1,10 +1,17 @@
 <?php
 
 use App\Http\Controllers\AksesPenggunaController;
+use App\Http\Controllers\FormalController;
 use App\Http\Controllers\FormKriteriaController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InformasiPribadiController;
 use App\Http\Controllers\InputdataController;
 use App\Http\Controllers\ListPekerjaanController;
+use App\Http\Controllers\NonformalController;
+use App\Http\Controllers\PengalamanController;
+use App\Http\Controllers\SkillController;
+use App\Http\Controllers\SosialLinkController;
+use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\IsAdmin;
 use Illuminate\Support\Facades\Route;
@@ -102,6 +109,40 @@ Route::get('/templatecv', function () {
 });
 Route::get('/selengkapnya', [App\Http\Controllers\HomeSelengkapnyaController::class, 'index']);
 
+
+
+//cvats
+//methodresource
+Route::resource('informasipribadi', InformasiPribadiController::class);
+Route::resource('pengalaman', PengalamanController::class);
+Route::resource('skill', SkillController::class);
+Route::resource('formal', FormalController::class);
+Route::resource('nonformal', NonformalController::class);
+Route::resource('sosiallink', SosialLinkController::class);
+Route::get('gambarprofil', function (Request $P) {
+    return Storage::download($P->rf);
+});
+    
+
+
+
+
+// metodget
+Route::get('/informasipribadi', [App\Http\Controllers\InformasiPribadiController::class, 'create'])->name('informasipribadi');
+Route::get('/kabupaten/{idprov}', [App\Http\Controllers\InformasiPribadiController::class, 'getkabupaten']);
+Route::get('/kecamatan/{idkec}', [App\Http\Controllers\InformasiPribadiController::class, 'getkecamatan']);
+Route::get('/kelurahan/{idkel}', [App\Http\Controllers\InformasiPribadiController::class, 'getkelurahan']);
+Route::get('/pengalaman', [App\Http\Controllers\PengalamanController::class, 'create'])->name('pengalaman');
+Route::get('/skill', [App\Http\Controllers\SkillController::class, 'create'])->name('skill');
+Route::get('/formal', [App\Http\Controllers\FormalController::class, 'create'])->name('formal');
+Route::get('/nonformal', [App\Http\Controllers\NonformalController::class, 'create'])->name('nonformal');
+Route::get('/sosiallink', [App\Http\Controllers\SosialLinkController::class, 'create'])->name('sosiallink');
+Route::get('/template', [App\Http\Controllers\TemplateController::class, 'index']);
+Route::get('/preview/index', function () {
+    return view('front.cvats.pages.preview.index');
+});
+
+//suratlamarankerja
 Route::get('/templatesrt', function () {
     return view('front.templsuratlamaran');
 });

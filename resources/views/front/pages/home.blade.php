@@ -56,7 +56,7 @@
                         membantu Anda menuju langkah pertama menuju kesuksesan karir</h5>
                     <button type="submit" class="site-button">Pasang Lowongan Anda</button>
                 </div>
-                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-center">
                     <img src="{{asset('front\images\inc\slide.png')}}" class="img-fluid" alt="img">
                 </div>
             </div>
