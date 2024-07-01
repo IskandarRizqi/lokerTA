@@ -42,8 +42,8 @@
                                    
                                 <div class="col-lg-8">
                                     <label for="form-control" style="color: black;">Nama</label>
-                                    <input type="hidden" name="idinformasipribadi" value="{{$informasipribadi->id}}">
-                                    <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" placeholder="" value="{{$informasipribadi->nama}}">
+                                    <input type="hidden" name="idinformasipribadi" value="">
+                                    <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" placeholder="" value="{{old('nama')}}">
                                     @error('nama')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
