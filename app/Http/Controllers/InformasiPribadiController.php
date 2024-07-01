@@ -14,29 +14,29 @@ class InformasiPribadiController extends Controller
 {
     public function index()
     {
-    
-        $data['informasipribadi'] = InformasiPribadiModel::get(); 
+
+        $data['informasipribadi'] = InformasiPribadiModel::get();
         return view('front.cvats.pages.informasipribadi.index');
     }
 
     public function create()
     {
-     
-        $ops['provinsis']=DB::table('provinsis')->get();
-        $ops['kecamatans']=DB::table('kecamatans')->get();
-        $ops['kelurahans']=DB::table('kelurahans')->get();
-        $ops['informasipribadi']=DB::table('informasipribadi')->first();
 
-        return view('front.cvats.pages.informasipribadi.tambah',$ops); 
-        
+        $ops['provinsis'] = DB::table('provinsis')->get();
+        // $ops['kecamatans'] = DB::table('kecamatans')->get();
+        // $ops['kelurahans'] = DB::table('kelurahans')->get();
+        $ops['informasipribadi'] = DB::table('informasipribadi')->first();
+
+        // return $ops;
+        return view('front.cvats.pages.informasipribadi.tambah', $ops);
     }
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-    //   return $request->all();
-        if ($request->hasFile('gambar')) { 
+        //   return $request->all();
+        if ($request->hasFile('gambar')) {
             $file = $request->file('gambar')->store('informasipribadi/' . time());
 
             $validator = Validator::make($request->all(), [
@@ -58,41 +58,43 @@ class InformasiPribadiController extends Controller
             if ($validator->fails()) {
                 return Redirect::back()->withErrors($validator)->withInput();
             }
-    
+
             InformasiPribadiModel::Create([
                 'id' => $request->idinformasipribadi,
                 'gambar' =>  $file,
                 'nama' => $request->nama,
                 'email' => $request->email,
-                'no_hp'=> $request->no_hp,
+                'no_hp' => $request->no_hp,
                 'no_wa' => $request->no_wa,
                 'provinsi' => $request->provinsi,
                 'kota_kab' => $request->kota_kab,
-                'kelurahan'=> $request->kelurahan,
+                'kelurahan' => $request->kelurahan,
                 'rt' => $request->rt,
                 'rw' => $request->rw,
-                'detailalamat'=> $request->detailalamat,
-                'deskripsi'=> $request->deskripsi,
-                'kecamatan'=> $request->kecamatan,
-                
+                'detailalamat' => $request->detailalamat,
+                'deskripsi' => $request->deskripsi,
+                'kecamatan' => $request->kecamatan,
+
             ]);
 
             return redirect('/informasipribadi')->with('sukses', 'Berhasil disimpan');
         }
-       
     }
 
 
-    public function getkabupaten($id){
-        return DB::table('kabupatens')->where('provinsi_id',$id)->get();
+    public function getkabupaten($id)
+    {
+        return DB::table('kabupatens')->where('provinsi_id', $id)->get();
     }
-    public function getkecamatan($id) {
-       
-        return DB::table('kecamatans')->where('kota_id',$id)->get();
+    public function getkecamatan($id)
+    {
+
+        return DB::table('kecamatans')->where('kota_id', $id)->get();
     }
-    public function getkelurahan($id) {
-     
-        return DB::table('kelurahans')->where('kecamatan_id',$id)->get();
+    public function getkelurahan($id)
+    {
+
+        return DB::table('kelurahans')->where('kecamatan_id', $id)->get();
     }
     public function show(string $id)
     {
@@ -106,47 +108,47 @@ class InformasiPribadiController extends Controller
     // }
 
     public function update(Request $request, string $id)
-        {
-            $validator = Validator::make($request->all(), [
-               'gambar' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-                'nama' => 'required',
-                'email' => 'required',
-                'no_hp' => 'required',
-                'no_wa' => 'required',
-                'provinsi' => 'required',
-                'kota_kab' => 'required',
-                'kelurahan' => 'required',
-                'rt' => 'required',
-                'rw' => 'required',
-                'detailalamat' => 'required',
-                'deskripsi' => 'required',
-                'kecamatan' => 'required',
-                
-               
-            ]);
-    
-            // response error validation
-            if ($validator->fails()) {
-                return Redirect::back()->withErrors($validator)->withInput();
-            }
-            if ($request->hasFile('gambar')) {
-                $file = $request->file('gambar')->store('informasipribadi/' . time());
+    {
+        $validator = Validator::make($request->all(), [
+            'gambar' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'nama' => 'required',
+            'email' => 'required',
+            'no_hp' => 'required',
+            'no_wa' => 'required',
+            'provinsi' => 'required',
+            'kota_kab' => 'required',
+            'kelurahan' => 'required',
+            'rt' => 'required',
+            'rw' => 'required',
+            'detailalamat' => 'required',
+            'deskripsi' => 'required',
+            'kecamatan' => 'required',
+
+
+        ]);
+
+        // response error validation
+        if ($validator->fails()) {
+            return Redirect::back()->withErrors($validator)->withInput();
+        }
+        if ($request->hasFile('gambar')) {
+            $file = $request->file('gambar')->store('informasipribadi/' . time());
             InformasiPribadiModel::where('id', $id)->update([
                 'id' => $request->idinformasipribadi,
                 'gambar' => $file,
                 'nama' => $request->nama,
                 'email' => $request->email,
-                'no_hp'=> $request->no_hp,
+                'no_hp' => $request->no_hp,
                 'no_wa' => $request->no_wa,
                 'provinsi' => $request->provinsi,
                 'kota_kab' => $request->kota_kab,
-                'kelurahan'=> $request->kelurahan,
+                'kelurahan' => $request->kelurahan,
                 'rt' => $request->rt,
                 'rw' => $request->rw,
-                'detailalamat'=> $request->detailalamat,
-                'deskripsi'=> $request->deskripsi,
-                'kecamatan'=> $request->kecamatan,
-                
+                'detailalamat' => $request->detailalamat,
+                'deskripsi' => $request->deskripsi,
+                'kecamatan' => $request->kecamatan,
+
             ]);
             return redirect('/informasipribadi')->with('success', 'Berhasil edit ');
         }
