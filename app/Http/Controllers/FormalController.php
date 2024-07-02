@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\FormalModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
 
@@ -26,14 +27,14 @@ class FormalController extends Controller
         $validator = Validator::make($request->all(), [
 
             'tingkatansekolah'  => 'required',
-            'namasekolah'=> 'required',
-            'jurusan'=> 'required',
-            'tanggalmulai'=> 'required',
-            'tanggalselesai'=> 'required',
-            'gelar'=> 'required',
-            'IPK'=> 'required',
-            'deskripsi'=> 'required',
-           
+            'namasekolah' => 'required',
+            'jurusan' => 'required',
+            'tanggalmulai' => 'required',
+            'tanggalselesai' => 'required',
+            'gelar' => 'required',
+            'IPK' => 'required',
+            'deskripsi' => 'required',
+
         ]);
 
         // response error validation
@@ -51,59 +52,59 @@ class FormalController extends Controller
             'gelar' => $request->gelar,
             'IPK' => $request->IPK,
             'deskripsi' => $request->deskripsi,
-    
-         
+            'id_user' => Auth::id(),
+
         ]);
-            return redirect('/formal')->with('ss', 'Berhasil tambah ');
-        }
+        return redirect('/formal')->with('ss', 'Berhasil tambah ');
+    }
 
-        public function show(string $id)
-        {
-            $data['edit'] = FormalModel::where('id', $id)->first();
-            return view('front.cvats.pages.formal.edit', $data);
-        }
+    public function show(string $id)
+    {
+        $data['edit'] = FormalModel::where('id', $id)->first();
+        return view('front.cvats.pages.formal.edit', $data);
+    }
 
-        public function edit(string $id)
-        {
-            //
-        }
+    public function edit(string $id)
+    {
+        //
+    }
 
-        public function update(Request $request, string $id)
-        {
-            $validator = Validator::make($request->all(), [
-                'tingkatansekolah'  => 'required',
-                'namasekolah'=> 'required',
-                'Jurusan'=> 'required',
-                'tanggalmulai'=> 'required',
-                'tanggalselesai'=> 'required',
-                'gelar'=> 'required',
-                'IPK'=> 'required',
-                'deskripsi'=> 'required',
-               
-            ]);
-    
-            // response error validation
-            if ($validator->fails()) {
-                return Redirect::back()->withErrors($validator)->withInput();
-            }
-            FormalModel::where('id', $id)->update([
-                'id' => $request->idformal,
-                'tingkatansekolah' => $request->tingkatansekolah,
-                'namasekolah' => $request->namasekolah,
-                'jurusan' => $request->jurusan,
-                'tanggalmulai' => $request->tanggalmulai,
-                'tanggalselesai' => $request->tanggalselesai,
-                'gelar' => $request->gelar,
-                'IPK' => $request->IPK,
-                'deskripsi' => $request->deskripsi,
-            ]);
-            return redirect('/formal')->with('success', 'Berhasil edit ');
-        }
+    public function update(Request $request, string $id)
+    {
+        $validator = Validator::make($request->all(), [
+            'tingkatansekolah'  => 'required',
+            'namasekolah' => 'required',
+            'Jurusan' => 'required',
+            'tanggalmulai' => 'required',
+            'tanggalselesai' => 'required',
+            'gelar' => 'required',
+            'IPK' => 'required',
+            'deskripsi' => 'required',
 
-        public function destroy(string $id)
-        {
-            FormalModel::where('id', $id)->delete();
-            return redirect('/formal')->with('success', 'Berhasil hapus data');
-        } 
-  
+        ]);
+
+        // response error validation
+        if ($validator->fails()) {
+            return Redirect::back()->withErrors($validator)->withInput();
+        }
+        FormalModel::where('id', $id)->update([
+            'id' => $request->idformal,
+            'tingkatansekolah' => $request->tingkatansekolah,
+            'namasekolah' => $request->namasekolah,
+            'jurusan' => $request->jurusan,
+            'tanggalmulai' => $request->tanggalmulai,
+            'tanggalselesai' => $request->tanggalselesai,
+            'gelar' => $request->gelar,
+            'IPK' => $request->IPK,
+            'deskripsi' => $request->deskripsi,
+            'id_user' => Auth::id(),
+        ]);
+        return redirect('/formal')->with('success', 'Berhasil edit ');
+    }
+
+    public function destroy(string $id)
+    {
+        FormalModel::where('id', $id)->delete();
+        return redirect('/formal')->with('success', 'Berhasil hapus data');
+    }
 }

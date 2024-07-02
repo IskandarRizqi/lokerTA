@@ -18,5 +18,6 @@ class FormalModel extends Model
         'gelar',
         'IPK',
         'deskripsi',
+        'id_user',
     ];
 }

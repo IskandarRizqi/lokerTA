@@ -15,5 +15,6 @@ class SosialLinkModel extends Model
         'instagram',
         'tiktok',
         'linkedin',
+        'id_user',
     ];
 }

@@ -18,8 +18,7 @@ class PengalamanModel extends Model
         'tanggalmulai',
         'tanggalselesai',
         'deskripsi',
-     
+        'id_user',
+
     ];
-
-
 }

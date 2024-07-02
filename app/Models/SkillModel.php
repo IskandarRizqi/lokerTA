@@ -14,7 +14,6 @@ class SkillModel extends Model
         'bagian',
         'ahli',
         'deskripsi',
-
+        'id_user',
     ];
 }
-

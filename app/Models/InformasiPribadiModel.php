@@ -23,7 +23,8 @@ class InformasiPribadiModel extends Model
         'detailalamat',
         'deskripsi',
         'kecamatan',
-        
-      
+        'id_user',
+
+
     ];
 }

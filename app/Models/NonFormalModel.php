@@ -15,8 +15,7 @@ class NonFormalModel extends Model
         'institusi',
         'tanggalmulai',
         'tanggalselesai',
+        'id_user',
 
-     
     ];
-    
 }
