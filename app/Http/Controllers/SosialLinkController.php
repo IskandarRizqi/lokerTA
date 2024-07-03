@@ -18,7 +18,8 @@ class SosialLinkController extends Controller
 
     public function create()
     {
-        return view('front.cvats.pages.sosiallink.tambah');
+        $x['s'] = SosialLinkModel::where('id_user', Auth::id())->first();
+        return view('front.cvats.pages.sosiallink.tambah', $x);
     }
 
     public function store(Request $request)
@@ -36,8 +37,9 @@ class SosialLinkController extends Controller
             return Redirect::back()->withErrors($validator)->withInput();
         }
 
-        SosialLinkModel::create([
-            'id' => $request->idsosiallink,
+        SosialLinkModel::updateOrCreate([
+            'id_user' => Auth::id(),
+        ], [
             'facebook' => $request->facebook,
             'instagram' => $request->instagram,
             'tiktok' => $request->tiktok,

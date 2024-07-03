@@ -18,7 +18,8 @@ class NonformalController extends Controller
 
     public function create()
     {
-        return view('front.cvats.pages.pendidikan.nonformal.tambah');
+        $x['n'] = NonFormalModel::where('id_user', Auth::id())->first();
+        return view('front.cvats.pages.pendidikan.nonformal.tambah', $x);
     }
 
     public function store(Request $request)
@@ -39,17 +40,14 @@ class NonformalController extends Controller
             return Redirect::back()->withErrors($validator)->withInput();
         }
 
-        NonFormalModel::create([
-            'id' => $request->idnonformal,
+        NonFormalModel::updateOrCreate([
+            'id_user' => Auth::id(),
+        ], [
             'namakursus' => $request->namakursus,
             'institusi' => $request->institusi,
             'tanggalmulai' => $request->tanggalmulai,
             'tanggalselesai' => $request->tanggalselesai,
             'id_user' => Auth::id(),
-
-
-
-
         ]);
         return redirect('/nonformal')->with('ss', 'Berhasil tambah ');
     }

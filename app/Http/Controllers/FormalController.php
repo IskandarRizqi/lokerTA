@@ -19,7 +19,10 @@ class FormalController extends Controller
 
     public function create()
     {
-        return view('front.cvats.pages.pendidikan.formal.tambah');
+        $x['tkn'] = FormalModel::select('tingkatansekolah')->pluck('tingkatansekolah')->toArray();
+        $x['glr'] = FormalModel::select('gelar')->pluck('gelar')->toArray();
+        $x['f'] = FormalModel::where('id_user', Auth::id())->first();
+        return view('front.cvats.pages.pendidikan.formal.tambah', $x);
     }
 
     public function store(Request $request)
@@ -42,8 +45,9 @@ class FormalController extends Controller
             return Redirect::back()->withErrors($validator)->withInput();
         }
 
-        FormalModel::create([
-            'id' => $request->idformal,
+        FormalModel::updateOrCreate([
+            'id_user' => Auth::id(),
+        ], [
             'tingkatansekolah' => $request->tingkatansekolah,
             'namasekolah' => $request->namasekolah,
             'jurusan' => $request->jurusan,
@@ -52,6 +56,7 @@ class FormalController extends Controller
             'gelar' => $request->gelar,
             'IPK' => $request->IPK,
             'deskripsi' => $request->deskripsi,
+            'id_user' => Auth::id(),
             'id_user' => Auth::id(),
 
         ]);
