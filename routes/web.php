@@ -122,7 +122,7 @@ Route::resource('sosiallink', SosialLinkController::class);
 Route::get('gambarprofil', function (Request $P) {
     return Storage::download($P->rf);
 });
-    
+
 
 
 
@@ -138,11 +138,13 @@ Route::get('/formal', [App\Http\Controllers\FormalController::class, 'create'])-
 Route::get('/nonformal', [App\Http\Controllers\NonformalController::class, 'create'])->name('nonformal');
 Route::get('/sosiallink', [App\Http\Controllers\SosialLinkController::class, 'create'])->name('sosiallink');
 Route::get('/template', [App\Http\Controllers\TemplateController::class, 'index']);
+//suratlamarankerja
+Route::get('/templatesrt', [App\Http\Controllers\TemplateController::class, 'srt']);
 Route::get('/preview/index', function () {
     return view('front.cvats.pages.preview.index');
 });
 
 //suratlamarankerja
-Route::get('/templatesrt', function () {
-    return view('front.templsuratlamaran');
-});
+// Route::get('/templatesrt', function () {
+//     return view('front.templsuratlamaran');
+// });
