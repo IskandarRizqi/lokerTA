@@ -68,7 +68,8 @@
             <li>
               <a href="#">For Candidates <i class="fa fa-chevron-down"></i></a>
               <ul class="sub-menu">
-                <li><a href="browse-job.html" class="dez-page">Class Training</a></li>
+                <li><a href="/home" class="dez-page">Class Training</a></li>
+                <li><a href="/profile" class="dez-page">CV ATS</a></li>
 
               </ul>
             </li>

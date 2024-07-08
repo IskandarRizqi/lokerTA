@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
+use DB;
 
 class HomeController extends Controller
 {
@@ -42,7 +43,8 @@ class HomeController extends Controller
             }
         }
 
-        $data['rekomendasi'] = GlobalHelper::getrecomend($id);
+       
+        $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
         // return $data;
         $data['inputdata'] = InputdataModel::get();
         return view('front.pages.home', $data);

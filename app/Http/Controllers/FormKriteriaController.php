@@ -9,13 +9,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
+use DB;
 
 class FormKriteriaController extends Controller
 {
 
     public function index()
     {
+
+        $data['kabupatens']=DB::table('kabupatens')
+        // ->join('kabupatens', 'kabupatens.id', 'kriteria.kota_kab')
+        ->get();
         $data['kriteria'] = KriteriaModel::get();
+        // return[$data];
         return view('front.pages.formkriteria', $data);
     }
 

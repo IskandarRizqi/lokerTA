@@ -107,23 +107,38 @@ class GlobalHelper
             }
         }
 
+
+
         foreach ($l1 as $key => $value) {
-            array_push($data, $value);
-        }
+            if (count($data) <= 6) {
+                array_push($data, $value);
+            }
+           
+        }   
         foreach ($l2 as $key => $value) {
-            array_push($data, $value);
+            if (count($data) <= 6) {
+                array_push($data, $value);
+            }
         }
         foreach ($l3 as $key => $value) {
-            array_push($data, $value);
+            if (count($data) <= 6) {
+                array_push($data, $value);
+            }
         }
         foreach ($l4 as $key => $value) {
-            array_push($data, $value);
+            if (count($data) <= 6) {
+                array_push($data, $value);
+            }
         }
         foreach ($l5 as $key => $value) {
-            array_push($data, $value);
+            if (count($data) <= 6) {
+                array_push($data, $value);
+            }
         }
         foreach ($l0 as $key => $value) {
-            array_push($data, $value);
+            if (count($data) <= 6) {
+                array_push($data, $value);
+            }
         }
         return $data;
     }

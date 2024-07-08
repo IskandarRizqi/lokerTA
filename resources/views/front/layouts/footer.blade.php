@@ -46,9 +46,8 @@
                         <ul class="list-2 w10 list-line">
                             <li><a href="/">Pencarian</a></li>
                             <li><a href="/home">Lowongan Terbaru</a></li>
-                            <li><a href="#">Training</a></li>
-                            <li><a href="#">create cv ATS</a></li>
-                            <li><a href="#">Membership</a></li>
+                            <li><a href="/profile">create cv ATS</a></li>
+                            <li><a href="/home">Membership</a></li>
                             <li><a href="/about-us">Help Center</a></li>
                         </ul>
                     </div>
