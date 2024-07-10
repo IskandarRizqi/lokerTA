@@ -62,17 +62,21 @@
         <!-- main nav -->
         <div class="header-nav navbar-collapse collapse justify-content-start" id="navbarNavDropdown">
           <ul class="nav navbar-nav">
-            <li class="active">
+            <li >
               <a href="/">Dashboard</a>
             </li>
             <li>
+              <a href="/informasipribadi">CV ATS <i></i></a>
+
+            </li>
+            {{-- <li>
               <a href="#">For Candidates <i class="fa fa-chevron-down"></i></a>
               <ul class="sub-menu">
-                <li><a href="/home" class="dez-page">Class Training</a></li>
+  
                 <li><a href="/profile" class="dez-page">CV ATS</a></li>
 
               </ul>
-            </li>
+            </li> --}}
 
             {{-- <li>
 
