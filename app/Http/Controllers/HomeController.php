@@ -32,7 +32,8 @@ class HomeController extends Controller
     public function index()
     {
         if (Auth::check() == false) {
-            $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
+            // $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
+            $data['rekomendasi'] = [];
             // return $data;
             $data['inputdata'] = InputdataModel::get();
             return view('front.pages.home', $data);
