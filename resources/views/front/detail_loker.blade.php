@@ -99,7 +99,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div style="text-align: justify; margin-bottom:30px;">{{$loker->deskripsi}}</div>
+                                    <div style="text-align: justify; margin-bottom:30px;">{!!$loker->deskripsi!!}</div>
 
                                 </div>
                                 <div class="col-md-4 right">

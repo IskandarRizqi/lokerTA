@@ -90,6 +90,7 @@ class ListPekerjaanController extends Controller
         $x['data'] = LamaranModel::select(
             'lamaran_models.*',
             'users.name',
+            'users.kriteria_id',
             'inputdata.gambar',
             'inputdata.jk',
             'inputdata.namaperusahaan',
@@ -98,9 +99,11 @@ class ListPekerjaanController extends Controller
             'inputdata.jam',
             'inputdata.tempatperusahaan',
             'inputdata.deskripsi',
+            'informasipribadi.file_pendukung'
         )
             ->leftJoin('users', 'users.id', 'lamaran_models.user_id')
             ->leftJoin('inputdata', 'inputdata.id', 'lamaran_models.loker_id')
+            ->leftJoin('informasipribadi', 'informasipribadi.id_user', 'lamaran_models.user_id')
             ->orderBy('lamaran_models.created_at', 'DESC')
             ->get();
         // return $x;

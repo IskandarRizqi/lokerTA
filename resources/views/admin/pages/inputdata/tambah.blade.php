@@ -11,7 +11,8 @@
             <div class="page-header">
                 <div class="page-title">
                     <a href="{{route('inputdata.index')}}" class="btn btn-primary btn-sm">Kembali</a>
-                    <button class="btn  btn-sm" type="submit" style="background-color: #FFB901; color:white">Simpan</button>
+                    <button class="btn  btn-sm" type="submit"
+                        style="background-color: #FFB901; color:white">Simpan</button>
                 </div>
             </div>
 
@@ -109,7 +110,7 @@
                                         <option value="D3">D3</option>
                                         <option value="D4">D4</option>
                                         <option value="S1">S1</option>
-                                      
+
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>
                                     @error('pendidikan')
@@ -176,8 +177,8 @@
                                     <label for="form-control" style="color: black;"> Deskripsi</label>
                                     <input type="hidden" name="idinputdata" value="">
                                     <textarea cols="30" rows="5"
-                                        class="form-control  @error('deskripsi') is-invalid @enderror"
-                                        name="deskripsi">{{old('deskripsi')}}</textarea>
+                                        class="form-control  @error('deskripsi') is-invalid @enderror" name="deskripsi"
+                                        id="deskripsi">{{old('deskripsi')}}</textarea>
                                     @error('deskripsi')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -206,5 +207,30 @@
 
     </div>
 </div>
+<script type="module">
+    import {
+        ClassicEditor,
+        Essentials,
+        Paragraph,
+        Bold,
+        Italic,
+        Font
+    } from 'ckeditor5';
+
+    ClassicEditor
+        .create( document.querySelector( '#deskripsi' ), {
+            plugins: [ Essentials, Paragraph, Bold, Italic, Font ],
+            toolbar: [
+                'undo', 'redo', '|', 'bold', 'italic', '|',
+                'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+            ]
+        } )
+        .then( editor => {
+            window.editor = editor;
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 <!--  END CONTENT AREA  -->
 @endsection

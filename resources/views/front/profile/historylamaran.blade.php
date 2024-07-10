@@ -24,7 +24,7 @@
                         <img src="/gambar?rf={{$v->loker->gambar}}" alt="" width="100%">
                     </div>
                     <div class="col-lg-9">
-                        <p class="">{{$v->loker->deskripsi}}</p>
+                        <p class="">{!!$v->loker->deskripsi!!}</p>
                     </div>
                 </div>
                 <div class="d-flex">

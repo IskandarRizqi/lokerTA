@@ -24,6 +24,7 @@ class InformasiPribadiModel extends Model
         'deskripsi',
         'kecamatan',
         'id_user',
+        'file_pendukung',
 
 
     ];

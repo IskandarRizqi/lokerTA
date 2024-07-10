@@ -52,8 +52,33 @@
                                     <td>{{$value->status == 0 ? 'Belum dikirim' : 'Terkirim'}}</td>
 
                                     <td>
-                                        <a href="/status-lamaran/{{$value->id}}/{{$value->status == 0 ? 1 : 0}}"
-                                            class="btn btn-primary btn-sm d-block d-none">Ubah Status</a>
+                                        <div class="dropdown d-inline-block">
+                                            <a class="dropdown-toggle" href="#" role="button" id="pendingTask"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-more-vertical">
+                                                    <circle cx="12" cy="12" r="1"></circle>
+                                                    <circle cx="12" cy="5" r="1"></circle>
+                                                    <circle cx="12" cy="19" r="1"></circle>
+                                                </svg>
+                                            </a>
+
+                                            <div class="dropdown-menu right" aria-labelledby="pendingTask"
+                                                style="will-change: transform; position: absolute; transform: translate3d(105px, 0, 0px); top: 0px; left: 0px;">
+                                                <a href="/status-lamaran/{{$value->id}}/{{$value->status == 0 ? 1 : 0}}"
+                                                    class="dropdown-item">Ubah Status</a>
+                                                <a href="/template?user_id={{$value->user_id}}" class="dropdown-item">CV
+                                                    ATS</a>
+                                                <a href="/templatesrt?user_id={{$value->user_id}}&kriteria_id={{$value->kriteria_id}}&loker_id={{$value->loker_id}}"
+                                                    class="dropdown-item">Surat Lamaran</a>
+                                                @if($value->file_pendukung)
+                                                <a href="/gambar?rf={{$value->file_pendukung}}"
+                                                    class="dropdown-item">File Pendukung</a>
+                                                @endif
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach

@@ -32,19 +32,24 @@
                                         <td width="1%">{{$key + 1}}</td>
 
                                         <td>{{$value->nama_pekerjaan}}</td>
-                                        <td>{{$value->deskripsi}}</td>
+                                        <td>{!!$value->deskripsi!!}</td>
 
 
                                         <td class="text-center" style="display: flex; justify-content: center;">
 
-                                            <a href="{{ route('list_pekerjaan.show', $value->uid) }}" class="btn btn-warning mb-1 mr-1 rounded-circle" data-toggle="tooltip" title='Update'><i class="bx bx-edit bx-sm"></i></a>
+                                            <a href="{{ route('list_pekerjaan.show', $value->uid) }}"
+                                                class="btn btn-warning mb-1 mr-1 rounded-circle" data-toggle="tooltip"
+                                                title='Update'><i class="bx bx-edit bx-sm"></i></a>
 
 
 
-                                            <form action="{{ route('list_pekerjaan.destroy', $value->uid) }}" method="post">
+                                            <form action="{{ route('list_pekerjaan.destroy', $value->uid) }}"
+                                                method="post">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button class="btn btn-danger mb-1 mr-1 rounded-circle show_confirm" data-toggle="tooltip" title='Delete' type="submit"><i class="bx bx-trash bx-sm"></i></button>
+                                                <button class="btn btn-danger mb-1 mr-1 rounded-circle show_confirm"
+                                                    data-toggle="tooltip" title='Delete' type="submit"><i
+                                                        class="bx bx-trash bx-sm"></i></button>
                                             </form>
 
                                         </td>

@@ -261,6 +261,19 @@
                                         </span>
                                         @enderror
                                     </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="file_pendukung" style="color: black;">File Pendukung (.pdf)
+                                                <small>(Ijazah, SKHU, SKCK, Sertifikat
+                                                    dll)</small>
+                                                @if($informasipribadi->file_pendukung)
+                                                <a href="/gambar?rf={{$informasipribadi->file_pendukung}}">Download</a>
+                                                @endif
+                                            </label>
+                                            <input type="file" name="file_pendukung" id="file_pendukung"
+                                                class="form-control" accept=".pdf">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-lg-12 mt-3 text-right">
                                     <!-- Menggeser tombol ke kanan -->

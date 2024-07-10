@@ -73,6 +73,9 @@ class InformasiPribadiController extends Controller
         if ($request->gambar) {
             $inp['gambar'] = $request->file('gambar')->store('informasipribadi/' . time());
         }
+        if ($request->file_pendukung) {
+            $inp['file_pendukung'] = $request->file('file_pendukung')->store('informasipribadi/' . time());
+        }
         InformasiPribadiModel::updateOrCreate([
             'id_user' => Auth::id()
         ], $inp);

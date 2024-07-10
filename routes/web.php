@@ -28,13 +28,9 @@ use Illuminate\Http\Request;
 |
  */
 
-Route::get('/', function () {
-    // if (Auth::check()) {
-    //     return redirect('/home');
-    // } else {
-    // }
-    return view('auth.login');
-});
+// Route::get('/', function () {
+//     return view('auth.login');
+// });
 Route::group(['middleware' => ['log']], function () {
     Auth::routes([
         'register' => false,

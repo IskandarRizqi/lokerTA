@@ -21,7 +21,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -31,7 +31,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $id = null;
+        if (Auth::check() == false) {
+            $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
+            // return $data;
+            $data['inputdata'] = InputdataModel::get();
+            return view('front.pages.home', $data);
+        }
         if (Auth::user()->role_id > 0) {
             if (!Auth::user()->kriteria_id) {
                 return Redirect::to('/kriteria');
@@ -43,7 +48,7 @@ class HomeController extends Controller
             }
         }
 
-       
+
         $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
         // return $data;
         $data['inputdata'] = InputdataModel::get();

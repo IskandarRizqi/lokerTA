@@ -9,7 +9,8 @@
         <div class="page-header">
             <div class="page-title">
 
-                <a href="/inputdata/create" class="btn  btn-sm" style="background-color: #FFB901; color:white">Tambah</a>
+                <a href="/inputdata/create" class="btn  btn-sm"
+                    style="background-color: #FFB901; color:white">Tambah</a>
 
             </div>
         </div>
@@ -38,17 +39,17 @@
                             </thead>
                             <tbody>
                                 @foreach($inputdata as $key => $value)
-                                <tr>   
-                                    <td width="1%">{{$key + 1}}</td>          
+                                <tr>
+                                    <td width="1%">{{$key + 1}}</td>
                                     <td> <img width="120px" src="/gambar?rf={{$value->gambar}}"
-                                    onclick="showImage('{{$value->gambar}}')"> </td>
+                                            onclick="showImage('{{$value->gambar}}')"> </td>
                                     <td>{{$value->jk}}</td>
                                     <td>{{$value->namaperusahaan}}</td>
                                     <td>{{$value->kategori}}</td>
                                     <td>{{$value->pendidikan}}</td>
                                     <td>{{$value->jam}}</td>
                                     <td>{{$value->tempatperusahaan}}</td>
-                                    <td>{{$value->deskripsi}}</td>
+                                    <td>{!! $value->deskripsi !!}</td>
 
                                     <td>
                                         <a href="{{route('inputdata.show', $value->id)}}"
@@ -58,7 +59,7 @@
                                             @method('DELETE')
                                             @csrf
                                             <a type="submit"
-                                            class="btn btn-danger btn-sm show_confirm d-block d-none">Hapus</a>
+                                                class="btn btn-danger btn-sm show_confirm d-block d-none">Hapus</a>
                                         </form>
                                     </td>
                                 </tr>

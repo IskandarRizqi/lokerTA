@@ -141,7 +141,8 @@
                                     <input type="hidden" name="inputdata" value="">
                                     <textarea cols="30" rows="5"
                                         class="form-control  @error('deskripsi') is-invalid @enderror"
-                                        placeholder="deskripsi" name="deskripsi">{{old('deskripsi')}}</textarea>
+                                        placeholder="deskripsi" id="deskripsi"
+                                        name="deskripsi">{{old('deskripsi')}}</textarea>
                                     @error('deskripsi')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -164,5 +165,30 @@
 
     </div>
 </div>
+<script type="module">
+    import {
+        ClassicEditor,
+        Essentials,
+        Paragraph,
+        Bold,
+        Italic,
+        Font
+    } from 'ckeditor5';
+
+    ClassicEditor
+        .create( document.querySelector( '#deskripsi' ), {
+            plugins: [ Essentials, Paragraph, Bold, Italic, Font ],
+            toolbar: [
+                'undo', 'redo', '|', 'bold', 'italic', '|',
+                'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+            ]
+        } )
+        .then( editor => {
+            window.editor = editor;
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 <!--  END CONTENT AREA  -->
 @endsection

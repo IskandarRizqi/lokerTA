@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('kategori');
             $table->string('jam');
             $table->string('tempatperusahaan');
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->timestamps();
             $table->softDeletes();
         });
