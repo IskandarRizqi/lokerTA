@@ -63,7 +63,7 @@
         <div class="header-nav navbar-collapse collapse justify-content-start" id="navbarNavDropdown">
           <ul class="nav navbar-nav">
             <li >
-              <a href="/">Dashboard</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="/informasipribadi">CV ATS <i></i></a>

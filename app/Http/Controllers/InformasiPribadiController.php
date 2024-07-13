@@ -25,6 +25,7 @@ class InformasiPribadiController extends Controller
         // $ops['kecamatans'] = DB::table('kecamatans')->get();
         // $ops['kelurahans'] = DB::table('kelurahans')->get();
         $ops['informasipribadi'] = InformasiPribadiModel::where('id_user', Auth::id())->first();
+         
 
         // return $ops;
         return view('front.cvats.pages.informasipribadi.tambah', $ops);
