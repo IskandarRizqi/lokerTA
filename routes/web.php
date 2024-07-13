@@ -40,9 +40,7 @@ Route::group(['middleware' => ['log']], function () {
 // untuk admin
 Route::middleware(['auth', 'admin'])->group(function () {
 
-    Route::get('/dashboard', function () {
-        return view('admin.pages.dashboard');
-    });
+    Route::get('/dashboard', [HomeController::class, 'index_admin']);
 
     Route::resource('inputdata', InputdataController::class);
     Route::resource('aksespengguna', AksesPenggunaController::class);

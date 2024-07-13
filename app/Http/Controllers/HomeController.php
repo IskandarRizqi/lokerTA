@@ -6,6 +6,7 @@ use App\Helper\GlobalHelper;
 use App\Models\InputdataModel;
 use App\Models\KriteriaModel;
 use App\Models\LamaranModel;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -54,6 +55,41 @@ class HomeController extends Controller
         // return $data;
         $data['inputdata'] = InputdataModel::get();
         return view('front.pages.home', $data);
+    }
+
+    public function index_admin(Request $request)
+    {
+        $x['total_loker'] = InputdataModel::count();
+        $x['total_admin'] = User::where('role_id', 0)->count();
+        $x['total_user'] = User::where('role_id', 1)->count();
+        $x['total_lamaran'] = LamaranModel::count();
+        $x['lamaran_setahun'] = [];
+        for ($i = 01; $i < 12; $i++) {
+            $ls = LamaranModel::whereYear('created_at', now()->year)
+                ->whereMonth('created_at', ($i + 1))
+                ->count();
+            array_push($x['lamaran_setahun'], $ls);
+        }
+
+        $x['tawal'] = now()->startOfMonth();
+        $x['takhir'] = now()->endOfMonth();
+        if ($request->tanggal_awal && $request->tanggal_akhir) {
+            $x['tawal'] = $request->tanggal_awal;
+            $x['takhir'] = $request->tanggal_akhir;
+        }
+
+        $x['data'] = LamaranModel::select(
+            'lamaran_models.*',
+            'inputdata.namaperusahaan',
+            'users.name',
+        )
+            ->join('inputdata', 'inputdata.id', 'lamaran_models.loker_id')
+            ->join('users', 'users.id', 'lamaran_models.user_id')
+            ->whereDate('lamaran_models.created_at', '>=', $x['tawal'])
+            ->whereDate('lamaran_models.created_at', '<=', $x['takhir'])
+            ->get();
+        // return $x;
+        return view('admin.pages.dashboard', $x);
     }
 
     public function caripekerjaan(Request $request)
