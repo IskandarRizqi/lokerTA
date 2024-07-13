@@ -77,6 +77,9 @@
                                                 <a href="/gambar?rf={{$value->file_pendukung}}"
                                                     class="dropdown-item">File Pendukung</a>
                                                 @endif
+                                                @if($value->email)
+                                                <a href="mailto:{{$value->email}}" class="dropdown-item">Kirim Email</a>
+                                                @endif
                                             </div>
                                         </div>
                                     </td>

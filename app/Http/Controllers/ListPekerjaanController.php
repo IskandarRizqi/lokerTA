@@ -99,6 +99,7 @@ class ListPekerjaanController extends Controller
             'inputdata.jam',
             'inputdata.tempatperusahaan',
             'inputdata.deskripsi',
+            'inputdata.email',
             'informasipribadi.file_pendukung'
         )
             ->leftJoin('users', 'users.id', 'lamaran_models.user_id')
