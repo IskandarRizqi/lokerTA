@@ -19,6 +19,7 @@ class InputdataModel extends Model
         'pendidikan',
         'jam',
         'tempatperusahaan',
+        'email',
         'deskripsi',
 
     ];

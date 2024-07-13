@@ -33,6 +33,7 @@
                                     <th>pendidikan</th>
                                     <th>Jam</th>
                                     <th>Tempat Perusahaan</th>
+                                    <th>Email</th>
                                     <th>Deskripsi</th>
                                     <th class="no-content text-center">Aksi</th>
                                 </tr>
@@ -49,6 +50,7 @@
                                     <td>{{$value->pendidikan}}</td>
                                     <td>{{$value->jam}}</td>
                                     <td>{{$value->tempatperusahaan}}</td>
+                                    <td>{{$value->email}}</td>
                                     <td>{!! $value->deskripsi !!}</td>
 
                                     <td>

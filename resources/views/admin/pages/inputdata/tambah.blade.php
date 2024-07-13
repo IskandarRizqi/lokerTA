@@ -99,7 +99,7 @@
 
                             <div class="row m-2">
 
-                                <div class="col-lg-4">
+                                <div class="col-lg-3">
                                     <label for="form-control" style="color: black;">Pendidikan</label>
                                     <input type="hidden" name="idinputdata" value="">
                                     <select name="pendidikan"
@@ -120,7 +120,7 @@
                                     @enderror
                                 </div>
 
-                                <div class="col-lg-4">
+                                <div class="col-lg-3">
                                     <label for="jam" style="color: black;">jam kerja</label>
                                     <input type="hidden" name="idinputdata" value="">
                                     <select name="jam" class="form-control @error('jam') is-invalid @enderror"
@@ -138,7 +138,7 @@
                                     @enderror
                                 </div>
 
-                                <div class="col-lg-4">
+                                <div class="col-lg-3">
                                     <label for="form-control" style="color: black;">Tempat Perusahaan</label>
                                     <input type="hidden" name="idinputdata" value="">
                                     <select name="tempatperusahaan"
@@ -165,6 +165,19 @@
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>
                                     @error('tempatperusahaan')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <label for="form-control" style="color: black;">Email Perusahaan</label>
+                                    <input type="hidden" name="idinputdata" value="">
+                                    <input type="text" name="email"
+                                        class="form-control @error('email') is-invalid @enderror"
+                                        placeholder="" value="{{old('email')}}">
+                                    @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

@@ -21,7 +21,7 @@
 
                             <div class="row m-2">
 
-                                <div class="col-lg-4">
+                                <div class="col-lg-3">
                                     <label for="gambar" style="color: black;">Gambar</label>
                                     <input type="hidden" name="idinputdata" value="">
                                     <input type="file" name="gambar" id="gambar"
@@ -35,7 +35,7 @@
 
                                 </div>
 
-                                <div class="col-lg-4">
+                                <div class="col-lg-3">
                                     <label for="form-control" style="color: black;">Nama Perusahaan</label>
                                     <input type="hidden" name="idiinputdata" value="">
                                     <input type="text" name="namaperusahaan"
@@ -48,7 +48,7 @@
                                     @enderror
                                 </div>
 
-                                <div class="col-lg-4">
+                                <div class="col-lg-3">
                                     <label for="kategori" style="color: black;">Kategori</label>
                                     <input type="hidden" name="idinputdata" value="">
                                     <select name="kategori" id="kategori"
@@ -66,13 +66,11 @@
                                     </span>
                                     @enderror
                                 </div>
-                            </div>
+                            
 
-                            <div class="row m-2">
-
-                                <div class="col-lg-6">
+                                <div class="col-lg-3">
                                     <div class="form-group">
-                                        <label for="jk">Prioritas Jenis Kelamin</label>
+                                        <label for="jk">Jenis Kelamin</label>
                                         <select id="jk" name="jk" class="form-control" required>
                                             <option value="" disabled selected>Pilih</option>
                                             <option value="laki-laki" {{$edit['jk']=='laki-laki' ? 'selected' : '' }}>
@@ -83,8 +81,12 @@
                                         </select>
                                     </div>
                                 </div>
+                            </div>
+                          
+                            
 
-                                <div class="col-lg-6">
+                            <div class="row m-2">
+                                <div class="col-lg-3">
                                     <div class="form-group">
                                         <label for="pendidikan">Minimal Penidikan</label>
                                         <select id="pendidikan" name="pendidikan" class="form-control" required>
@@ -105,7 +107,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-3">
                                     <label for="kategori" style="color: black;">jam kerja</label>
                                     <input type="hidden" name="idinputdata" value="">
                                     <select name="jam" id="jam" class="form-control @error('jam') is-invalid @enderror"
@@ -123,7 +125,7 @@
                                     @enderror
                                 </div>
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-3">
                                     <label for="form-control" style="color: black;">Tempat Perusahaan</label>
                                     <input type="hidden" name="idinputdata" value="">
                                     <input type="text" name="tempatperusahaan"
@@ -135,6 +137,21 @@
                                     </span>
                                     @enderror
                                 </div>
+
+                                <div class="col-lg-3">
+                                    <label for="form-control" style="color: black;">Email Perusahaan</label>
+                                    <input type="hidden" name="idiinputdata" value="">
+                                    <input type="text" name="email"
+                                        class="form-control @error('email') is-invalid @enderror"
+                                        placeholder="email" value="{{$edit['email']}}">
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row m-1">
 
                                 <div class="col-lg-12">
                                     <label for="form-control" style="color: black;"> Deskripsi</label>

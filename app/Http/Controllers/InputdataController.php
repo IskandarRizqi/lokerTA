@@ -35,6 +35,7 @@ class InputdataController extends Controller
                 'pendidikan' => 'required',
                 'jam' => 'required',
                 'tempatperusahaan' => 'required',
+                'email' => 'required',
                 'deskripsi' => 'required',
             ]);
 
@@ -50,6 +51,7 @@ class InputdataController extends Controller
                 'pendidikan' => $request->pendidikan,
                 'jam' => $request->jam,
                 'tempatperusahaan' => $request->tempatperusahaan,
+                'email' => $request->email,
                 'deskripsi' => $request->deskripsi,
             ]);
 
@@ -77,6 +79,7 @@ class InputdataController extends Controller
             'pendidikan' => 'required',
             'jam' => 'required',
             'tempatperusahaan' => 'required',
+            'email' => 'required',
             'deskripsi' => 'required',
         ]);
         if ($validator->fails()) {
@@ -89,6 +92,7 @@ class InputdataController extends Controller
             'pendidikan' => $request->pendidikan,
             'jam' => $request->jam,
             'tempatperusahaan' => $request->tempatperusahaan,
+            'email' => $request->email,
             'deskripsi' => $request->deskripsi,
         ];
         if ($request->hasFile('gambar')) {
