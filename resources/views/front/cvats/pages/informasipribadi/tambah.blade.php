@@ -266,7 +266,7 @@
                                             <label for="file_pendukung" style="color: black;">File Pendukung (.pdf)
                                                 <small>(Ijazah, SKHU, SKCK, Sertifikat
                                                     dll)</small>
-                                                @if($informasipribadi->file_pendukung)
+                                                @if($informasipribadi)
                                                 <a href="/gambar?rf={{$informasipribadi->file_pendukung}}">Download</a>
                                                 @endif
                                             </label>
