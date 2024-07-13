@@ -68,7 +68,7 @@ class AksesPenggunaController extends Controller
     public function show(string $id)
     {
         $data['edit'] = User::where('id', $id)->first();
-        return view('admin.pages.user.edit',$data);
+        return view('admin.pages.user.tambahpengguna',$data);
     }
 
     public function edit(string $id)
