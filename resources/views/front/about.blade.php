@@ -17,7 +17,7 @@
                 </div>
                 <p>Tentang Kami <br> <br>
 
-                    Selamat datang di [Insert Website Name], portal lowongan kerja terkemuka di Indonesia. Kami berkomitmen untuk membantu Anda menemukan pekerjaan yang sesuai dengan keahlian dan minat Anda.
+                    Selamat datang di Website JobConnect, portal lowongan kerja terkemuka di Indonesia. Kami berkomitmen untuk membantu Anda menemukan pekerjaan yang sesuai dengan keahlian dan minat Anda.
                     <br> <br>
                     Misi Kami
                     <br> <br>
@@ -35,7 +35,7 @@
                     <div class="hubungikami col-lg-6">
                         <abbr title="Phone Number"><strong>Phone:</strong></abbr> (62) 85772637432 <br>
                         <abbr title="Fax"><strong>Fax:</strong></abbr> (62) 88888822222<br>
-                        <abbr title="Email Address"><strong>Email:</strong></abbr> lokertegal@gmail.com
+                        <abbr title="Email Address"><strong>Email:</strong></abbr> JobConnect@gmail.com
                     </div>
                 </div>
             </div>
