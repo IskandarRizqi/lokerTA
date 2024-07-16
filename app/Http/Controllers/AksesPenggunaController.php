@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helper\GlobalHelper;
 use App\Models\user;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -10,6 +11,7 @@ use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AksesPenggunaController extends Controller
 {
@@ -60,15 +62,14 @@ class AksesPenggunaController extends Controller
             'id' => $request->id
         ], $i);
 
-
-
-        return redirect('/aksespengguna')->with('ss', 'Berhasil tambah');
+        GlobalHelper::messagereturn($user);
+        return redirect('/aksespengguna');
     }
 
     public function show(string $id)
     {
         $data['edit'] = User::where('id', $id)->first();
-        return view('admin.pages.user.tambahpengguna',$data);
+        return view('admin.pages.user.tambahpengguna', $data);
     }
 
     public function edit(string $id)

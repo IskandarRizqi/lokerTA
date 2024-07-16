@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Helper\GlobalHelper;
 use App\Models\FormalModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -45,7 +45,7 @@ class FormalController extends Controller
             return Redirect::back()->withErrors($validator)->withInput();
         }
 
-        FormalModel::updateOrCreate([
+        $x = FormalModel::updateOrCreate([
             'id_user' => Auth::id(),
         ], [
             'tingkatansekolah' => $request->tingkatansekolah,
@@ -60,7 +60,8 @@ class FormalController extends Controller
             'id_user' => Auth::id(),
 
         ]);
-        return redirect('/formal')->with('ss', 'Berhasil tambah ');
+        GlobalHelper::messagereturn($x);
+        return redirect('/formal');
     }
 
     public function show(string $id)

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helper\GlobalHelper;
 use App\Models\InputdataModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -99,9 +100,10 @@ class InputdataController extends Controller
             $file = $request->file('gambar')->store('inputdata/' . time());
             $i['gambar'] = $file;
         }
-        InputdataModel::where('id', $id)->update($i);
+        $x = InputdataModel::where('id', $id)->update($i);
 
-        return redirect('/inputdata')->with('succes', 'Berhasil tambah');
+        GlobalHelper::messagereturn($x);
+        return redirect('/inputdata');
     }
 
     public function destroy(string $id)

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helper\GlobalHelper;
 use App\Models\LamaranModel;
 use App\Models\ListPekerjaanModel;
 use Illuminate\Http\Request;
@@ -113,12 +114,14 @@ class ListPekerjaanController extends Controller
     public function statuslamaran(Request $r, $id, $status)
     {
         try {
-            LamaranModel::where('id', $id)->update([
+            $x = LamaranModel::where('id', $id)->update([
                 'status' => $status
             ]);
-            return Redirect::back()->with('info', 'Update status berhasil');
+            GlobalHelper::messagereturn($x);
+            return Redirect::back();
         } catch (\Throwable $th) {
-            return Redirect::back()->with('info', 'Update status gagal');
+            GlobalHelper::messagereturn($x);
+            return Redirect::back();
         }
     }
 }

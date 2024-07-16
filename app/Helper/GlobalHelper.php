@@ -4,6 +4,7 @@ namespace App\Helper;
 
 use App\Models\InputdataModel;
 use App\Models\User;
+use RealRashid\SweetAlert\Facades\Alert;
 use Sastrawi\Stemmer\StemmerFactory;
 use Sastrawi\StopWordRemover\StopWordRemoverFactory;
 
@@ -113,8 +114,7 @@ class GlobalHelper
             if (count($data) <= 6) {
                 array_push($data, $value);
             }
-           
-        }   
+        }
         foreach ($l2 as $key => $value) {
             if (count($data) <= 6) {
                 array_push($data, $value);
@@ -141,5 +141,13 @@ class GlobalHelper
             }
         }
         return $data;
+    }
+
+    public static function messagereturn($bool)
+    {
+        if ($bool) {
+            return Alert::success('Success', 'Berhasil');
+        }
+        return Alert::info('Info', 'Tidak Berhasil');
     }
 }

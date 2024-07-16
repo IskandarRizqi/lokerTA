@@ -64,7 +64,7 @@ class HomeController extends Controller
         $x['total_user'] = User::where('role_id', 1)->count();
         $x['total_lamaran'] = LamaranModel::count();
         $x['lamaran_setahun'] = [];
-        for ($i = 01; $i < 12; $i++) {
+        for ($i = 01; $i < 13; $i++) {
             $ls = LamaranModel::whereYear('created_at', now()->year)
                 ->whereMonth('created_at', ($i + 1))
                 ->count();

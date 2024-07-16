@@ -137,7 +137,7 @@
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="statbox widget box box-shadow">
                     <div class="widget-content widget-content-area">
-                        <div id="chart1" style="height: 100px"></div>
+                        <div id="chart1"></div>
                     </div>
                 </div>
             </div>
@@ -211,6 +211,7 @@
         })
         $(document).ready(function() {
             let ls = JSON.parse($('#lamaran_setahun').val());
+            console.log(ls);
             var options = {
           series: [{
             name: "Lamar",
