@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\InputdataModel;
 use App\Models\KriteriaModel;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Carbon\Carbon;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -42,13 +43,13 @@ class TemplateController extends Controller
         $data['perusahaan'] = '';
         $data['kota_perusahaan'] = '';
         $data['kategori_perusahaan'] = '';
-        $data['tanggal_lamar'] = '';
+        $data['tanggal_lamar'] = Carbon::now();
         if ($request->loker_id) {
             $loker = InputdataModel::where('id', $request->loker_id)->first();
             $data['perusahaan'] = $loker ? $loker->namaperusahaan : '';
             $data['kota_perusahaan'] = $loker ? $loker->tempatperusahaan : '';
             $data['kategori_perusahaan'] = $loker ? $loker->kategori : '';
-            $data['tanggal_lamar'] = $loker ? $loker->created_at : '';
+            $data['tanggal_lamar'] = $loker ? $loker->created_at : Carbon::now();
             // return $loker;
         }
         $data['informasipribadi'] = DB::table('informasipribadi')
