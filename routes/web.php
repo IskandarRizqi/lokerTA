@@ -17,6 +17,8 @@ use App\Http\Middleware\IsAdmin;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +33,8 @@ use Illuminate\Http\Request;
 // Route::get('/', function () {
 //     return view('auth.login');
 // });
+
+Auth::routes(['verify' => true]);
 Route::group(['middleware' => ['log']], function () {
     Auth::routes([
         'register' => false,
@@ -63,6 +67,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/update-kriteria', [App\Http\Controllers\HomeController::class, 'updatekriteria']);
 });
 
+Route::resource('kriteria', FormKriteriaController::class);
 
 
 Route::get('/detail-loker/{id}', [App\Http\Controllers\Front\LokerController::class, 'detailloker']);
@@ -72,14 +77,13 @@ Route::get('/submit-loker/{id}', [App\Http\Controllers\Front\LokerController::cl
 //     return view('front.pages.home');
 // });
 
-Auth::routes();
 Route::resource('list_pekerjaan', ListPekerjaanController::class);
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Route::resource('data-pengguna', UserController::class);
 Route::resource('/', HomeController::class);
 
-Route::resource('kriteria', FormKriteriaController::class);
+
 
 
 Route::get('gambar', function (Request $r) {

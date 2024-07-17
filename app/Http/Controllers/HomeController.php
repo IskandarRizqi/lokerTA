@@ -39,17 +39,11 @@ class HomeController extends Controller
             $data['inputdata'] = InputdataModel::get();
             return view('front.pages.home', $data);
         }
-        if (Auth::user()->role_id > 0) {
-            if (!Auth::user()->kriteria_id) {
-                return Redirect::to('/kriteria');
-            }
-        }
         if (Auth::user()->role_id < 1) {
             if (!Auth::user()->kriteria_id) {
                 return redirect::to('/dashboard');
             }
         }
-
 
         $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
         // return $data;

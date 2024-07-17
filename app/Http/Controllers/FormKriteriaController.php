@@ -17,11 +17,10 @@ class FormKriteriaController extends Controller
     public function index()
     {
 
-        $data['kabupatens']=DB::table('kabupatens')
-        // ->join('kabupatens', 'kabupatens.id', 'kriteria.kota_kab')
-        ->get();
+        $data['kabupatens'] = DB::table('kabupatens')
+            // ->join('kabupatens', 'kabupatens.id', 'kriteria.kota_kab')
+            ->get();
         $data['kriteria'] = KriteriaModel::get();
-        // return[$data];
         return view('front.pages.formkriteria', $data);
     }
 
