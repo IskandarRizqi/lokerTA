@@ -64,6 +64,9 @@ class GlobalHelper
             return $l;
         }
         $auth = User::where('id', $id)->with('kriteria')->first();
+        if (!$auth->kriteria) {
+            return $l;
+        }
 
         $l0 = [];
         $l1 = [];

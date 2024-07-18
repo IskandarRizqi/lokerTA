@@ -34,6 +34,16 @@ class TemplateController extends Controller
         $data['skill'] = DB::table('skill')->where('id_user', $id)->get();
         $data['sosiallink'] = DB::table('sosiallink')->where('id_user', $id)->first();
 
+        if (
+            !$data['informasipribadi'] ||
+            !$data['pengalaman'] ||
+            !$data['formal'] ||
+            !$data['nonformal'] ||
+            !$data['skill'] ||
+            !$data['sosiallink']
+        ) {
+            return Redirect::back()->with('info', 'data tidak lengkap, harap isi data terlebih dahulu');
+        }
         // return($data);
         return view('front.cvats.pages.preview.template', $data);
     }
@@ -65,16 +75,18 @@ class TemplateController extends Controller
                 return $q->where('informasipribadi.id_user', Auth::id());
             })
             ->first();
-
-        if (!$data['informasipribadi']) {
-            return Redirect::back()->with('info', 'Data tidak ditemukan');
-        }
         $data['user'] = KriteriaModel::where(function ($q) use ($request) {
             if ($request->kriteria_id) {
                 return $q->where('id', $request->kriteria_id);
             }
             return $q->where('id', Auth::user()->kriteria_id);
         })->first();
+        if (
+            !$data['informasipribadi'] ||
+            !$data['user']
+        ) {
+            return Redirect::back()->with('info', 'data tidak lengkap, harap isi data terlebih dahulu');
+        }
         return view('front.templsuratlamaran', $data);
     }
 }
