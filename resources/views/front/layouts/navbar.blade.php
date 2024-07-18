@@ -69,7 +69,7 @@
                   <a href="/custom_logout" class="btn btn-info">
                     Iya
                   </a>
-                  <span class="btn btn-danger ml-2">Tidak</span>
+                  <span class="btn btn-danger ml-2" data-bs-dismiss="modal">Tidak</span>
                 </div>
               </div>
               <div class="modal-footer" hidden>
