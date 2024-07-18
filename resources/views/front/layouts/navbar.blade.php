@@ -38,18 +38,45 @@
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a href="/profile" class="dropdown-item">Profile</a>
-                <a href="{{ route('logout') }}" class="dropdown-item"
+                {{-- <a href="{{ route('logout') }}" class="dropdown-item"
                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none" hidden>
                     @csrf
                   </form>
-                </a>
+                </a> --}}
+                <div class="dropdown-item">
+                  <span data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</span>
+                </div>
               </div>
             </div>
             @else
             <a href="/register" class="site-button"><i class="fa fa-user"></i> Sign Up</a>
             <a href="/login" class="site-button"><i class="fa fa-lock"></i> login</a>
             @endif
+          </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Konfirmasi</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center">
+                <h3>Apakah anda yakin keluar?</h3>
+                <div class="align-item-center">
+                  <a href="/custom_logout" class="btn btn-info">
+                    Iya
+                  </a>
+                  <span class="btn btn-danger ml-2">Tidak</span>
+                </div>
+              </div>
+              <div class="modal-footer" hidden>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
           </div>
         </div>
         <!-- Quik search -->
@@ -62,7 +89,7 @@
         <!-- main nav -->
         <div class="header-nav navbar-collapse collapse justify-content-start" id="navbarNavDropdown">
           <ul class="nav navbar-nav">
-            <li >
+            <li>
               <a href="/">Home</a>
             </li>
             <li>
@@ -72,7 +99,7 @@
             {{-- <li>
               <a href="#">For Candidates <i class="fa fa-chevron-down"></i></a>
               <ul class="sub-menu">
-  
+
                 <li><a href="/profile" class="dez-page">CV ATS</a></li>
 
               </ul>

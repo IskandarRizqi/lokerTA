@@ -26,10 +26,10 @@ class Authenticate
     {
         if (auth()->user()->role_id > 0) {
             if (!auth()->user()->email_verified_at) {
-                return redirect()->to('/')->with('info', 'email belum di verifikasi');
+                return redirect()->to('/')->with('info', 'silahkan verifikasi email anda terlebih dahulu');
             }
-            if (!Auth::user()->kriteria_id) {
-                return redirect()->to('kriteria')->with('info', 'email belum di verifikasi');
+            if (!auth()->user()->kriteria_id) {
+                return redirect()->to('kriteria')->with('info', 'silahkan verifikasi email anda');
             }
         }
         return $next($request);

@@ -198,4 +198,31 @@ class HomeController extends Controller
         }
         return Redirect::back()->with('info', 'Kriteria gagal diperbarui');
     }
+
+    public function custom_verify(Request $request)
+    {
+        if ($request->verify_id && $request->hash) {
+            $u = User::where('id', $request->verify_id)->first();
+            if (!$u) {
+                return 'Data tidak ditemukan';
+            }
+
+            User::where('id', $request->verify_id)->update([
+                'email_verified_at' => now()
+            ]);
+
+            return Redirect::to('/profile');
+        }
+    }
+
+    public function custom_logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
+    }
 }

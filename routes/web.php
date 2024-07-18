@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AksesPenggunaController;
+use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\FormalController;
 use App\Http\Controllers\FormKriteriaController;
 use App\Http\Controllers\HomeController;
@@ -15,6 +16,7 @@ use App\Http\Controllers\SosialLinkController;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\IsAdmin;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
@@ -34,13 +36,17 @@ use Illuminate\Support\Facades\Auth;
 // Route::get('/', function () {
 //     return view('auth.login');
 // });
+Route::get('/verified', [HomeController::class, 'custom_verify']);
+Route::get('/custom_logout', [HomeController::class, 'custom_logout']);
 
 Auth::routes(['verify' => true]);
-Route::group(['middleware' => ['log']], function () {
-    Auth::routes([
-        'register' => false,
-    ]);
-});
+Route::get('/email/verify', 'Auth\VerificationController@show')->name('verification.notice');
+
+// Route::group(['middleware' => ['log']], function () {
+//     Auth::routes([
+//         'register' => false,
+//     ]);
+// });
 
 // untuk admin
 Route::middleware(['auth', 'admin'])->group(function () {
@@ -147,4 +153,3 @@ Route::get('/preview/index', function () {
 // Route::get('/templatesrt', function () {
 //     return view('front.templsuratlamaran');
 // });
-
