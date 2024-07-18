@@ -5,13 +5,13 @@
     @include('front.layouts.head')
     <style>
         .menu-kiri:hover {
-            background-color: blue;
+            background-color: #FFB901;
             color: white;
             border-radius: 10px;
         }
 
         .menu-kiri .active {
-            background-color: blue;
+            background-color: #FFB901;
             color: white;
             border-radius: 10px;
         }

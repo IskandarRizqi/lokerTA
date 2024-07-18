@@ -27,7 +27,7 @@ class RegisterController extends Controller
 
     /**
      * Where to redirect users after registration.
-     *
+     * 
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
@@ -55,6 +55,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+        
     }
 
     /**
@@ -72,6 +73,8 @@ class RegisterController extends Controller
             'role_id' => 1,
             'password' => Hash::make($data['password']),
         ]);
+
+      
     }
 
 }

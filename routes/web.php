@@ -8,6 +8,7 @@ use App\Http\Controllers\InformasiPribadiController;
 use App\Http\Controllers\InputdataController;
 use App\Http\Controllers\ListPekerjaanController;
 use App\Http\Controllers\NonformalController;
+use App\Http\Controllers\OtpCodeController;
 use App\Http\Controllers\PengalamanController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\SosialLinkController;
@@ -142,3 +143,4 @@ Route::get('/preview/index', function () {
 // Route::get('/templatesrt', function () {
 //     return view('front.templsuratlamaran');
 // });
+

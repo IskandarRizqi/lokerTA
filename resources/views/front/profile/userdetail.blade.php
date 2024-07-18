@@ -34,7 +34,7 @@
         </div>
         <div class="col-lg-12">
             <div class="form-group">
-                <button type="submit" class="btn btn-primary col-lg-12">Ubah</button>
+                <button type="submit" class="btn btn-primary col-lg-12" style="background-color: #FFB901; ">Ubah</button>
             </div>
         </div>
     </div>

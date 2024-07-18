@@ -127,6 +127,6 @@
         </select>
     </div>
 
-    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    <button type="submit" class="btn btn-primary btn-block" style="background-color: #FFB901;">Submit</button>
 </form>
 @endsection
