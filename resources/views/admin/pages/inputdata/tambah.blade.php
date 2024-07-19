@@ -49,7 +49,7 @@
                                         <option value="">Pilih </option>
                                         <option value="laki-laki">Laki-laki</option>
                                         <option value="perempuan">Perempuan</option>
-                                        <option value="lp">Male & Female</option>
+                                        <option value="All">Male & Female</option>
 
                                     </select>
                                     @error('kategori')
@@ -79,14 +79,27 @@
                                         placeholder="" value="{{old('kategori')}}">
                                         <option value="">Pilih Kategori</option>
                                         <option value="Administrasi ">Administrasi </option>
-                                        <option value="Hukum ">Hukum </option>
                                         <option value="Akuntansi">Akuntansi</option>
+                                        <option value="Arsitektur">Arsitektur</option>
+                                        <option value="Customer Service">Customer Service</option>
+                                        <option value="Developer">Developer</option>
+                                        <option value="Desain Grafis">Desain Grafis</option>
+                                        <option value="Frontend">Frontend</option>
+                                        <option value="Farmasi">Farmasi</option>
+                                        <option value="Hukum ">Hukum </option>
+                                        <option value="IT ">IT</option>
+                                        <option value="Jurnalistik ">Jurnalistik</option>
                                         <option value="Kesehatan ">Kesehatan </option>
-                                        <option value="operator produksi">operator produksi</option>
+                                        <option value="Manajemen ">Manajemen </option>
+                                        <option value="Marketing">Marketing</option>
+                                        <option value="Multimedia ">Multimedia </option>
+                                        <option value="Perbankan ">Perbankan </option>
+                                        <option value="Perawat ">Perawat </option>
+                                        <option value="Operator produksi">Operator Produksi</option>
+                                        <option value="Mesin ">Mesin </option>
+                                        <option value="Komputer ">Komputer </option>
+                                        <option value="Elektro ">Elektro </option>
                                         <option value="QC">QC</option>
-                                        <option value="Marketing">marketing</option>
-                                        <option value="Developer">developer</option>
-                                        <option value="Frontend">frontend</option>
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>
                                     @error('kategori')
@@ -106,7 +119,7 @@
                                         class="form-control @error('pendidikan') is-invalid @enderror" placeholder=""
                                         value="{{old('pendidikan')}}">
                                         <option value="">Pilih pendidikan</option>
-                                        <option value="SMK">SMA</option>
+                                        <option value="SLTA">SMA/SMK</option>
                                         <option value="D3">D3</option>
                                         <option value="D4">D4</option>
                                         <option value="S1">S1</option>
@@ -126,9 +139,10 @@
                                     <select name="jam" class="form-control @error('jam') is-invalid @enderror"
                                         placeholder="" value="{{old('jam')}}">
                                         <option value="">Pilih jam kerja</option>
-                                        <option value="Parttime">parttime </option>
-                                        <option value="Fulltime">fulltime </option>
-                                        <option value="Frelance">frelance</option>
+                                        <option value="Fulltime">Fulltime </option>
+                                        <option value="Parttime">Parttime </option>
+                                        <option value="Frelance">Frelance</option>
+                                        
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>
                                     @error('jam')
@@ -145,23 +159,38 @@
                                         class="form-control @error('tempatperusahaan') is-invalid @enderror"
                                         placeholder="" value="{{old('tempatperusahaan')}}">
                                         <option value="">Pilih </option>
+                                        <option value="Balikpapan">Balikpapan</option>
+                                        <option value="Bandung">Bandung</option>
+                                        <option value="Batam">Batam</option>
+                                        <option value="Banyumas">Banyumas</option>
+                                        <option value="Bekasi">Bekasi</option>
+                                        <option value="Brebes">Brebes</option>
+                                        <option value="Bogor">Bogor</option>
+                                        <option value="Blora">Blora</option>
+                                        <option value="Cilacap">Cilacap</option>
+                                        <option value="Cilegon">Cilegon</option>
+                                        <option value="Cirebon">Cirebon</option>
+                                        <option value="Cikarang">Cikarang</option>
+                                        <option value="Depok">Depok</option>
                                         <option value="Jakarta">Jakarta</option>
-                                        <option value="Semarang">semarang</option>
+                                        <option value="Jambi">Jambi</option>
+                                        <option value="Karawang">Karawang</option>
+                                        <option value="Kendal">Kendal</option>
+                                        <option value="Kalimantan">Kalimantan</option>
+                                        <option value="Madiun">Madiun</option>
+                                        <option value="Malang">Malang</option>
+                                        <option value="Magelang">Magelang</option>
+                                        <option value="Palembang">Palembang</option>
+                                        <option value="Pekalongan">Pekalongan</option>
+                                        <option value="Pemalang">Pemalang</option>
+                                        <option value="Purwokerto">Purwokerto</option>
                                         <option value="Tanggerang">Tanggerang</option>
+                                        <option value="Solo">Solo</option>
+                                        <option value="Semarang">Semarang</option>
+                                        <option value="Surabaya">Surabaya</option>
+                                        <option value="Surakarta">Surakarta</option>
+                                        <option value="Tegal">Tegal</option>
                                         <option value="Yogyakarta">Yogyakarta</option>
-                                        <option value="Karawang">karawang</option>
-                                        <option value="surabaya">surabaya</option>
-                                        <option value="tanggerang">tanggerang</option>
-                                        <option value="bandung">bandung</option>
-                                        <option value="palembang">palembang</option>
-                                        <option value="batam">batam</option>
-                                        <option value="kalimantan">kalimantan</option>
-                                        <option value="bekasi">bekasi</option>
-                                        <option value="cikarang">cikarang</option>
-                                        <option value="cirebon">cirebon</option>
-                                        <option value="tegal">tegal</option>
-                                        <option value="cilacap">cilacap</option>
-                                        <option value="solo">solo</option>
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>
                                     @error('tempatperusahaan')

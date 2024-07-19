@@ -55,9 +55,27 @@
                                         class="form-control @error('kategori') is-invalid @enderror"
                                         placeholder="kategori">
                                         <option value="">Pilih Kategori</option>
-                                        <option {{$edit['kategori']=='Marketing' ? 'selected' : '' }}>marketing</option>
-                                        <option {{$edit['kategori']=='Developer' ? 'selected' : '' }}>developer</option>
-                                        <option {{$edit['kategori']=='Frontend' ? 'selected' : '' }}>frontend</option>
+                                        <option {{$edit['kategori']=='Administrasi' ? 'selected' : '' }}>Administrasi</option>
+                                        <option {{$edit['kategori']=='Akuntansi' ? 'selected' : '' }}>Akuntansi</option>
+                                        <option {{$edit['kategori']=='Arsitektur' ? 'selected' : '' }}>Arsitektur</option>
+                                        <option {{$edit['kategori']=='Customer Service' ? 'selected' : '' }}>Customer Service</option>
+                                        <option {{$edit['kategori']=='Developer' ? 'selected' : '' }}>Developer</option>
+                                        <option {{$edit['kategori']=='Desain Grafis' ? 'selected' : '' }}>Desain Grafis</option>
+                                        <option {{$edit['kategori']=='Frontend' ? 'selected' : '' }}>Frontend</option>
+                                        <option {{$edit['kategori']=='Farmasi' ? 'selected' : '' }}>Farmasi</option>
+                                        <option {{$edit['kategori']=='Hukum' ? 'selected' : '' }}>Hukum</option>
+                                        <option {{$edit['kategori']=='IT' ? 'selected' : '' }}>IT</option>
+                                        <option {{$edit['kategori']=='Jurnalistik' ? 'selected' : '' }}>Jurnalistik</option>
+                                        <option {{$edit['kategori']=='Kesehatan' ? 'selected' : '' }}>Kesehatan</option>
+                                        <option {{$edit['kategori']=='Manajemen' ? 'selected' : '' }}>Manajemen</option>
+                                        <option {{$edit['kategori']=='Multimedia' ? 'selected' : '' }}>Multimedia</option>
+                                        <option {{$edit['kategori']=='Perbankan' ? 'selected' : '' }}>Perbankan</option>
+                                        <option {{$edit['kategori']=='Perawat' ? 'selected' : '' }}>Perawat</option>
+                                        <option {{$edit['kategori']=='Operator produksi' ? 'selected' : '' }}>Operator produksi</option>
+                                        <option {{$edit['kategori']=='Mesin' ? 'selected' : '' }}>Mesin</option>
+                                        <option {{$edit['kategori']=='Komputer' ? 'selected' : '' }}>Komputer</option>
+                                        <option {{$edit['kategori']=='Elektro' ? 'selected' : '' }}>Elektro</option>
+                                        <option {{$edit['kategori']=='QC' ? 'selected' : '' }}>QC</option>
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>
                                     @error('kategori')
@@ -77,6 +95,8 @@
                                                 Laki-laki</option>
                                             <option value="perempuan" {{$edit['jk']=='perempuan' ? 'selected' : '' }}>
                                                 Perempuan</option>
+                                            <option value="ALL" {{$edit['jk']=='ALL' ? 'selected' : '' }}>
+                                                    ALL</option>
 
                                         </select>
                                     </div>
@@ -91,18 +111,16 @@
                                         <label for="pendidikan">Minimal Penidikan</label>
                                         <select id="pendidikan" name="pendidikan" class="form-control" required>
                                             <option value="" disabled selected>Pilih</option> <!-- Placeholder -->
-                                            <option value="SD" {{$edit['pendidikan']=='SD' ? 'selected' : '' }}>SD
-                                            </option>
-                                            <option value="SMP" {{$edit['pendidikan']=='SMP' ? 'selected' : '' }}>SMP
-                                            </option>
-                                            <option value="SMA/SMK" {{$edit['pendidikan']=='SMA/SMK' ? 'selected' : ''
+                                           
+                                            <option value="SLTA" {{$edit['pendidikan']=='SLTA' ? 'selected' : ''
                                                 }}>SMA/SMK</option>
-                                            <option value="Diploma" {{$edit['pendidikan']=='Diploma' ? 'selected' : ''
+                                            <option value="D3" {{$edit['pendidikan']=='D3' ? 'selected' : ''
                                                 }}>D3</option>
-                                            <option value="Diploma" {{$edit['pendidikan']=='Diploma' ? 'selected' : ''
-                                                }}>D4/S1</option>
-                                            <option value="Pascasarjana" {{$edit['pendidikan']=='Pascasarjana'
-                                                ? 'selected' : '' }}>Pascasarjana</option>
+                                            <option value="D4" {{$edit['pendidikan']=='D4' ? 'selected' : ''
+                                                }}>D4</option>
+                                            <option value="S1" {{$edit['pendidikan']=='S1' ? 'selected' : ''
+                                                }}>S1</option>
+                                            
                                         </select>
                                     </div>
                                 </div>
@@ -113,9 +131,9 @@
                                     <select name="jam" id="jam" class="form-control @error('jam') is-invalid @enderror"
                                         placeholder="jam">
                                         <option value="">Pilih jam kerja</option>
-                                        <option {{$edit['jam']=='Parttime' ? 'selected' : '' }}>parttime </option>
-                                        <option {{$edit['jam']=='Fulltime' ? 'selected' : '' }}>fulltime </option>
-                                        <option {{$edit['jam']=='Frelance' ? 'selected' : '' }}>frelance</option>
+                                        <option {{$edit['jam']=='Fulltime' ? 'selected' : '' }}>Fulltime </option>
+                                        <option {{$edit['jam']=='Parttime' ? 'selected' : '' }}>Parttime </option>
+                                        <option {{$edit['jam']=='Frelance' ? 'selected' : '' }}>Frelance</option>
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>
                                     @error('jam')
@@ -155,10 +173,10 @@
 
                                 <div class="col-lg-12">
                                     <label for="form-control" style="color: black;"> Deskripsi</label>
-                                    <input type="hidden" name="inputdata" value="">
+                                    <input type="hidden" name="idinputdata" value="">
                                     <textarea cols="30" rows="5"
                                         class="form-control  @error('deskripsi') is-invalid @enderror"
-                                        placeholder="deskripsi" id="deskripsi"
+                                        placeholder="deskripsi" id="deskripsi" 
                                         name="deskripsi">{{old('deskripsi')}}</textarea>
                                     @error('deskripsi')
                                     <span class="invalid-feedback" role="alert">

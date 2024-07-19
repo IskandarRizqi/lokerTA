@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- About Us -->
-<div class="section-full job-categories content-inner-2 bg-white"
+<div class="section-full job-categories content-inner-1 bg-white"
     style="background-image:url(../images/pattern/pic1.html);">
     <div class="container clearfix">
 
@@ -15,7 +15,7 @@
                 <div class="heading-block border-bottom-0">
                     <h3>Support</h3>
                 </div>
-                <p>@extends('front.layouts.main')
+               
 
                     @section('content')
                     <!-- About Us -->

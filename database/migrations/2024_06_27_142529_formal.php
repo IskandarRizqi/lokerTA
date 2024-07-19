@@ -19,7 +19,7 @@ return new class extends Migration
             $table->dateTime('tanggalmulai');
             $table->dateTime('tanggalselesai');
             $table->text('gelar');
-            $table->integer('IPK');
+            $table->double('IPK');
             $table->text('deskripsi');
             $table->timestamps();
         });

@@ -186,13 +186,13 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img src="images/facebook.png" class="icon-for-print" width="14" height="14"> <span >{{$sosiallink->facebook}}</span>
+                                    <img src="images/fb.png" class="icon-for-print" width="14" height="14"> <span >{{$sosiallink->facebook}}</span>
                                 </td>
                             </tr>
             
                             <tr>
                                 <td>
-                                    <img src="images/instagram.png" class="icon-for-print" width="14" height="14"> <span >{{$sosiallink->instagram}}</span>
+                                    <img src="images/ig.png" class="icon-for-print" width="14" height="14"> <span >{{$sosiallink->instagram}}</span>
                                 </td>
                             </tr>
                         </table>

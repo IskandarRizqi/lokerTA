@@ -25,6 +25,20 @@
         <ul class="list-unstyled menu-categories" id="accordionExample">
 
             <li class="menu" style="color: black;">
+                <a href="/profile" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 64 64">
+                            <circle cx="32" cy="32" r="32" fill="#502ACD"/>
+                            <circle cx="32" cy="24" r="16" fill="#ffffff"/>
+                            <path d="M32 40c-11.046 0-20 8.954-20 20v4h40v-4c0-11.046-8.954-20-20-20z" fill="#ffffff"/>
+                          </svg>
+                          
+                        <span style="font-size: 16px; color: black;"> Profile</span>
+                    </div>
+                </a>
+            </li>
+
+            <li class="menu" style="color: black;">
                 <a href="#submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">

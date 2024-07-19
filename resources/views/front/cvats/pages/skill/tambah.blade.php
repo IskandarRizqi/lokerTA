@@ -107,7 +107,7 @@
                             <div class="col-lg-12 mt-3 text-right">
                                 <!-- Menggeser tombol ke kanan -->
                                 <!-- Tombol Create ditempatkan di sini -->
-                                <button class="btn btn-primary btn-sm" type="submit">SIMPAN & LANJUTKAN</button>
+                                <button class="btn btn-primary btn-sm" type="submit">SIMPAN</button>
                             </div>
 
                         </div>
