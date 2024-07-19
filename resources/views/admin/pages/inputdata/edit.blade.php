@@ -55,23 +55,30 @@
                                         class="form-control @error('kategori') is-invalid @enderror"
                                         placeholder="kategori">
                                         <option value="">Pilih Kategori</option>
-                                        <option {{$edit['kategori']=='Administrasi' ? 'selected' : '' }}>Administrasi</option>
+                                        <option {{$edit['kategori']=='Administrasi' ? 'selected' : '' }}>Administrasi
+                                        </option>
                                         <option {{$edit['kategori']=='Akuntansi' ? 'selected' : '' }}>Akuntansi</option>
-                                        <option {{$edit['kategori']=='Arsitektur' ? 'selected' : '' }}>Arsitektur</option>
-                                        <option {{$edit['kategori']=='Customer Service' ? 'selected' : '' }}>Customer Service</option>
+                                        <option {{$edit['kategori']=='Arsitektur' ? 'selected' : '' }}>Arsitektur
+                                        </option>
+                                        <option {{$edit['kategori']=='Customer Service' ? 'selected' : '' }}>Customer
+                                            Service</option>
                                         <option {{$edit['kategori']=='Developer' ? 'selected' : '' }}>Developer</option>
-                                        <option {{$edit['kategori']=='Desain Grafis' ? 'selected' : '' }}>Desain Grafis</option>
+                                        <option {{$edit['kategori']=='Desain Grafis' ? 'selected' : '' }}>Desain Grafis
+                                        </option>
                                         <option {{$edit['kategori']=='Frontend' ? 'selected' : '' }}>Frontend</option>
                                         <option {{$edit['kategori']=='Farmasi' ? 'selected' : '' }}>Farmasi</option>
                                         <option {{$edit['kategori']=='Hukum' ? 'selected' : '' }}>Hukum</option>
                                         <option {{$edit['kategori']=='IT' ? 'selected' : '' }}>IT</option>
-                                        <option {{$edit['kategori']=='Jurnalistik' ? 'selected' : '' }}>Jurnalistik</option>
+                                        <option {{$edit['kategori']=='Jurnalistik' ? 'selected' : '' }}>Jurnalistik
+                                        </option>
                                         <option {{$edit['kategori']=='Kesehatan' ? 'selected' : '' }}>Kesehatan</option>
                                         <option {{$edit['kategori']=='Manajemen' ? 'selected' : '' }}>Manajemen</option>
-                                        <option {{$edit['kategori']=='Multimedia' ? 'selected' : '' }}>Multimedia</option>
+                                        <option {{$edit['kategori']=='Multimedia' ? 'selected' : '' }}>Multimedia
+                                        </option>
                                         <option {{$edit['kategori']=='Perbankan' ? 'selected' : '' }}>Perbankan</option>
                                         <option {{$edit['kategori']=='Perawat' ? 'selected' : '' }}>Perawat</option>
-                                        <option {{$edit['kategori']=='Operator produksi' ? 'selected' : '' }}>Operator produksi</option>
+                                        <option {{$edit['kategori']=='Operator produksi' ? 'selected' : '' }}>Operator
+                                            produksi</option>
                                         <option {{$edit['kategori']=='Mesin' ? 'selected' : '' }}>Mesin</option>
                                         <option {{$edit['kategori']=='Komputer' ? 'selected' : '' }}>Komputer</option>
                                         <option {{$edit['kategori']=='Elektro' ? 'selected' : '' }}>Elektro</option>
@@ -84,7 +91,7 @@
                                     </span>
                                     @enderror
                                 </div>
-                            
+
 
                                 <div class="col-lg-3">
                                     <div class="form-group">
@@ -96,14 +103,14 @@
                                             <option value="perempuan" {{$edit['jk']=='perempuan' ? 'selected' : '' }}>
                                                 Perempuan</option>
                                             <option value="ALL" {{$edit['jk']=='ALL' ? 'selected' : '' }}>
-                                                    ALL</option>
+                                                ALL</option>
 
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                          
-                            
+
+
 
                             <div class="row m-2">
                                 <div class="col-lg-3">
@@ -111,16 +118,16 @@
                                         <label for="pendidikan">Minimal Penidikan</label>
                                         <select id="pendidikan" name="pendidikan" class="form-control" required>
                                             <option value="" disabled selected>Pilih</option> <!-- Placeholder -->
-                                           
-                                            <option value="SLTA" {{$edit['pendidikan']=='SLTA' ? 'selected' : ''
-                                                }}>SMA/SMK</option>
-                                            <option value="D3" {{$edit['pendidikan']=='D3' ? 'selected' : ''
-                                                }}>D3</option>
-                                            <option value="D4" {{$edit['pendidikan']=='D4' ? 'selected' : ''
-                                                }}>D4</option>
-                                            <option value="S1" {{$edit['pendidikan']=='S1' ? 'selected' : ''
-                                                }}>S1</option>
-                                            
+
+                                            <option value="SLTA" {{$edit['pendidikan']=='SLTA' ? 'selected' : '' }}>
+                                                SMA/SMK</option>
+                                            <option value="D3" {{$edit['pendidikan']=='D3' ? 'selected' : '' }}>D3
+                                            </option>
+                                            <option value="D4" {{$edit['pendidikan']=='D4' ? 'selected' : '' }}>D4
+                                            </option>
+                                            <option value="S1" {{$edit['pendidikan']=='S1' ? 'selected' : '' }}>S1
+                                            </option>
+
                                         </select>
                                     </div>
                                 </div>
@@ -160,8 +167,8 @@
                                     <label for="form-control" style="color: black;">Email Perusahaan</label>
                                     <input type="hidden" name="idiinputdata" value="">
                                     <input type="text" name="email"
-                                        class="form-control @error('email') is-invalid @enderror"
-                                        placeholder="email" value="{{$edit['email']}}">
+                                        class="form-control @error('email') is-invalid @enderror" placeholder="email"
+                                        value="{{$edit['email']}}">
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -176,8 +183,8 @@
                                     <input type="hidden" name="idinputdata" value="">
                                     <textarea cols="30" rows="5"
                                         class="form-control  @error('deskripsi') is-invalid @enderror"
-                                        placeholder="deskripsi" id="deskripsi" 
-                                        name="deskripsi">{{old('deskripsi')}}</textarea>
+                                        placeholder="deskripsi" id="deskripsi"
+                                        name="deskripsi">{{$edit['deskripsi']}}</textarea>
                                     @error('deskripsi')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
