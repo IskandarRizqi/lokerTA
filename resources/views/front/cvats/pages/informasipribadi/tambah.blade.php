@@ -76,6 +76,16 @@
 
                                 <div class="row m-2">
 
+                                    <div class="col-lg-6">
+                                        <label for="form-control" style="color: black;">Tanggal Lahir</label>
+                                        <input type="hidden" name="idinformasipribadi" value="">
+                                        <input type="date" name="tanggal" class="form-control @error('tanggal') is-invalid @enderror" placeholder="" value="{{old('tanggal')}}">
+                                        @error('tanggal')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
                                     <div class="col-lg-4">
                                         <label for="form-control" style="color: black;">No HP</label>
                                         <input type="hidden" name="idinformasipribadi" value="">

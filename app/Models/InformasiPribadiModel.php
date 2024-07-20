@@ -13,6 +13,7 @@ class InformasiPribadiModel extends Model
         'gambar',
         'nama',
         'email',
+        'tanggal',
         'no_hp',
         'no_wa',
         'provinsi',

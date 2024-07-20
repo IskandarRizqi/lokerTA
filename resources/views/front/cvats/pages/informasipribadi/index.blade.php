@@ -28,6 +28,7 @@
                                     <th>gambar</th>
                                     <th>nama</th>
                                     <th>email</th>
+                                    <th>Tanggal Lahir</th>
                                     <th>no_hp</th>
                                     <th>no_wa</th>
                                     <th>provinsi</th>
@@ -48,6 +49,7 @@
                                     <td>{{$value->gambar}}</td>
                                     <td>{{$value->nama}}</td>
                                     <td>{{$value->email}}</td>
+                                    <td>{{$value->tanggal}}</td>
                                     <td>{{$value->no_hp}}</td>
                                     <td>{{$value->no_wa}}</td>
                                     <td>{{$value->provinsi}}</td>

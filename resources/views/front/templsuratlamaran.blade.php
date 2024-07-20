@@ -128,9 +128,10 @@
                 </tr>
                 <tr>
 
+
                     <td width="220">Tempat/Tanggal Lahir</td>
                     <td width="0">:</td>
-                    <td width="0">..........................................</td>
+                    <td width="0">{{$informasipribadi->kab}} / {{$informasipribadi->tanggal}}</td>
 
                 </tr>
 
