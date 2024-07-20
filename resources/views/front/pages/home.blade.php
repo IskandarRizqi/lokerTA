@@ -857,12 +857,12 @@
                         </div> --}}
                     </div>
                 </ul>
-                <div class="m-t30">
+                {{-- <div class="m-t30">
                     <div class="d-flex">
                         <a class="site-button button-sm mr-auto" href="#"><i class="ti-arrow-left"></i> Prev</a>
                         <a class="site-button button-sm" href="#">Next <i class="ti-arrow-right"></i></a>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
         </div>

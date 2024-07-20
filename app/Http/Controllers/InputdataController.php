@@ -19,7 +19,7 @@ class InputdataController extends Controller
 
     public function create()
     {
-        return view('admin.pages.Inputdata.tambah');
+        return view('admin.pages.inputdata.tambah');
     }
 
     public function store(Request $request)
