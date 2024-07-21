@@ -80,12 +80,13 @@
         <form action="{{route('kriteria.store')}}" method="POST">
             @csrf
             <div class="form-group">
-                <label for="jk">Apa jenis kelamin anda?</label>
+                <label for="jk">Gender loker apa yang sedang anda cari?</label>
                 <input type="hidden" name="idkriteria" value="">
                 <select id="jk" name="jk" required>
                     <option value="" disabled selected>Pilih</option>
                     <option value="laki-laki">Laki-laki</option>
                     <option value="perempuan">Perempuan</option>
+                    <option value="All">Male & Female</option>
                     
 
                 </select>

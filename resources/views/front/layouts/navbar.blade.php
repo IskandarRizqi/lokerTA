@@ -94,7 +94,7 @@
             </li>
             <li>
               <a href="/informasipribadi">CV ATS <i></i></a>
-
+ 
             </li>
             {{-- <li>
               <a href="#">For Candidates <i class="fa fa-chevron-down"></i></a>

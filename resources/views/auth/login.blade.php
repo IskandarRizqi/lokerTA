@@ -52,7 +52,7 @@
                             </form>
                             <form id="forgot-password" class="tab-pane fade  col-12 p-a0">
                                 <h4 class="font-weight-700">LUPA PASSWORD ?</h4>
-                                <p class="font-weight-600">Hubungi admin di iskandar@email.email</p>
+                                <p class="font-weight-600">Hubungi admin di jobconnect@gmail.com</p>
                                 <div class="form-group" hidden>
                                     <label class="font-weight-700">E-MAIL *</label>
                                     <input name="dzName" required="" class="form-control" placeholder="Your Email Id"
