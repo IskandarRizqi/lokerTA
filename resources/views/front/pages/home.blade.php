@@ -637,17 +637,17 @@
 
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="stat2" name="jam[]"
-                                                value="fulltime">
+                                                value="Fulltime">
                                             <label class="custom-control-label" for="stat2">Fulltime</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="stat4" name="jam[]"
-                                                value="frelance">
+                                                value="Freelance">
                                             <label class="custom-control-label" for="stat4">Freelance</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="stat3" name="jam[]"
-                                                value="parttime">
+                                                value="Parttime">
                                             <label class="custom-control-label" for="stat3">Parttime</label>
                                         </div>
                                         
