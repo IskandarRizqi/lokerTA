@@ -7,6 +7,7 @@ use App\Models\User;
 use RealRashid\SweetAlert\Facades\Alert;
 use Sastrawi\Stemmer\StemmerFactory;
 use Sastrawi\StopWordRemover\StopWordRemoverFactory;
+use Symfony\Component\Console\Input\Input;
 
 class GlobalHelper
 {
@@ -98,68 +99,48 @@ class GlobalHelper
                     $c++;
                 }
             }
-            if ($c <= 4) {
-                array_push($l0, $v);
-            }
+            // if ($c <= 4) {
+            //     array_push($l0, $v);
+            // }
         }
 
 
 
         foreach ($l1 as $key => $value) {
             if (count($data) <= 4) {
-                foreach ($data as $k => $v) {
-                    if ($v->id !== $value->id) {
-                        array_push($data, $value);
-                    }
-                }
+                array_push($data, $value->id);
             }
         }
         foreach ($l2 as $key => $value) {
             if (count($data) <= 4) {
-                foreach ($data as $k => $v) {
-                    if ($v->id !== $value->id) {
-                        array_push($data, $value);
-                    }
-                }
+                array_push($data, $value->id);
             }
         }
         foreach ($l3 as $key => $value) {
             if (count($data) <= 4) {
-                foreach ($data as $k => $v) {
-                    if ($v->id !== $value->id) {
-                        array_push($data, $value);
-                    }
-                }
+                array_push($data, $value->id);
             }
         }
         foreach ($l4 as $key => $value) {
             if (count($data) <= 4) {
-                foreach ($data as $k => $v) {
-                    if ($v->id !== $value->id) {
-                        array_push($data, $value);
-                    }
-                }
+                array_push($data, $value->id);
             }
         }
         foreach ($l5 as $key => $value) {
             if (count($data) <= 4) {
-                foreach ($data as $k => $v) {
-                    if ($v->id !== $value->id) {
-                        array_push($data, $value);
-                    }
-                }
+                array_push($data, $value->id);
             }
         }
-        foreach ($l0 as $key => $value) {
-            if (count($data) <= 6) {
-                foreach ($data as $k => $v) {
-                    if ($v->id !== $value->id) {
-                        array_push($data, $value);
-                    }
-                }
-            }
-        }
-        return $data;
+        // foreach ($l0 as $key => $value) {
+        //     if (count($data) <= 6) {
+        //         foreach ($data as $k => $v) {
+        //             if ($v->id !== $value->id) {
+        //                 array_push($data, $value);
+        //             }
+        //         }
+        //     }
+        // }
+        return InputdataModel::whereIn('id', $data)->get();
     }
 
     public static function messagereturn($bool)

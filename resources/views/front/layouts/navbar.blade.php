@@ -89,12 +89,12 @@
         <!-- main nav -->
         <div class="header-nav navbar-collapse collapse justify-content-start" id="navbarNavDropdown">
           <ul class="nav navbar-nav">
-            <li>
+            <li class="{{Request::is('/') ? 'active' : ''}}">
               <a href="/">Home</a>
             </li>
-            <li>
+            <li class="{{Request::is('informasipribadi') ? 'active' : ''}}">
               <a href="/informasipribadi">CV ATS <i></i></a>
- 
+
             </li>
             {{-- <li>
               <a href="#">For Candidates <i class="fa fa-chevron-down"></i></a>
@@ -110,7 +110,7 @@
               <a href="/templatecv" class="dez-page">CV ATS</a>
 
             </li> --}}
-            <li>
+            <li class="{{Request::is('about-us') ? 'active' : '' }}">
               <a href="/about-us">About Us <i></i></a>
 
             </li>
