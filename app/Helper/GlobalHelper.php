@@ -45,20 +45,11 @@ class GlobalHelper
     }
     public static function getrecomend($id)
     {
-        // $loker = InputdataModel::select()
-        // ->where('kategori', $auth->kriteria->bidang)
-        // ->where('jam', $auth->kriteria->jam)
-        // ->where('tempatperusahaan', $auth->kriteria->lokasi)
-        // ->where('pendidikan', $auth->kriteria->pendidikan)
-        // ->where('jk', $auth->kriteria->jk)
-        // ->get();
-
         $data = [];
 
         $l = InputdataModel::select()
             ->orderBy('created_at', 'ASC')
             ->get();
-        $jmlloker = count($l);
 
         if (!$id) {
             return $l;
@@ -107,9 +98,9 @@ class GlobalHelper
                     $c++;
                 }
             }
-            if ($c <= 6) {
-                array_push($l0, $v);
-            }
+            // if ($c <= 6) {
+            //     array_push($l0, $v);
+            // }
         }
 
 
@@ -139,11 +130,11 @@ class GlobalHelper
                 array_push($data, $value);
             }
         }
-        foreach ($l0 as $key => $value) {
-            if (count($data) <= 6) {
-                array_push($data, $value);
-            }
-        }
+        // foreach ($l0 as $key => $value) {
+        //     if (count($data) <= 6) {
+        //         array_push($data, $value);
+        //     }
+        // }
         return $data;
     }
 

@@ -72,6 +72,29 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/history-lamaran', [App\Http\Controllers\HomeController::class, 'historylamaran']);
     Route::get('/edit-kriteria', [App\Http\Controllers\HomeController::class, 'editkriteria']);
     Route::post('/update-kriteria', [App\Http\Controllers\HomeController::class, 'updatekriteria']);
+
+
+    //cvats
+    //methodresource
+    Route::resource('informasipribadi', InformasiPribadiController::class);
+    Route::resource('pengalaman', PengalamanController::class);
+    Route::resource('skill', SkillController::class);
+    Route::resource('formal', FormalController::class);
+    Route::resource('nonformal', NonformalController::class);
+    Route::resource('sosiallink', SosialLinkController::class);
+
+
+    // metodget
+    Route::get('/informasipribadi', [App\Http\Controllers\InformasiPribadiController::class, 'create'])->name('informasipribadi');
+    Route::get('/kabupaten/{idprov}', [App\Http\Controllers\InformasiPribadiController::class, 'getkabupaten']);
+    Route::get('/kecamatan/{idkec}', [App\Http\Controllers\InformasiPribadiController::class, 'getkecamatan']);
+    Route::get('/kelurahan/{idkel}', [App\Http\Controllers\InformasiPribadiController::class, 'getkelurahan']);
+    Route::get('/pengalaman', [App\Http\Controllers\PengalamanController::class, 'create'])->name('pengalaman');
+    Route::get('/skill', [App\Http\Controllers\SkillController::class, 'create'])->name('skill');
+    Route::get('/formal', [App\Http\Controllers\FormalController::class, 'create'])->name('formal');
+    Route::get('/nonformal', [App\Http\Controllers\NonformalController::class, 'create'])->name('nonformal');
+    Route::get('/sosiallink', [App\Http\Controllers\SosialLinkController::class, 'create'])->name('sosiallink');
+    Route::get('/template', [App\Http\Controllers\TemplateController::class, 'index']);
 });
 
 Route::resource('kriteria', FormKriteriaController::class);
@@ -116,14 +139,6 @@ Route::get('/selengkapnya', [App\Http\Controllers\HomeSelengkapnyaController::cl
 
 
 
-//cvats
-//methodresource
-Route::resource('informasipribadi', InformasiPribadiController::class);
-Route::resource('pengalaman', PengalamanController::class);
-Route::resource('skill', SkillController::class);
-Route::resource('formal', FormalController::class);
-Route::resource('nonformal', NonformalController::class);
-Route::resource('sosiallink', SosialLinkController::class);
 Route::get('gambarprofil', function (Request $P) {
     return Storage::download($P->rf);
 });
@@ -132,17 +147,6 @@ Route::get('gambarprofil', function (Request $P) {
 
 
 
-// metodget
-Route::get('/informasipribadi', [App\Http\Controllers\InformasiPribadiController::class, 'create'])->name('informasipribadi');
-Route::get('/kabupaten/{idprov}', [App\Http\Controllers\InformasiPribadiController::class, 'getkabupaten']);
-Route::get('/kecamatan/{idkec}', [App\Http\Controllers\InformasiPribadiController::class, 'getkecamatan']);
-Route::get('/kelurahan/{idkel}', [App\Http\Controllers\InformasiPribadiController::class, 'getkelurahan']);
-Route::get('/pengalaman', [App\Http\Controllers\PengalamanController::class, 'create'])->name('pengalaman');
-Route::get('/skill', [App\Http\Controllers\SkillController::class, 'create'])->name('skill');
-Route::get('/formal', [App\Http\Controllers\FormalController::class, 'create'])->name('formal');
-Route::get('/nonformal', [App\Http\Controllers\NonformalController::class, 'create'])->name('nonformal');
-Route::get('/sosiallink', [App\Http\Controllers\SosialLinkController::class, 'create'])->name('sosiallink');
-Route::get('/template', [App\Http\Controllers\TemplateController::class, 'index']);
 //suratlamarankerja
 Route::get('/templatesrt', [App\Http\Controllers\TemplateController::class, 'srt']);
 Route::get('/preview/index', function () {
