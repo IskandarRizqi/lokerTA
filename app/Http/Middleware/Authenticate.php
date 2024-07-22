@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Symfony\Component\HttpFoundation\Response;
 
 class Authenticate
@@ -15,15 +16,14 @@ class Authenticate
      */
     protected function redirectTo(Request $request): ?string
     {
-        // if (Auth::check()) {
-        //     if (Auth::user()->role_id == 1) {
-        //     }
-        // }
         return $request->expectsJson() ? null : route('login');
     }
 
     public function handle(Request $request, Closure $next): Response
     {
+        if (!Auth::check()) {
+            return redirect()->to('/')->with('info', 'silahkan login terlebih dahulu');
+        }
         if (auth()->user()->role_id > 0) {
             if (!auth()->user()->email_verified_at) {
                 return redirect()->to('/')->with('info', 'silahkan verifikasi email anda terlebih dahulu');
