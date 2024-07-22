@@ -98,7 +98,7 @@ class GlobalHelper
                     $c++;
                 }
             }
-            if ($c <= 6) {
+            if ($c <= 4) {
                 array_push($l0, $v);
             }
         }
