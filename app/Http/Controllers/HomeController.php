@@ -46,7 +46,6 @@ class HomeController extends Controller
         }
 
         $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
-        // return $data;
         $data['inputdata'] = InputdataModel::get();
         return view('front.pages.home', $data);
     }
