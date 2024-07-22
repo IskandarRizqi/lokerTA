@@ -49,7 +49,7 @@
                                         <option value="">Pilih </option>
                                         <option value="laki-laki">Laki-laki</option>
                                         <option value="perempuan">Perempuan</option>
-                                        <option value="All">Male & Female</option>
+                                        <option value="All">Laki/Perempuan</option>
 
                                     </select>
                                     @error('kategori')
