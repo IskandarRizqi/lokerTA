@@ -98,50 +98,39 @@ class GlobalHelper
                     $c++;
                 }
             }
-            // if ($c <= 6) {
-            //     array_push($l0, $v);
-            // }
+            if ($c <= 6) {
+                array_push($l0, $v);
+            }
         }
 
 
 
         foreach ($l1 as $key => $value) {
-            if (count($data) <= 6) {
-                foreach ($data as $k => $v) {
-                    if ($v->id !== $value->id) {
-                        array_push($data, $value);
-                    }
-                }
+            if (count($data) <= 4) {
+                array_push($data, $value);
             }
         }
         foreach ($l2 as $key => $value) {
-            if (count($data) <= 6) {
-                foreach ($data as $k => $v) {
-                    if ($v->id !== $value->id) {
-                        array_push($data, $value);
-                    }
-                }
+            if (count($data) <= 4) {
+                array_push($data, $value);
             }
         }
         foreach ($l3 as $key => $value) {
-            if (count($data) <= 6) {
-                foreach ($data as $k => $v) {
-                    if ($v->id !== $value->id) {
-                        array_push($data, $value);
-                    }
-                }
+            if (count($data) <= 4) {
+                array_push($data, $value);
             }
         }
         foreach ($l4 as $key => $value) {
-            if (count($data) <= 6) {
-                foreach ($data as $k => $v) {
-                    if ($v->id !== $value->id) {
-                        array_push($data, $value);
-                    }
-                }
+            if (count($data) <= 4) {
+                array_push($data, $value);
             }
         }
         foreach ($l5 as $key => $value) {
+            if (count($data) <= 4) {
+                array_push($data, $value);
+            }
+        }
+        foreach ($l0 as $key => $value) {
             if (count($data) <= 6) {
                 foreach ($data as $k => $v) {
                     if ($v->id !== $value->id) {
@@ -150,11 +139,6 @@ class GlobalHelper
                 }
             }
         }
-        // foreach ($l0 as $key => $value) {
-        //     if (count($data) <= 6) {
-        //         array_push($data, $value);
-        //     }
-        // }
         return $data;
     }
 
