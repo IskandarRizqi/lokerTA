@@ -13,7 +13,35 @@
       <div class="container clearfix">
         <!-- website logo -->
         <div class="logo-header mostion">
-          <a href="/"><img src="images/logo.png" class="logo" alt=""></a>
+          <a href="/"><img src="front/images/logo/icon1.pngs" class="logo" alt=""></a>
+          <div class="d-block d-sm-none d-flex mt-2">
+            @if(Auth::check())
+            <div class="dropdown">
+              <button class="btn btn-warning dropdown-toggle text-white pl-2 pr-2" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img @if(Auth::user()->gambar)
+                src="/gambar?rf={{Auth::user()->gambar}}"
+                @endif alt="" width="20px" style="border-radius:10px; font-size: 12px;"
+                class="mr-2">{{Auth::user()->name}}
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a href="/profile" class="dropdown-item">Profile</a>
+                {{-- <a href="{{ route('logout') }}" class="dropdown-item"
+                  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none" hidden>
+                    @csrf
+                  </form>
+                </a> --}}
+                <div class="dropdown-item">
+                  <span data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</span>
+                </div>
+              </div>
+            </div>
+            @else
+            <a href="/register" class="site-button"><i class="fa fa-user"></i> Sign Up</a>
+            <a href="/login" class="site-button ml-2"><i class="fa fa-lock"></i> login</a>
+            @endif
+          </div>
         </div>
         <!-- nav toggle button -->
         <!-- nav toggle button -->
