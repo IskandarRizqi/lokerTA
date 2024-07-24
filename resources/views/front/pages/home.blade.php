@@ -190,7 +190,7 @@
                                         <div class="job-post-company">
                                             <span class="mb-1"><img src="/gambar?rf={{$v->gambar}}"
                                                     style="width: 100px; height: 100px;" /></span>
-                                            <h6>{{$v->tempatperusahaan}}</h6>
+                                            <h6>{{$v->namaperusahaan}}</h6>
                                             <h6>{{$v->kategori}}</h6>
                                         </div>
                                     </div>

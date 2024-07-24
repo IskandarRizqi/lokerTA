@@ -39,6 +39,8 @@ class HomeSelengkapnyaController extends Controller
         $x = [];
         $x['data'] = InputdataModel::select()
             ->where(function ($q) use ($request) {
+                //untukmysql
+                
                 // if ($request->job_title) {
                 //     // $q->where('kategori', 'like', '%' . $request->job_title . '%');
                 //     $q->whereRaw('LOWER(`kategori`) LIKE ? ', ['%' . trim(strtolower($request->job_title)) . '%']);
@@ -50,6 +52,8 @@ class HomeSelengkapnyaController extends Controller
                 // if ($request->lulusan) {
                 //     $q->where('pendidikan', 'like', '%' . $request->lulusan . '%');
                 // }
+
+                //untukposgres
                    if ($request->job_title) {
                     $q->where("kategori","ilike", '%' . $request->job_title . '%' );
                 }

@@ -34,6 +34,7 @@ class HomeController extends Controller
     {
         if (Auth::check() == false) {
             // $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
+
             $data['rekomendasi'] = [];
             // return $data;
             $data['inputdata'] = InputdataModel::get();
@@ -44,9 +45,11 @@ class HomeController extends Controller
                 return redirect::to('/dashboard');
             }
         }
-
+    
+      
         $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
         $data['inputdata'] = InputdataModel::get();
+        // return $data;
         return view('front.pages.home', $data);
     }
 
