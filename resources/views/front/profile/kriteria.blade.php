@@ -176,8 +176,8 @@
             <option value="Frelance" {{$data->jam == 'Frelance' ? 'selected' : ''}}>Frelance</option>
             @else
             <option value="Fulltime">Fulltime </option>
-                    <option value="Parttime">Parttime </option>
-                    <option value="Frelance">Frelance</option>
+            <option value="Parttime">Parttime </option>
+            <option value="Frelance">Frelance</option>
             @endif
 
         </select>
