@@ -32,6 +32,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        
         if (Auth::check() == false) {
             // $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
 
@@ -48,7 +49,11 @@ class HomeController extends Controller
     
       
         $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
-        $data['inputdata'] = InputdataModel::get();
+        $data['inputdata'] = InputdataModel::select()
+       
+        ->orderby('created_at','DESC')->get();
+      
+        
         // return $data;
         return view('front.pages.home', $data);
     }
@@ -93,7 +98,11 @@ class HomeController extends Controller
         // return $request->all();
         $x = [];
         $x['data'] = InputdataModel::select()
-            ->where(function ($q) use ($request) {
+            
+        
+            ->where(function ($q) use ($request) 
+           
+            {
                 // if ($request->job_title) {
                 //     // $q->where('kategori', 'like', '%' . $request->job_title . '%');
                 //     $q->whereRaw('LOWER(`kategori`) LIKE ? ', ['%' . trim(strtolower($request->job_title)) . '%']);
@@ -131,7 +140,10 @@ class HomeController extends Controller
                     }
                 }
             })
-            ->paginate(8);
+            
+            ->orderby('created_at','DESC')
+            ->paginate(9);
+            
         $x['job_title'] = '';
         $x['lokasi'] = '';
         $x['lulusan'] = '';
@@ -155,6 +167,7 @@ class HomeController extends Controller
             $x['jm'] = $request->jam;
         }
         // return $x;
+        
         return view('front.pages.cariloker', $x);
     }
 
