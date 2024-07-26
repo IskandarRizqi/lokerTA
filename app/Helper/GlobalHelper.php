@@ -82,19 +82,19 @@ class GlobalHelper
                 }
             }
             if ($auth->kriteria->pendidikan == $v->pendidikan) {
-                if (count($l4) <= 2) {
+                if (count($l4) <= 1) {
                     array_push($l4, $v);
                     $c++;
                 }
             }
             if ($auth->kriteria->jam == $v->jam) {
-                if (count($l2) <= 2) {
+                if (count($l2) <= 1) {
                     array_push($l2, $v);
                     $c++;
                 }
             }
             if ($auth->kriteria->jk == $v->jk) {
-                if (count($l5) <= 2) {
+                if (count($l5) <= 1) {
                     array_push($l5, $v);
                     $c++;
                 }
