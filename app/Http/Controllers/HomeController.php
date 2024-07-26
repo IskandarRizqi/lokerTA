@@ -32,7 +32,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
+
         if (Auth::check() == false) {
             // $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
 
@@ -46,14 +46,14 @@ class HomeController extends Controller
                 return redirect::to('/dashboard');
             }
         }
-    
-      
+
+
         $data['rekomendasi'] = GlobalHelper::getrecomend(Auth::id());
         $data['inputdata'] = InputdataModel::select()
-       
-        ->orderby('created_at','DESC')->get();
-      
-        
+
+            ->orderby('created_at', 'DESC')->get();
+
+
         // return $data;
         return view('front.pages.home', $data);
     }
@@ -65,9 +65,9 @@ class HomeController extends Controller
         $x['total_user'] = User::where('role_id', 1)->count();
         $x['total_lamaran'] = LamaranModel::count();
         $x['lamaran_setahun'] = [];
-        for ($i = 01; $i < 13; $i++) {
+        for ($i = 1; $i < 13; $i++) {
             $ls = LamaranModel::whereYear('created_at', now()->year)
-                ->whereMonth('created_at', ($i + 1))
+                ->whereMonth('created_at', ($i))
                 ->count();
             array_push($x['lamaran_setahun'], $ls);
         }
@@ -98,11 +98,9 @@ class HomeController extends Controller
         // return $request->all();
         $x = [];
         $x['data'] = InputdataModel::select()
-            
-        
-            ->where(function ($q) use ($request) 
-           
-            {
+
+
+            ->where(function ($q) use ($request) {
                 // if ($request->job_title) {
                 //     // $q->where('kategori', 'like', '%' . $request->job_title . '%');
                 //     $q->whereRaw('LOWER(`kategori`) LIKE ? ', ['%' . trim(strtolower($request->job_title)) . '%']);
@@ -140,10 +138,10 @@ class HomeController extends Controller
                     }
                 }
             })
-            
-            ->orderby('created_at','DESC')
+
+            ->orderby('created_at', 'DESC')
             ->paginate(9);
-            
+
         $x['job_title'] = '';
         $x['lokasi'] = '';
         $x['lulusan'] = '';
@@ -167,7 +165,7 @@ class HomeController extends Controller
             $x['jm'] = $request->jam;
         }
         // return $x;
-        
+
         return view('front.pages.cariloker', $x);
     }
 
