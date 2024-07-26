@@ -52,7 +52,7 @@
                 "pageLength": 10
             });
 
-            $('.show_confirm').click(function(event) {
+            $('#zero-config').on('click','.show_confirm',function(event) {
                 var form = $(this).closest("form");
                 event.preventDefault();
                 swal.fire({
