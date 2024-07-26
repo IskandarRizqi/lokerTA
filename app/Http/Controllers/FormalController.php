@@ -61,7 +61,7 @@ class FormalController extends Controller
 
         ]);
         GlobalHelper::messagereturn($x);
-        return redirect('/formal');
+        return redirect('/formal')->with('ss', 'berhasil tambah');
     }
 
     public function show(string $id)
