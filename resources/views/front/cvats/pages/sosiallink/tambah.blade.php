@@ -17,11 +17,11 @@
                         <div class="widget-two">
 
                             <div class="row m-1">
-                                <div class="col-lg-12 mt-3 text-right">
+                                {{-- <div class="col-lg-12 mt-3 text-right">
                                     <!-- Menggeser tombol ke kanan -->
 
                                     <button class="btn btn-primary btn-sm" type="submit"> Tambah</button>
-                                </div>
+                                </div> --}}
                                 <div class="col-lg-3">
                                     <label for="form-control" style="color: black;">Facebook</label>
                                     <input type="hidden" name="idsosiallink" value="">

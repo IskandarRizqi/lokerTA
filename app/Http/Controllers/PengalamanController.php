@@ -44,6 +44,8 @@ class PengalamanController extends Controller
         }
 
         PengalamanModel::updateOrCreate([
+            // 'id'=> $request->id
+            
             'id_user' => Auth::id()
         ], [
             'id' => $request->idpengalaman,

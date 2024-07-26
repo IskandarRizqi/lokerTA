@@ -24,11 +24,11 @@
                         <div class="widget-two">
 
                             <div class="row m-2">
-                                <div class="col-lg-12 mt-3 text-right">
+                                {{-- <div class="col-lg-12 mt-3 text-right">
                                     <!-- Menggeser tombol ke kanan -->
                                     <!-- Tombol Create ditempatkan di sini -->
                                     <button class="btn btn-primary btn-sm" type="submit"> + Riwayat Kerja</button>
-                                </div>
+                                </div> --}}
 
                                 <div class="col-lg-6">
                                     <label for="form-control" style="color: black;">Perusahaan</label>
