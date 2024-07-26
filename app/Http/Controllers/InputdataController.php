@@ -13,7 +13,9 @@ class InputdataController extends Controller
 {
     public function index()
     {
-        $data['inputdata'] = InputdataModel::get();
+        $data['inputdata'] = InputdataModel::select()
+        ->orderby('created_at','DESC')->get();
+        
         return view('admin.pages.inputdata.index', $data);
     }
 
