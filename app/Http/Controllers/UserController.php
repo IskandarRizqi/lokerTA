@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helper\GlobalHelper;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -12,7 +13,7 @@ use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
-     /**
+    /**
      * Display a listing of the resource.
      */
     public function index()
@@ -69,6 +70,7 @@ class UserController extends Controller
 
         $user->syncRoles([$role['name'], $role['name']]);
         $user->givePermissionTo($permission);
+        GlobalHelper::messagereturn($user);
         return redirect('/data-pengguna')->with('success', 'Data berhasil disimpan');
     }
 
@@ -148,6 +150,7 @@ class UserController extends Controller
         // DB::table('model_has_roles')->where('model_id', $id)->delete();
 
         // $user->syncRoles($role['id']);
+        GlobalHelper::messagereturn($user);
         return redirect('/data-pengguna')->with('success', 'Data berhasil disimpan');
     }
 
