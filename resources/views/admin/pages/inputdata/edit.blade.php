@@ -36,6 +36,22 @@
                                 </div>
 
                                 <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label for="jk">Jenis Kelamin</label>
+                                        <select id="jk" name="jk" class="form-control" >
+                                            <option value="" disabled selected>Pilih</option>
+                                            <option value="laki-laki" {{$edit['jk']=='laki-laki' ? 'selected' : '' }}>
+                                                Laki-laki</option>
+                                            <option value="perempuan" {{$edit['jk']=='perempuan' ? 'selected' : '' }}>
+                                                Perempuan</option>
+                                            <option value="ALL" {{$edit['jk']=='ALL' ? 'selected' : '' }}>
+                                                ALL</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
                                     <label for="form-control" style="color: black;">Nama Perusahaan</label>
                                     <input type="hidden" name="idiinputdata" value="">
                                     <input type="text" name="namaperusahaan"
@@ -93,21 +109,7 @@
                                 </div>
 
 
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label for="jk">Jenis Kelamin</label>
-                                        <select id="jk" name="jk" class="form-control" required>
-                                            <option value="" disabled selected>Pilih</option>
-                                            <option value="laki-laki" {{$edit['jk']=='laki-laki' ? 'selected' : '' }}>
-                                                Laki-laki</option>
-                                            <option value="perempuan" {{$edit['jk']=='perempuan' ? 'selected' : '' }}>
-                                                Perempuan</option>
-                                            <option value="ALL" {{$edit['jk']=='ALL' ? 'selected' : '' }}>
-                                                ALL</option>
-
-                                        </select>
-                                    </div>
-                                </div>
+                                
                             </div>
 
 

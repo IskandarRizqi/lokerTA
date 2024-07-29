@@ -14,6 +14,13 @@
     <!--  BEGIN MAIN CONTAINER  -->
     <div class="main-container sidebar-closed sbar-open" id="container">
 
+        {{-- @if(Session::has('ss'))
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Info!</strong>{{Session::get('ss')}}
+            <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">x</button>
+        </div>
+        @endif --}}
+
         <div class="overlay"></div>
         <div class="cs-overlay"></div>
         <div class="search-overlay"></div>
