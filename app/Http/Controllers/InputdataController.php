@@ -14,8 +14,8 @@ class InputdataController extends Controller
     public function index()
     {
         $data['inputdata'] = InputdataModel::select()
-        ->orderby('created_at','DESC')->get();
-        
+            ->orderby('created_at', 'DESC')->get();
+
         return view('admin.pages.inputdata.index', $data);
     }
 
@@ -45,7 +45,7 @@ class InputdataController extends Controller
             if ($validator->fails()) {
                 return redirect::back()->withErrors($validator)->withInput($request->all());
             }
-            InputdataModel::create([
+            $x = InputdataModel::create([
                 'id' => $request->idinputdata,
                 'gambar' => $file,
                 'jk' => $request->jk,
@@ -57,7 +57,7 @@ class InputdataController extends Controller
                 'email' => $request->email,
                 'deskripsi' => $request->deskripsi,
             ]);
-
+            GlobalHelper::messagereturn($x);
             return redirect('/inputdata')->with('ss', 'Berhasil tambah');
         }
     }
