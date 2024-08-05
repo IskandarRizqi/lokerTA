@@ -11,39 +11,39 @@ use Symfony\Component\Console\Input\Input;
 
 class GlobalHelper
 {
-    public static function preprocess($text)
-    {
-        $stemmerFactory = new StemmerFactory();
-        $stemmer = $stemmerFactory->createStemmer();
+    // public static function preprocess($text)
+    // {
+    //     $stemmerFactory = new StemmerFactory();
+    //     $stemmer = $stemmerFactory->createStemmer();
 
-        $stopWordRemoverFactory = new StopWordRemoverFactory();
-        $stopWordRemover = $stopWordRemoverFactory->createStopWordRemover();
+    //     $stopWordRemoverFactory = new StopWordRemoverFactory();
+    //     $stopWordRemover = $stopWordRemoverFactory->createStopWordRemover();
 
-        $text = strtolower($text);
-        $text = $stopWordRemover->remove($text);
-        $text = $stemmer->stem($text);
+    //     $text = strtolower($text);
+    //     $text = $stopWordRemover->remove($text);
+    //     $text = $stemmer->stem($text);
 
-        return $text;
-    }
+    //     return $text;
+    // }
 
-    public static function cosineSimilarity($vec1, $vec2)
-    {
-        $dotProduct = array_sum(array_map(function ($a, $b) {
-            return $a * $b;
-        }, $vec1, $vec2));
-        $magnitude1 = sqrt(array_sum(array_map(function ($x) {
-            return pow($x, 2);
-        }, $vec1)));
-        $magnitude2 = sqrt(array_sum(array_map(function ($x) {
-            return pow($x, 2);
-        }, $vec2)));
+    // public static function cosineSimilarity($vec1, $vec2)
+    // {
+    //     $dotProduct = array_sum(array_map(function ($a, $b) {
+    //         return $a * $b;
+    //     }, $vec1, $vec2));
+    //     $magnitude1 = sqrt(array_sum(array_map(function ($x) {
+    //         return pow($x, 2);
+    //     }, $vec1)));
+    //     $magnitude2 = sqrt(array_sum(array_map(function ($x) {
+    //         return pow($x, 2);
+    //     }, $vec2)));
 
-        if ($magnitude1 * $magnitude2 == 0) {
-            return 0;
-        } else {
-            return $dotProduct / ($magnitude1 * $magnitude2);
-        }
-    }
+    //     if ($magnitude1 * $magnitude2 == 0) {
+    //         return 0;
+    //     } else {
+    //         return $dotProduct / ($magnitude1 * $magnitude2);
+    //     }
+    // }
     public static function getrecomend($id)
     {
         $data = [];
@@ -69,6 +69,7 @@ class GlobalHelper
         $l5 = [];
         $c = 0;
         foreach ($l as $key => $v) {
+            //jika data kriteria bidang sm dgn data yg diinputkan bdng 
             if ($auth->kriteria->bidang == $v->bidang) {
                 if (count($l1) <= 3) {
                     array_push($l1, $v);

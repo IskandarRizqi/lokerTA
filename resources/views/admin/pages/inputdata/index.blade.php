@@ -34,6 +34,7 @@
                                     <th>Jam</th>
                                     <th>Tempat Perusahaan</th>
                                     <th>Email</th>
+                                    <th>gaji</th>
                                     <th>Deskripsi</th>
                                     <th class="no-content text-center">Aksi</th>
                                 </tr>
@@ -51,6 +52,7 @@
                                     <td>{{$value->jam}}</td>
                                     <td>{{$value->tempatperusahaan}}</td>
                                     <td>{{$value->email}}</td>
+                                    <td>{{$value->gaji}}</td>
                                     <td>{!! $value->deskripsi !!}</td>
 
                                     <td>

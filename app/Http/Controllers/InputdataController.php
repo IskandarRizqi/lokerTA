@@ -40,6 +40,7 @@ class InputdataController extends Controller
                 'jam' => 'required',
                 'tempatperusahaan' => 'required',
                 'email' => 'required',
+                'gaji' => 'required',
                 'deskripsi' => 'required',
             ]);
 
@@ -56,6 +57,7 @@ class InputdataController extends Controller
                 'jam' => $request->jam,
                 'tempatperusahaan' => $request->tempatperusahaan,
                 'email' => $request->email,
+                'gaji' => $request->gaji,
                 'deskripsi' => $request->deskripsi,
             ]);
             GlobalHelper::messagereturn($x);
@@ -84,6 +86,7 @@ class InputdataController extends Controller
             'jam' => 'required',
             'tempatperusahaan' => 'required',
             'email' => 'required',
+            'gaji' => 'required',
             'deskripsi' => 'required',
         ]);
         if ($validator->fails()) {
@@ -97,6 +100,7 @@ class InputdataController extends Controller
             'jam' => $request->jam,
             'tempatperusahaan' => $request->tempatperusahaan,
             'email' => $request->email,
+            'gaji' => $request->gaji,
             'deskripsi' => $request->deskripsi,
         ];
         if ($request->hasFile('gambar')) {
@@ -110,7 +114,7 @@ class InputdataController extends Controller
     }
 
     public function destroy(string $id)
-    {
+{
 
         InputdataModel::where('id', $id)->delete();
         return redirect('/inputdata')->with('success', 'Berhasil hapus data');
