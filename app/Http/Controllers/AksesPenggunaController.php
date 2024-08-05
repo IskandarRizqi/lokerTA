@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Helper\GlobalHelper;
 use App\Models\user;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
 use Spatie\Permission\Models\Role;
@@ -17,18 +18,30 @@ class AksesPenggunaController extends Controller
 {
     public function index()
     {
+        if (Auth::user()->role_id != 0) {
+            Alert::info('Akses dibatasi');
+            return Redirect::back();
+        }
         $data['users'] = user::get();
         return view('admin.pages.user.index', $data);
     }
 
     public function create()
     {
+        if (Auth::user()->role_id != 0) {
+            Alert::info('Akses dibatasi');
+            return Redirect::back();
+        }
         $x['edit'] = false;
         return view('admin.pages.user.tambahpengguna', $x);
     }
 
     public function store(Request $request)
     {
+        if (Auth::user()->role_id != 0) {
+            Alert::info('Akses dibatasi');
+            return Redirect::back();
+        }
 
         $validator = validator::make($request->all(), [
 
@@ -68,6 +81,10 @@ class AksesPenggunaController extends Controller
 
     public function show(string $id)
     {
+        if (Auth::user()->role_id != 0) {
+            Alert::info('Akses dibatasi');
+            return Redirect::back();
+        }
         $data['edit'] = User::where('id', $id)->first();
         return view('admin.pages.user.tambahpengguna', $data);
     }
@@ -109,7 +126,10 @@ class AksesPenggunaController extends Controller
 
     public function destroy(string $id)
     {
-
+        if (Auth::user()->role_id != 0) {
+            Alert::info('Akses dibatasi');
+            return Redirect::back();
+        }
         User::where('id', $id)->delete();
         return redirect('/aksespengguna')->with('success', 'Berhasil hapus data');
     }

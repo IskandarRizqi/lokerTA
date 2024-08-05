@@ -18,7 +18,7 @@ class IsAdmin
     public function handle(Request $request, Closure $next): Response
     {
         if (Auth::check()) {
-            if (Auth::user()->role_id == 0) {
+            if (Auth::user()->role_id != 1) {
                 return $next($request);
             }
             return Redirect::to('/')->with('info', 'Tidak Memiliki Akses');

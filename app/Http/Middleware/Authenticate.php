@@ -24,7 +24,7 @@ class Authenticate
         if (!Auth::check()) {
             return redirect()->to('/')->with('info', 'silahkan login terlebih dahulu');
         }
-        if (auth()->user()->role_id > 0) {
+        if (auth()->user()->role_id == 1) {
             if (!auth()->user()->email_verified_at) {
                 return redirect()->to('/')->with('info', 'silahkan verifikasi email anda terlebih dahulu');
             }

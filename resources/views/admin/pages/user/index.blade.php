@@ -38,7 +38,13 @@
                                     <td width="1%">{{$key + 1}}</td>
                                     <td>{{$value->name}}</td>
                                     <td>{{$value->email}}</td>
-                                    <td>{{$value->role_id == 0 ? 'Admin' : 'User'}}</td>
+                                    @if($value->role_id == 0)
+                                    <td>Admin</td>
+                                    @elseif($value->role_id == 1)
+                                    <td>User</td>
+                                    @else
+                                    <td>Perusahaan</td>
+                                    @endif
                                     <td>
                                         <a href="{{route('aksespengguna.show', $value->id)}}"
                                             class="btn btn-primary btn-sm d-block d-none">Edit</a>

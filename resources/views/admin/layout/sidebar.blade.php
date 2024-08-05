@@ -14,18 +14,19 @@
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24">
                             <style>
-                              svg {
-                                fill: #502ACD;
-                              }
+                                svg {
+                                    fill: #502ACD;
+                                }
                             </style>
-                            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8v-10h-8v10zm0-18v6h8V3h-8z"/>
-                          </svg>
-                          
+                            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8v-10h-8v10zm0-18v6h8V3h-8z" />
+                        </svg>
+
                         <span style="font-size: 18px; color: black;">Dashboard</span>
                     </div>
                 </a>
             </li>
 
+            @if(Auth::user()->role_id == 0)
             <li class="menu" style="color: black;">
                 <a href="/aksespengguna" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
@@ -43,6 +44,7 @@
                     </div>
                 </a>
             </li>
+            @endif
 
 
 
@@ -53,13 +55,14 @@
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24">
                             <style>
-                              svg {
-                                fill: #502ACD;
-                              }
+                                svg {
+                                    fill: #502ACD;
+                                }
                             </style>
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17h-2v-6h2v6zm0-8h-2V7h2v4zm6 8h-2v-6h2v6zm0-8h-2V7h2v4z"/>
-                          </svg>
-                          
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17h-2v-6h2v6zm0-8h-2V7h2v4zm6 8h-2v-6h2v6zm0-8h-2V7h2v4z" />
+                        </svg>
+
                         <span style="font-size: 18px; color: black;">Input Data</span>
                     </div>
                 </a>
@@ -69,15 +72,16 @@
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24">
                             <style>
-                              svg {
-                                fill: #502ACD;
-                              }
+                                svg {
+                                    fill: #502ACD;
+                                }
                             </style>
-                            <path d="M16 2H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6l-6-4zM8 4h8v4h-8V4zm1 14v-2h6v2H9zm0-4v-2h6v2H9zm0-4V9h6v2H9zm10 7H8v-4h11v4z"/>
-                          </svg>
-                          
-                          
-                          
+                            <path
+                                d="M16 2H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6l-6-4zM8 4h8v4h-8V4zm1 14v-2h6v2H9zm0-4v-2h6v2H9zm0-4V9h6v2H9zm10 7H8v-4h11v4z" />
+                        </svg>
+
+
+
                         <span style="font-size: 18px; color: black;">Lamaran Pekerjaan</span>
                     </div>
                 </a>

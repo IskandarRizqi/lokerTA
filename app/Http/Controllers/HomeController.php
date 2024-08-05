@@ -41,7 +41,7 @@ class HomeController extends Controller
             $data['inputdata'] = InputdataModel::get();
             return view('front.pages.home', $data);
         }
-        if (Auth::user()->role_id < 1) {
+        if (Auth::user()->role_id != 1) {
             if (!Auth::user()->kriteria_id) {
                 return redirect::to('/dashboard');
             }
@@ -101,42 +101,42 @@ class HomeController extends Controller
 
 
             ->where(function ($q) use ($request) {
-                // if ($request->job_title) {
-                //     // $q->where('kategori', 'like', '%' . $request->job_title . '%');
-                //     $q->whereRaw('LOWER(`kategori`) LIKE ? ', ['%' . trim(strtolower($request->job_title)) . '%']);
-                // }
-                // if ($request->lokasi) {
-                //     // $q->where('tempatperusahaan', 'like', '%' . $request->lokasi . '%');
-                //     $q->whereRaw('LOWER(`tempatperusahaan`) LIKE ? ', ['%' . trim(strtolower($request->lokasi)) . '%']);
-                // }
-                // if ($request->lulusan) {
-                //     $q->where('pendidikan', 'like', '%' . $request->lulusan . '%');
-                // }
-
-                if ($request->formberanda) {
-                    if ($request->job_title) {
-                        $q->whereIn('kategori',  $request->job_title);
-                    }
-                    if ($request->lokasi) {
-                        $q->whereIn('tempatperusahaan',  $request->lokasi);
-                    }
-                    if ($request->lulusan) {
-                        $q->whereIn('pendidikan',  $request->lulusan);
-                    }
-                    if ($request->jam) {
-                        $q->whereIn('jam',  $request->jam);
-                    }
-                } else {
-                    if ($request->job_title) {
-                        $q->where('kategori', 'ilike', '%' . $request->job_title . '%');
-                    }
-                    if ($request->lokasi) {
-                        $q->where('tempatperusahaan', 'ilike', '%' . $request->Lokasi . '%');
-                    }
-                    if ($request->lulusan) {
-                        $q->where('pendidikan', 'ilike', '%' . $request->lulusan . '%');
-                    }
+                if ($request->job_title) {
+                    // $q->where('kategori', 'like', '%' . $request->job_title . '%');
+                    $q->whereRaw('LOWER(`kategori`) LIKE ? ', ['%' . trim(strtolower($request->job_title)) . '%'])->orWhereNull('kategori');
                 }
+                if ($request->lokasi) {
+                    // $q->where('tempatperusahaan', 'like', '%' . $request->lokasi . '%');
+                    $q->whereRaw('LOWER(`tempatperusahaan`) LIKE ? ', ['%' . trim(strtolower($request->lokasi)) . '%'])->orWhereNull('tempatperusahaan');
+                }
+                if ($request->lulusan) {
+                    $q->where('pendidikan', 'like', '%' . $request->lulusan . '%')->orWhereNull('pendidikan');
+                }
+
+                // if ($request->formberanda) {
+                //     if ($request->job_title) {
+                //         $q->whereIn('kategori',  $request->job_title)->orWhereNull('kategori');
+                //     }
+                //     if ($request->lokasi) {
+                //         $q->whereIn('tempatperusahaan',  $request->lokasi)->orWhereNull('tempatperusahaan');
+                //     }
+                //     if ($request->lulusan) {
+                //         $q->whereIn('pendidikan',  $request->lulusan)->orWhereNull('pendidikan');
+                //     }
+                //     if ($request->jam) {
+                //         $q->whereIn('jam',  $request->jam);
+                //     }
+                // } else {
+                //     if ($request->job_title) {
+                //         $q->where('kategori', 'ilike', '%' . $request->job_title . '%')->orWhereNull('kategori');
+                //     }
+                //     if ($request->lokasi) {
+                //         $q->where('tempatperusahaan', 'ilike', '%' . $request->Lokasi . '%')->orWhereNull('tempatperusahaan');
+                //     }
+                //     if ($request->lulusan) {
+                //         $q->where('pendidikan', 'ilike', '%' . $request->lulusan . '%')->orWhereNull('pendidikan');
+                //     }
+                // }
             })
 
             ->orderby('created_at', 'DESC')

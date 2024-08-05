@@ -46,7 +46,7 @@
                                 <div class="col-lg-6">
                                     <label for="form-control" style="color: black;">Email</label>
                                     <input type="hidden" name="" value="">
-                                    <input type="text" name="email"
+                                    <input type="email" name="email"
                                         class="form-control @error('email') is-invalid @enderror" placeholder=""
                                         value="{{$edit ? $edit->email : old('email')}}">
                                     @error('email')
@@ -81,9 +81,11 @@
                                         @if($edit)
                                         <option value="0" {{$edit->role_id == 0 ? 'selected' : ''}}>Admin</option>
                                         <option value="1" {{$edit->role_id == 1 ? 'selected' : ''}}>User</option>
+                                        <option value="2" {{$edit->role_id == 2 ? 'selected' : ''}}>Perusahaan</option>
                                         @else
                                         <option value="0" {{old('role_id')==0 ? 'selected' : '' }}>Admin</option>
                                         <option value="1" {{old('role_id')==1 ? 'selected' : '' }}>User</option>
+                                        <option value="2" {{old('role_id')==2 ? 'selected' : '' }}>Perusahaan</option>
                                         @endif
 
                                     </select>
