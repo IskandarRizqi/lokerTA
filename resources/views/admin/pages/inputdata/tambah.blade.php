@@ -142,7 +142,7 @@
                                         <option value="Fulltime">Fulltime </option>
                                         <option value="Parttime">Parttime </option>
                                         <option value="Frelance">Frelance</option>
-                                        
+
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>
                                     @error('jam')
@@ -203,9 +203,9 @@
                                 <div class="col-lg-3">
                                     <label for="form-control" style="color: black;">Email Perusahaan</label>
                                     <input type="hidden" name="idinputdata" value="">
-                                    <input type="text" name="email"
-                                        class="form-control @error('email') is-invalid @enderror"
-                                        placeholder="" value="{{old('email')}}">
+                                    <input type="email" name="email"
+                                        class="form-control @error('email') is-invalid @enderror" placeholder=""
+                                        value="{{old('email')}}">
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

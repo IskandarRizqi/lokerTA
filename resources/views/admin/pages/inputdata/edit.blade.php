@@ -38,7 +38,7 @@
                                 <div class="col-lg-3">
                                     <div class="form-group">
                                         <label for="jk">Jenis Kelamin</label>
-                                        <select id="jk" name="jk" class="form-control" >
+                                        <select id="jk" name="jk" class="form-control">
                                             <option value="" disabled selected>Pilih</option>
                                             <option value="laki-laki" {{$edit['jk']=='laki-laki' ? 'selected' : '' }}>
                                                 Laki-laki</option>
@@ -109,7 +109,7 @@
                                 </div>
 
 
-                                
+
                             </div>
 
 
@@ -168,7 +168,7 @@
                                 <div class="col-lg-3">
                                     <label for="form-control" style="color: black;">Email Perusahaan</label>
                                     <input type="hidden" name="idiinputdata" value="">
-                                    <input type="text" name="email"
+                                    <input type="email" name="email"
                                         class="form-control @error('email') is-invalid @enderror" placeholder="email"
                                         value="{{$edit['email']}}">
                                     @error('email')
