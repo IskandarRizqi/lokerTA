@@ -159,7 +159,11 @@
                                         class="form-control @error('tempatperusahaan') is-invalid @enderror"
                                         placeholder="" value="{{old('tempatperusahaan')}}">
                                         <option value="">Pilih </option>
-                                        <option value="Balikpapan">Balikpapan</option>
+                                        @foreach($kabupatens as $v)
+                   
+                                        <option value="{{$v->nama}}"> {{$v->nama}}</option>
+                                        @endforeach
+                                        {{-- <option value="Balikpapan">Balikpapan</option>
                                         <option value="Bandung">Bandung</option>
                                         <option value="Batam">Batam</option>
                                         <option value="Banyumas">Banyumas</option>
@@ -190,7 +194,7 @@
                                         <option value="Surabaya">Surabaya</option>
                                         <option value="Surakarta">Surakarta</option>
                                         <option value="Tegal">Tegal</option>
-                                        <option value="Yogyakarta">Yogyakarta</option>
+                                        <option value="Yogyakarta">Yogyakarta</option> --}}
                                         <!-- Tambahkan pilihan sesuai dengan kebutuhan Anda -->
                                     </select>
                                     @error('tempatperusahaan')

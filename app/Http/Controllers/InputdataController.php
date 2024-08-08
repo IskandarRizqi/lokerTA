@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
 use Psy\Readline\Hoa\Console;
+use DB;
 
 class InputdataController extends Controller
 {
@@ -15,14 +16,15 @@ class InputdataController extends Controller
     {
         $data['inputdata'] = InputdataModel::select()
             ->orderby('created_at', 'DESC')->get();
+            $data['kabupatens'] = DB::table('kabupatens')->get();
 
         return view('admin.pages.inputdata.index', $data);
     }
 
     public function create()
     {
-        
-        return view('admin.pages.inputdata.tambah');
+        $data['kabupatens'] = DB::table('kabupatens')->get();
+        return view('admin.pages.inputdata.tambah', $data);
     }
 
     public function store(Request $request)

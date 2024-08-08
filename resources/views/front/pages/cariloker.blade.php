@@ -108,7 +108,13 @@
                                     <div class="form-group">
                                         <select id="lokasi" name="lokasi">
                                             <option value="">Lokasi </option>
-                                            <option {{$lokasi=='Balikpapan' ? 'selected' : '' }} value="Balikpapan">Balikpapan</option>
+                                         
+                                            @foreach($kabupatens as $v)
+                  
+                                           {{-- <option value="{{$v->nama}}"> {{$v->nama}}</option> --}}
+                                           <option {{$v->nama==$lokasi ? 'selected' : '' }} value= "{{$v->nama}}">{{$v->nama}}</option>
+                                           @endforeach
+                                            {{-- <option {{$lokasi=='Balikpapan' ? 'selected' : '' }} value="Balikpapan">Balikpapan</option>
                                             <option {{$lokasi=='Bandung' ? 'selected' : '' }} value="Bandung">Bandung</option>
                                             <option {{$lokasi=='Batam' ? 'selected' : '' }} value="Batam">Batam</option>
                                             <option {{$lokasi=='Banyumas' ? 'selected' : '' }} value="Banyumas">Banyumas</option>
@@ -139,7 +145,7 @@
                                             <option {{$lokasi=='Surabaya' ? 'selected' : '' }} value="Surabaya">Surabaya</option>
                                             <option {{$lokasi=='Surakarta' ? 'selected' : '' }} value="Surakarta">Surakarta</option>
                                             <option {{$lokasi=='Tegal' ? 'selected' : '' }} value="Tegal">Tegal</option>
-                                            <option {{$lokasi=='Yogyakarta' ? 'selected' : '' }} value="Yogyakarta">Yogyakarta</option>
+                                            <option {{$lokasi=='Yogyakarta' ? 'selected' : '' }} value="Yogyakarta">Yogyakarta</option> --}}
 
                                         </select>
                                     </div>

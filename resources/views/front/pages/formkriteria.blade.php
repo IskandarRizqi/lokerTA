@@ -127,12 +127,130 @@
                 <label for="lokasi">Kota Mana Yang Sedang Anda Cari?</label>
                 <input type="hidden" name="idkriteria" value="">
                 <select id="lokasi" name="lokasi" required>
-                     {{-- @foreach($kabupatens as $v)
-                
-                    <option value="{{$v->id}}"> {{$v->nama}}</option>
-                    @endforeach --}}
-                    <option value="" disabled selected>Pilih</option> <!-- Placeholder -->
-                    <option value="Balikpapan">Balikpapan</option>
+                    <option value="" disabled selected>Pilih</option> 
+                     @foreach($kabupatens as $v)
+                   
+                    <option value="{{$v->nama}}"> {{$v->nama}}</option>
+                    @endforeach
+                    <!-- Placeholder -->
+                   
+                    {{-- <option value="KOTA PEKANBARU">KOTA PEKANBARU</option>
+                    <option value="KOTA JAMBI">KOTA JAMBI</option>
+                    <option value="KOTA PALEMBANG">KOTA PALEMBANG</option>
+                    <option value="KOTA LUBUKLINGGAU">KOTA LUBUKLINGGAU</option>
+                    <option value="KOTA BANDAR LAMPUNG">KOTA BANDAR LAMPUNG</option>
+                    <option value="KABUPATEN LAMPUNG BARAT">KABUPATEN LAMPUNG BARAT</option>
+                    <option value="KABUPATEN LAMPUNG TIMUR PEKANBARU">KABUPATEN LAMPUNG TIMUR PEKANBARU</option>
+                    <option value="KABUPATEN LAMPUNG TENGAH">KABUPATEN LAMPUNG TENGAH</option>
+                    <option value="KABUPATEN LAMPUNG SELATAN">KABUPATEN LAMPUNG SELATAN</option>
+                    <option value="KOTA METRO">KOTA METRO</option>
+                    <option value="KABUPATEN BANGKA">KABUPATEN BANGKA</option>
+                    <option value="KABUPATEN BELITUNG">KABUPATEN BELITUNG</option>
+                    <option value="KOTA PANGKAL PINANG">KOTA PANGKAL PINANG</option>
+                    <option value="KABUPATEN KARIMUN">KABUPATEN KARIMUN</option>
+                    <option value="KABUPATEN LINGGA">KABUPATEN LINGGA</option>
+                    <option value="KABUPATEN NATUNA">KABUPATEN NATUNA</option>
+                    <option value="KOTA BATAM">KOTA BATAM</option>
+                    <option value="KOTA TANJUNG PINANG">KOTA TANJUNG PINANG</option>
+                    <option value="KOTA JAKARTA SELATAN">KOTA JAKARTA SELATAN</option>
+                    <option value="KOTA JAKARTA TIMUR">KOTA JAKARTA TIMUR</option>
+                    <option value="KOTA JAKARTA BARAT">KOTA JAKARTA BARAT</option>
+                    <option value="KOTA PUSAT">KOTA PUSAT</option>
+                    <option value="KOTA UTARA">KOTA UTARA</option>
+                    <option value="KABUPATEN KEPULAUAN SERIBU">KABUPATEN KEPULAUAN SERIBU</option>
+                    <option value="KABUPATEN BOGOR">KABUPATEN BOGOR</option>
+                    <option value="KABUPATEN SUKABUMI">KABUPATEN SUKABUMI</option>
+                    <option value="KABUPATEN CIANJUR">KABUPATEN CIANJUR</option>
+                    <option value="KABUPATEN BANDUNG">KABUPATEN BANDUNG</option>
+                    <option value="KABUPATEN GARUT">KABUPATEN GARUT</option>
+                    <option value="KABUPATEN TASIKMALAYA">KABUPATEN TASIKMALAYA</option>
+                    <option value="KABUPATEN CIAMIS">KABUPATEN CIAMIS</option>
+                    <option value="KABUPATEN KUNINGAN">KABUPATEN KUNINGAN</option>
+                    <option value="KABUPATEN CIREBON">KABUPATEN CIREBON</option>
+                    <option value="KABUPATEN MAJALENGKA">KABUPATEN MAJALENGKA</option>
+                    <option value="KABUPATEN SUMEDANG">KABUPATEN SUMEDANG</option>
+                    <option value="KABUPATEN INDRAMAYU">KABUPATEN INDRAMAYU</option>
+                    <option value="KABUPATEN SUBANG">KABUPATEN SUBANG</option>
+                    <option value="KABUPATEN PURWAKARTA">KABUPATEN PURWAKARTA</option>
+                    <option value="KABUPATEN KARAWANG">KABUPATEN KARAWANG</option>
+                    <option value="KABUPATEN BEKASI">KABUPATEN BEKASI</option>
+                    <option value="KABUPATEN PANGANDARAN">KABUPATEN PANGANDARAN</option>
+                    <option value="KOTA BOGOR">KOTA BOGOR</option>
+                    <option value="KOTA SUKABUMI">KOTA SUKABUMI</option>
+                    <option value="KOTA BANDUNG">KOTA BANDUNG</option>
+                    <option value="KOTA CIREBON">KOTA CIREBON</option>
+                    <option value="KOTA BEKASI">KOTA BEKASI</option>
+                    <option value="KOTA DEPOK">KOTA DEPOK</option>
+                    <option value="KOTA CIMAHI">KOTA CIMAHI</option>
+                    <option value="KOTA TASIKMALAYA">KOTA TASIKMALAYA</option>
+                    <option value="KOTA BANJAR">KOTA BANJAR</option>
+                    <option value="KOTA MAGELANG">KOTA MAGELANG</option>
+                    <option value="KOTA TEGAL">KOTA TEGAL</option>
+                    <option value="KOTA PEKALONGAN">KOTA PEKALONGAN</option>
+                    <option value="KOTA SURAKARTA">KOTA SURAKARTA</option>
+                    <option value="KOTA SALATIGA">KOTA SALATIGA</option>
+                    <option value="KOTA SEMARANG">KOTA SEMARANG</option>
+                    <option value="KABUPATEN CILACAP">KABUPATEN CILACAP</option>
+                    <option value="KABUPATEN BANYUMAS">KABUPATEN BANYUMAS</option>
+                    <option value="KABUPATEN PURBALINGGA">KABUPATEN PURBALINGGA</option>
+                    <option value="KABUPATEN BANJARNEGARA">KABUPATEN BANJARNEGARA</option>
+                    <option value="KABUPATEN KEBUMEN">KABUPATEN KEBUMEN</option>
+                    <option value="KABUPATEN PURWOREJO">KABUPATEN PURWOREJO</option>
+                    <option value="KABUPATEN WONOSOBO">KABUPATEN WONOSOBO</option>
+                    <option value="KABUPATEN MAGELANG">KABUPATEN MAGELANG</option>
+                    <option value="KABUPATEN BOYOLALI">KABUPATEN BOYOLALI</option>
+                    <option value="KABUPATEN KLATEN">KABUPATEN KLATEN</option>
+                    <option value="KABUPATEN SUKOHARJO">KABUPATEN SUKOHARJO</option>
+                    <option value="KABUPATEN WONOGIRI">KABUPATEN WONOGIRI</option>
+                    <option value="KABUPATEN KARANGANYAR">KABUPATEN KARANGANYAR</option>
+                    <option value="KABUPATEN SRAGEN">KABUPATEN SRAGEN</option>
+                    <option value="KABUPATEN GROBOGAN">KABUPATEN GROBOGAN</option>
+                    <option value="KABUPATEN BLORA">KABUPATEN BLORA</option>
+                    <option value="KABUPATEN REMBANG">KABUPATEN REMBANG</option>
+                    <option value="KABUPATEN PATI">KABUPATEN PATI</option>
+                    <option value="KABUPATEN KUDUS">KABUPATEN KUDUS</option>
+                    <option value="KABUPATEN JEPARA">KABUPATEN JEPARA</option>
+                    <option value="KABUPATEN DEMAK">KABUPATEN DEMAK</option>
+                    <option value="KABUPATEN SEMARANG">KABUPATEN SEMARANG</option>
+                    <option value="KABUPATEN TEMANGGUNG">KABUPATEN TEMANGGUNG</option>
+                    <option value="KABUPATEN KENDAL">KABUPATEN KENDAL</option>
+                    <option value="KABUPATEN BATANG">KABUPATEN BATANG</option>
+                    <option value="KABUPATEN PEKALONGAN">KABUPATEN PEKALONGAN</option>
+                    <option value="KABUPATEN PEMALANG">KABUPATEN PEMALANG</option>
+                    <option value="KABUPATEN TEGAL">KABUPATEN TEGAL</option>
+                    <option value="KABUPATEN BREBES">KABUPATEN BREBES</option>
+                    <option value="KABUPATEN KULON PROGO">KABUPATEN KULON PROGO</option>
+                    <option value="KABUPATEN BANTUL">KABUPATEN BANTUL</option>
+                    <option value="KABUPATEN GUNUNG KIDUL">KABUPATEN GUNUNG KIDUL</option>
+                    <option value="KABUPATEN SLEMAN">KABUPATEN SLEMAN</option>
+                    <option value="KOTA YOGYAKARTA">KOTA YOGYAKARTA</option>
+                    <option value="KABUPATEN PACITAN">KABUPATEN PACITAN</option>
+                    <option value="KABUPATEN PONOROGO">KABUPATEN PONOROGO</option>
+                    <option value="KABUPATEN TRENGGALEK">KABUPATEN TRENGGALEK</option>
+                    <option value="KABUPATEN TULUNGAGUNG">KABUPATEN TULUNGAGUNG</option>
+                    <option value="KABUPATEN BLITAR">KABUPATEN BLITAR</option>
+                    <option value="KABUPATEN KEDIRI">KABUPATEN KEDIRI</option>
+                    <option value="KABUPATEN MALANG">KABUPATEN MALANG</option>
+                    <option value="KABUPATEN LUMAJANG">KABUPATEN LUMAJANG</option>
+                    <option value="KABUPATEN JEMBER">KABUPATEN JEMBER</option>
+                    <option value="KABUPATEN BANYUWANGI">KABUPATEN BANYUWANGI</option>
+                    <option value="KABUPATEN BONDOWOSO">KABUPATEN BONDOWOSO</option>
+                    <option value="KABUPATEN SITUBONDO">KABUPATEN SITUBONDO</option>
+                    <option value="KABUPATEN PROBOLINGGO">KABUPATEN PROBOLINGGO</option>
+                    <option value="KABUPATEN PASURUAN">KABUPATEN PASURUAN</option>
+                    <option value="KABUPATEN SIDOARJO">KABUPATEN SIDOARJO</option>
+                    <option value="KABUPATEN MOJOKERTO">KABUPATEN MOJOKERTO</option>
+                    <option value="KABUPATEN JOMBANG">KABUPATEN JOMBANG</option>
+                    <option value="KABUPATEN NGANJUK">KABUPATEN NGANJUK</option>
+                    <option value="KABUPATEN MADIUN">KABUPATEN MADIUN</option> --}}
+                  
+                  
+
+                   
+                   
+                   
+                   
+                    {{-- <option value="Balikpapan">Balikpapan</option>
                     <option value="Bandung">Bandung</option>
                     <option value="Batam">Batam</option>
                     <option value="Banyumas">Banyumas</option>
@@ -163,7 +281,7 @@
                     <option value="Surabaya">Surabaya</option>
                     <option value="Surakarta">Surakarta</option>
                     <option value="Tegal">Tegal</option>
-                    <option value="Yogyakarta">Yogyakarta</option>
+                    <option value="Yogyakarta">Yogyakarta</option> --}}
                    
              
                 </select>
