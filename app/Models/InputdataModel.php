@@ -21,6 +21,6 @@ class InputdataModel extends Model
         'tempatperusahaan',
         'email',
         'deskripsi',
-
+        // 'perusahaan_id',
     ];
 }

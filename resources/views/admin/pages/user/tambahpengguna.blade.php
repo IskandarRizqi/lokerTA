@@ -79,13 +79,15 @@
                                         placeholder="">
                                         <option value="">Pilih</option>
                                         @if($edit)
-                                        <option value="0" {{$edit->role_id == 0 ? 'selected' : ''}}>Admin</option>
+                                        <option value="0" {{$edit->role_id == 0 ? 'selected' : ''}}>Super Admin</option>
                                         <option value="1" {{$edit->role_id == 1 ? 'selected' : ''}}>User</option>
                                         <option value="2" {{$edit->role_id == 2 ? 'selected' : ''}}>Perusahaan</option>
+                                        <option value="3" {{$edit->role_id == 3 ? 'selected' : ''}}>Admin</option>
                                         @else
-                                        <option value="0" {{old('role_id')==0 ? 'selected' : '' }}>Admin</option>
+                                        <option value="0" {{old('role_id')==0 ? 'selected' : '' }}>Super Admin</option>
                                         <option value="1" {{old('role_id')==1 ? 'selected' : '' }}>User</option>
                                         <option value="2" {{old('role_id')==2 ? 'selected' : '' }}>Perusahaan</option>
+                                        <option value="3" {{old('role_id')==3 ? 'selected' : '' }}>Admin</option>
                                         @endif
 
                                     </select>
