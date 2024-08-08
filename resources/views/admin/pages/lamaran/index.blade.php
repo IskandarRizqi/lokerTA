@@ -52,6 +52,7 @@
                                     <td>{{$value->status == 0 ? 'Belum dikirim' : 'Terkirim'}}</td>
 
                                     <td>
+                                        @if(Auth::user()->role_id == 0 || Auth::user()->role_id == 3)
                                         <div class="dropdown d-inline-block">
                                             <a class="dropdown-toggle" href="#" role="button" id="pendingTask"
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -82,6 +83,8 @@
                                                 @endif
                                             </div>
                                         </div>
+
+                                        @endif
                                     </td>
                                 </tr>
                                 @endforeach

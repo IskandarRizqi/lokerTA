@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Helper\GlobalHelper;
 use App\Models\InputdataModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Redirect;
 use Psy\Readline\Hoa\Console;
@@ -14,8 +15,15 @@ class InputdataController extends Controller
 {
     public function index()
     {
+        $auth = Auth::user();
         $data['inputdata'] = InputdataModel::select()
-            ->orderby('created_at', 'DESC')->get();
+            ->where(function ($q) use ($auth) {
+                // if ($auth->role_id == 2) {
+                //     $q->where('user_id', $auth->id);
+                // }
+            })
+            ->orderby('created_at', 'DESC')
+            ->get();
             $data['kabupatens'] = DB::table('kabupatens')->get();
 
         return view('admin.pages.inputdata.index', $data);
@@ -23,7 +31,7 @@ class InputdataController extends Controller
 
     public function create()
     {
-        $data['kabupatens'] = DB::table('kabupatens')->get();
+$data['kabupatens'] = DB::table('kabupatens')->get();
         return view('admin.pages.inputdata.tambah', $data);
     }
 
@@ -61,6 +69,7 @@ class InputdataController extends Controller
                 'email' => $request->email,
                 'gaji' => $request->gaji,
                 'deskripsi' => $request->deskripsi,
+                // 'perusahaan_id' => Auth::user()->id,
             ]);
             GlobalHelper::messagereturn($x);
             return redirect('/inputdata')->with('ss', 'Berhasil tambah');

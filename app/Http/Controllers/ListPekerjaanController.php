@@ -6,9 +6,11 @@ use App\Helper\GlobalHelper;
 use App\Models\LamaranModel;
 use App\Models\ListPekerjaanModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ListPekerjaanController extends Controller
 {
@@ -87,29 +89,34 @@ class ListPekerjaanController extends Controller
 
     public function listlamaran(Request $r)
     {
-        $x = [];
-        $x['data'] = LamaranModel::select(
-            'lamaran_models.*',
-            'users.name',
-            'users.kriteria_id',
-            'inputdata.gambar',
-            'inputdata.jk',
-            'inputdata.namaperusahaan',
-            'inputdata.kategori',
-            'inputdata.pendidikan',
-            'inputdata.jam',
-            'inputdata.tempatperusahaan',
-            'inputdata.deskripsi',
-            'inputdata.email',
-            'informasipribadi.file_pendukung'
-        )
-            ->leftJoin('users', 'users.id', 'lamaran_models.user_id')
-            ->leftJoin('inputdata', 'inputdata.id', 'lamaran_models.loker_id')
-            ->leftJoin('informasipribadi', 'informasipribadi.id_user', 'lamaran_models.user_id')
-            ->orderBy('lamaran_models.created_at', 'DESC')
-            ->get();
-        // return $x;
-        return view('admin.pages.lamaran.index', $x);
+
+        if (Auth::user()->role_id == 0 || Auth::user()->role_id == 3) {
+            $x = [];
+            $x['data'] = LamaranModel::select(
+                'lamaran_models.*',
+                'users.name',
+                'users.kriteria_id',
+                'inputdata.gambar',
+                'inputdata.jk',
+                'inputdata.namaperusahaan',
+                'inputdata.kategori',
+                'inputdata.pendidikan',
+                'inputdata.jam',
+                'inputdata.tempatperusahaan',
+                'inputdata.deskripsi',
+                'inputdata.email',
+                'informasipribadi.file_pendukung'
+            )
+                ->leftJoin('users', 'users.id', 'lamaran_models.user_id')
+                ->leftJoin('inputdata', 'inputdata.id', 'lamaran_models.loker_id')
+                ->leftJoin('informasipribadi', 'informasipribadi.id_user', 'lamaran_models.user_id')
+                ->orderBy('lamaran_models.created_at', 'DESC')
+                ->get();
+            // return $x;
+            return view('admin.pages.lamaran.index', $x);
+        }
+        Alert::info('Akses dibatasi');
+        return Redirect::back();
     }
     public function statuslamaran(Request $r, $id, $status)
     {

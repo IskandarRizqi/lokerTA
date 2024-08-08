@@ -22,6 +22,6 @@ class InputdataModel extends Model
         'email',
         'gaji',
         'deskripsi',
-
+        // 'perusahaan_id',
     ];
 }

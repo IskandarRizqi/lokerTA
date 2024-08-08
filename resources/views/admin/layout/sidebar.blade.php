@@ -67,6 +67,7 @@
                     </div>
                 </a>
             </li>
+            @if(Auth::user()->role_id == 0 || Auth::user()->role_id == 3)
             <li class="menu">
                 <a href="/list-lamaran" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
@@ -86,7 +87,7 @@
                     </div>
                 </a>
             </li>
-
+            @endif
 
 
 
