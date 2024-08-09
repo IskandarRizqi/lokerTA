@@ -178,6 +178,27 @@
                                     @enderror
                                 </div>
                             </div>
+                            <div class="row-m-1">
+                                <div class="col-lg-3">
+                                    <label for="form-control" style="color: black;">Salary gaji</label>
+                                    <input type="hidden" name="idinputdata" value="">
+                                    <select name="gaji" class="form-control @error('gaji') is-invalid @enderror"
+                                        placeholder="" value="{{ $edit['gaji'] }}">
+                                        <option value="">Pilih </option>
+                                        <option value="Rp 1.000.000 - 2.500.000">Rp 1.000.000 - 2.500.000</option>
+                                        <option value="Rp 2.500.000 - 4.500.000">Rp 2.500.000 - 4.500.000</option>
+                                        <option value="Rp 4.500.000 - 7.000.000">Rp 4.500.000 - 7.000.000</option>
+                                        <option value="Rp 7.000.000 - 10.000.000">Rp 7.000.000 - 10.000.000</option>
+
+
+                                    </select>
+                                    @error('kategori')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
                             <div class="row m-1">
 
                                 <div class="col-lg-12">

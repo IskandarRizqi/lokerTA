@@ -134,7 +134,7 @@
                     @endforeach
                     <!-- Placeholder -->
                    
-                    {{-- <option value="KOTA PEKANBARU">KOTA PEKANBARU</option>
+                    <option value="KOTA PEKANBARU">KOTA PEKANBARU</option>
                     <option value="KOTA JAMBI">KOTA JAMBI</option>
                     <option value="KOTA PALEMBANG">KOTA PALEMBANG</option>
                     <option value="KOTA LUBUKLINGGAU">KOTA LUBUKLINGGAU</option>
@@ -155,8 +155,8 @@
                     <option value="KOTA JAKARTA SELATAN">KOTA JAKARTA SELATAN</option>
                     <option value="KOTA JAKARTA TIMUR">KOTA JAKARTA TIMUR</option>
                     <option value="KOTA JAKARTA BARAT">KOTA JAKARTA BARAT</option>
-                    <option value="KOTA PUSAT">KOTA PUSAT</option>
-                    <option value="KOTA UTARA">KOTA UTARA</option>
+                    <option value="KOTA JAKARTA PUSAT">KOTA JAKARTA PUSAT</option>
+                    <option value="KOTA JAKARTA UTARA">KOTA JAKARTA UTARA</option>
                     <option value="KABUPATEN KEPULAUAN SERIBU">KABUPATEN KEPULAUAN SERIBU</option>
                     <option value="KABUPATEN BOGOR">KABUPATEN BOGOR</option>
                     <option value="KABUPATEN SUKABUMI">KABUPATEN SUKABUMI</option>
@@ -242,7 +242,7 @@
                     <option value="KABUPATEN MOJOKERTO">KABUPATEN MOJOKERTO</option>
                     <option value="KABUPATEN JOMBANG">KABUPATEN JOMBANG</option>
                     <option value="KABUPATEN NGANJUK">KABUPATEN NGANJUK</option>
-                    <option value="KABUPATEN MADIUN">KABUPATEN MADIUN</option> --}}
+                    <option value="KABUPATEN MADIUN">KABUPATEN MADIUN</option>
                   
                   
 

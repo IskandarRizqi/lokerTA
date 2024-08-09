@@ -187,6 +187,7 @@ class HomeController extends Controller
     {
         $data = [];
         $data['data'] = KriteriaModel::where('id', Auth::user()->kriteria_id)->first();
+        $data['kabupatens'] = DB::table('kabupatens')->get();
         return view('front.profile.kriteria', $data);
     }
 

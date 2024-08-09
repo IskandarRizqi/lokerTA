@@ -328,39 +328,39 @@
                                     <div class="product-brand">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="01"
-                                                name="lokasi[]" value="Balikpapan">
+                                                name="lokasi[]" value="KOTA PEKANBARU">
                                             <label class="text-capitalize custom-control-label"
-                                                for="01">Balikpapan</label>
+                                                for="01">KOTA PEKANBARU</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="02"
-                                                name="lokasi[]" value="Bandung">
+                                                name="lokasi[]" value="KOTA PALEMBANG">
                                             <label class="text-capitalize custom-control-label"
-                                                for="02">Bandung</label>
+                                                for="02">KOTA PALEMBANG</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="03"
-                                                name="lokasi[]" value="Batam">
+                                                name="lokasi[]" value="KOTA BATAM">
                                             <label class="text-capitalize custom-control-label"
-                                                for="03">Batam</label>
+                                                for="03">KOTA BATAM</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="04"
-                                                name="lokasi[]" value="Banyumas">
+                                                name="lokasi[]" value="KOTA JAKARTA PUSAT">
                                             <label class="text-capitalize custom-control-label"
-                                                for="04">Banyumas</label>
+                                                for="04">KOTA JAKARTA PUSAT</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="05"
-                                                name="lokasi[]" value="Bekasi">
+                                                name="lokasi[]" value="KOTA BOGOR">
                                             <label class="text-capitalize custom-control-label"
-                                                for="05">Bekasi</label>
+                                                for="05">KOTA BOGOR</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="06"
-                                                name="lokasi[]" value="Brebes">
+                                                name="lokasi[]" value="KOTA BANDUNG">
                                             <label class="text-capitalize custom-control-label"
-                                                for="06">Brebes</label>
+                                                for="06">KOTA BANDUNG</label>
                                         </div>
                                        
                                         <div class="mt-2">
@@ -371,159 +371,159 @@
                                                 <!-- Area untuk konten tambahan -->
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="07"
-                                                        name="lokasi[]" value="Bogor">
+                                                        name="lokasi[]" value="KOTA CIREBON">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="07">Bogor</label>
+                                                        for="07">KOTA CIREBON</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="08"
-                                                        name="lokasi[]" value="Blora">
+                                                        name="lokasi[]" value="KOTA BEKASI">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="08">Blora</label>
+                                                        for="08">KOTA BEKASI</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="09"
-                                                        name="lokasi[]" value="Cilacap">
+                                                        name="lokasi[]" value="KOTA TEGAL">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="09">Cilacap</label>
+                                                        for="09">KOTA TEGAL</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="010"
-                                                        name="lokasi[]" value="Cilegon">
+                                                        name="lokasi[]" value="KOTA PEKALONGAN">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="010">Cilegon</label>
+                                                        for="010">KOTA PEKALONGAN</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="011"
-                                                        name="lokasi[]" value="Cirebon">
+                                                        name="lokasi[]" value="KOTA SEMARANG">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="011">Cirebon</label>
+                                                        for="011">KOTA SEMARANG</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="012"
-                                                        name="lokasi[]" value="Cikarang">
+                                                        name="lokasi[]" value="KOTA PEKALONGAN">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="012">Cikarang</label>
+                                                        for="012">KOTA PEKALONGAN</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="013"
-                                                        name="lokasi[]" value="Depok">
+                                                        name="lokasi[]" value="KOTA MAGELANG">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="013">Depok</label>
+                                                        for="013">KOTA MAGELANG</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="014"
-                                                        name="lokasi[]" value="Jakarta">
+                                                        name="lokasi[]" value="KOTA YOGYAKARTA">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="014">Jakarta</label>
+                                                        for="014">KOTA YOGYAKARTA</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="015"
-                                                        name="lokasi[]" value="Jambi">
+                                                        name="lokasi[]" value="KABUPATEN CILACAP">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="015">Jambi</label>
+                                                        for="015">KABUPATEN CILACAP</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="016"
-                                                        name="lokasi[]" value="Karawang">
+                                                        name="lokasi[]" value="KOTA DEPOK">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="016">Karawang</label>
+                                                        for="016">KOTA DEPOK</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="017"
-                                                        name="lokasi[]" value="Kendal">
+                                                        name="lokasi[]" value="KOTA SUKABUMI">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="017">Kendal</label>
+                                                        for="017">KOTA SUKABUMI</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="018"
-                                                        name="lokasi[]" value="Kalimantan">
+                                                        name="lokasi[]" value="KABUPATEN BREBES">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="018">Kalimantan</label>
+                                                        for="018">KABUPATEN BREBES</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="019"
-                                                        name="lokasi[]" value="Madiun">
+                                                        name="lokasi[]" value="KABUPATEN PEMALANG">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="019">Madiun</label>
+                                                        for="019">KABUPATEN PEMALANG</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="020"
-                                                        name="lokasi[]" value="Malang">
+                                                        name="lokasi[]" value="KABUPATEN BATANG">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="020">Malang</label>
+                                                        for="020">KABUPATEN BATANG</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="021"
-                                                        name="lokasi[]" value="Magelang">
+                                                        name="lokasi[]" value="KABUPATEN KENDAL">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="021">Magelang</label>
+                                                        for="021">KABUPATEN KENDAL</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="022"
-                                                        name="lokasi[]" value="Palembang">
+                                                        name="lokasi[]" value="KABUPATEN DEMAK">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="022">Palembang</label>
+                                                        for="022">KABUPATEN DEMAK</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="023"
-                                                        name="lokasi[]" value="Pekalongan">
+                                                        name="lokasi[]" value="KABUPATEN JEPARA">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="023">Pekalongan</label>
+                                                        for="023">KABUPATEN JEPARA</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="024"
-                                                        name="lokasi[]" value="Pemalang">
+                                                        name="lokasi[]" value="KABUPATEN KUDUS">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="024">Pemalang</label>
+                                                        for="024">KABUPATEN KUDUS</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="025"
-                                                        name="lokasi[]" value="Purwokerto">
+                                                        name="lokasi[]" value="KABUPATEN PATI">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="025">Purwokerto</label>
+                                                        for="025">KABUPATEN PATI</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="026"
-                                                        name="lokasi[]" value="Tanggerang">
+                                                        name="lokasi[]" value="KABUPATEN REMBANG">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="026">Tanggerang</label>
+                                                        for="026">KABUPATEN REMBANG</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="027"
-                                                        name="lokasi[]" value="Solo">
+                                                        name="lokasi[]" value="KABUPATEN BLORA">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="027">Solo</label>
+                                                        for="027">KABUPATEN BLORA</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="028"
-                                                        name="lokasi[]" value="Semarang">
+                                                        name="lokasi[]" value="KABUPATEN WONOGIRI">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="028">Semarang</label>
+                                                        for="028">KABUPATEN WONOGIRI</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="029"
-                                                        name="lokasi[]" value="Surabaya">
+                                                        name="lokasi[]" value="KABUPATEN BOYOLALI">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="029">Surabaya</label>
+                                                        for="029">KABUPATEN BOYOLALI</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="030"
-                                                        name="lokasi[]" value="Surakarta">
+                                                        name="lokasi[]" value="KABUPATEN PURWOREJO">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="030">Surakarta</label>
+                                                        for="030">KABUPATEN PURWOREJO</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="931"
-                                                        name="lokasi[]" value="Tegal">
+                                                        name="lokasi[]" value="KABUPATEN PURBALINGGA">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="931">Tegal</label>
+                                                        for="931">KABUPATEN PURBALINGGA</label>
                                                 </div>
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="032"
-                                                        name="lokasi[]" value="Yogyakarta">
+                                                        name="lokasi[]" value="KABUPATEN BANYUMAS">
                                                     <label class="text-capitalize custom-control-label"
-                                                        for="032">Yogyakarta</label>
+                                                        for="032">KABUPATEN BANYUMAS</label>
                                                 </div>
 
                                             </div>

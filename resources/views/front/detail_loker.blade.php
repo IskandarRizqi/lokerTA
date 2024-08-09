@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <div class="product">
                             <div class="row gutter-40">
-                                <div class="col-md-8 text-center text-md-left product-desc">
+                                <div class="col-lg-8 text-center text-md-left product-desc">
                                     <div class="d-flex align-items-center mb-2">
                                         {{-- <a href="/submit-loker/{{$loker->id}}">
                                             <button class="btn btn-info btn-sm">Lamar Perkerjaan</button>
@@ -86,14 +86,33 @@
                                                 
                                                 {{$loker->jk}}
                                             </div>
+                                           
+                                           
+                                        </div>
+                                        <div class="d-flex">
+                                        <div class="alamat ml-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black">
+                                                    <!-- Rectangle for the banknote -->
+                                                    <rect x="3" y="6" width="18" height="12" rx="2" ry="2" fill="none" stroke="black" stroke-width="2"/>
+                                                    
+                                                    <!-- Dollar Sign in the center -->
+                                                    <text x="12" y="15" font-family="Arial" font-size="10" text-anchor="middle" fill="black">$</text>
+                                                    
+                                                    <!-- Optional small circles or additional details to mimic currency features -->
+                                                    <circle cx="7" cy="12" r="1" fill="black"/>
+                                                    <circle cx="17" cy="12" r="1" fill="black"/>
+                                                  </svg>
+                                             
+                                                {{$loker->gaji}}
+                                        </div>
                                         </div>
                                     </div>
                                     <div style="text-align: justify; margin-bottom:30px;">{!!$loker->deskripsi!!}</div>
 
                                 </div>
-                                <div class="col-md-4 right">
+                                <div class="col-lg-4 right">
                                     <img data-animate="fadeInLeft" src="/gambar?rf={{$loker->gambar}}"
-                                        alt="Gambar loker" style="border-radius: 10px; width:150px; height:100px;">
+                                        alt="Gambar loker" style="border-radius: 10px; width:100px; height:100px; margin-left: 150px; margin-top: 10px;">
                                 </div>
                             </div>
                             <a href="/submit-loker/{{$loker->id}}" class="btn btn-warning btn-block mt-2">

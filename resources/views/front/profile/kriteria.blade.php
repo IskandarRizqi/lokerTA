@@ -77,7 +77,15 @@
         <select id="lokasi" name="lokasi" required>
             <option value="" disabled>Pilih</option>
             @if($data)
-            <option value="Balikpapan" {{$data->lokasi == 'Balikpapan' ? 'selected' : ''}}>Balikpapan</option>
+        
+                                         
+            @foreach($kabupatens as $v)
+
+           {{-- <option value="{{$v->nama}}"> {{$v->nama}}</option> --}}
+           {{-- <option {{$v->nama==$lokasi ? 'selected' : '' }} value= "{{$v->nama}}">{{$v->nama}}</option> --}}
+           <option value="{{$v->nama}}" {{$data->lokasi == 'lokasi' ? 'selected' : ''}}>{{$v->nama}}</option>
+           @endforeach
+            {{-- <option value="Balikpapan" {{$v->nama == 'Balikpapan' ? 'selected' : ''}}>Balikpapan</option>
             <option value="Bandung" {{$data->lokasi == 'Bandung' ? 'selected' : ''}}>Bandung</option>
             <option value="Batam" {{$data->lokasi == 'Batam' ? 'selected' : ''}}>Batam</option>
             <option value="Banyumas" {{$data->lokasi == 'Banyumas' ? 'selected' : ''}}>Banyumas</option>
@@ -110,9 +118,14 @@
             <option value="Surabaya" {{$data->lokasi == 'Surabaya' ? 'selected' : ''}}>Surabaya</option>
             <option value="Surakarta" {{$data->lokasi == 'Surakarta' ? 'selected' : ''}}>Surakarta</option>
             <option value="Tegal" {{$data->lokasi == 'Tegal' ? 'selected' : ''}}>Tegal</option>
-            <option value="Yogyakarta" {{$data->lokasi == 'Yogyakarta' ? 'selected' : ''}}>Yogyakarta</option>
+            <option value="Yogyakarta" {{$data->lokasi == 'Yogyakarta' ? 'selected' : ''}}>Yogyakarta</option> --}}
             @else
-            <option value="Balikpapan">Balikpapan</option>
+            @foreach($kabupatens as $v)
+                   
+            <option value="{{$v->nama}}"> {{$v->nama}}</option>
+            @endforeach
+
+            {{-- <option value="Balikpapan">Balikpapan</option>
                     <option value="Bandung">Bandung</option>
                     <option value="Batam">Batam</option>
                     <option value="Banyumas">Banyumas</option>
@@ -143,7 +156,7 @@
                     <option value="Surabaya">Surabaya</option>
                     <option value="Surakarta">Surakarta</option>
                     <option value="Tegal">Tegal</option>
-                    <option value="Yogyakarta">Yogyakarta</option>
+                    <option value="Yogyakarta">Yogyakarta</option> --}}
             @endif
         </select>
     </div>
