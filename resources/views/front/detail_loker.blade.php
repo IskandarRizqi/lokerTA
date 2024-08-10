@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <div class="product">
                             <div class="row gutter-40">
-                                <div class="col-lg-8 text-center text-md-left product-desc">
+                                <div class="col-md-8 text-center text-md-left product-desc">
                                     <div class="d-flex align-items-center mb-2">
                                         {{-- <a href="/submit-loker/{{$loker->id}}">
                                             <button class="btn btn-info btn-sm">Lamar Perkerjaan</button>
@@ -36,8 +36,8 @@
                                         <h3 class="mb-2">{{$loker->namaperusahaan}}</h3>
                                         <div class="d-flex">
                                             <div class="jamkerja">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24"
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 20 20"
                                                     style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
                                                     <path
                                                         d="M12 5c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zm0 14c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6z">
@@ -49,8 +49,8 @@
                                                 <span class="text-capitalize">{{$loker->jam}}</span>
                                             </div>
                                             <div class="pekerjaan ml-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24"
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 20 20"
                                                     style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
                                                     <path
                                                         d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zm-5-2v2H9V4h6zM8 8h12v3H4V8h4zM4 19v-6h6v2h4v-2h6l.001 6H4z">
@@ -59,8 +59,8 @@
                                                 <span class="text-capitalize">{{$loker->kategori}}</span>
                                             </div>
                                             <div class="alamat ml-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                    viewBox="0 0 24 24"
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 20 20"
                                                     style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
                                                     <path
                                                         d="m12 17 1-2V9.858c1.721-.447 3-2 3-3.858 0-2.206-1.794-4-4-4S8 3.794 8 6c0 1.858 1.279 3.411 3 3.858V15l1 2zM10 6c0-1.103.897-2 2-2s2 .897 2 2-.897 2-2 2-2-.897-2-2z">
@@ -72,12 +72,20 @@
                                                 {{$loker->tempatperusahaan}}
                                             </div>
                                             <div class="alamat ml-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="black">
                                                     <path d="M12 3L1 9l11 6 9-4.91V18h2V9L12 3zm0 2.18L18.26 9 12 11.82 5.74 9 12 5.18zM12 13.09l-7.91-4.05L3 10.08v2.27l9 4.59 9-4.59v-2.27l-1.09-.55L12 13.09z"/>
                                                 </svg>
                                                 
                                                 {{$loker->pendidikan}}
                                             </div>
+                                            
+                                           
+                                           
+                                           
+                                        </div>
+                                      
+                                        <div class="d-flex" style="margin-top: 9px;">
+
                                             <div class="alamat ml-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="black">
                                                     <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
@@ -86,12 +94,8 @@
                                                 
                                                 {{$loker->jk}}
                                             </div>
-                                           
-                                           
-                                        </div>
-                                        <div class="d-flex">
-                                        <div class="alamat ml-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="black">
+                                            <div class="alamat ml-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="black">
                                                     <!-- Rectangle for the banknote -->
                                                     <rect x="3" y="6" width="18" height="12" rx="2" ry="2" fill="none" stroke="black" stroke-width="2"/>
                                                     
@@ -101,16 +105,20 @@
                                                     <!-- Optional small circles or additional details to mimic currency features -->
                                                     <circle cx="7" cy="12" r="1" fill="black"/>
                                                     <circle cx="17" cy="12" r="1" fill="black"/>
-                                                  </svg>
-                                             
+                                                </svg>
+                                            
                                                 {{$loker->gaji}}
+                                    
+                                             </div>
+                                            
                                         </div>
-                                        </div>
+                                          
+                                       
                                     </div>
                                     <div style="text-align: justify; margin-bottom:30px;">{!!$loker->deskripsi!!}</div>
 
                                 </div>
-                                <div class="col-lg-4 right">
+                                <div class="col-md-4 right">
                                     <img data-animate="fadeInLeft" src="/gambar?rf={{$loker->gambar}}"
                                         alt="Gambar loker" style="border-radius: 10px; width:100px; height:100px; margin-left: 150px; margin-top: 10px;">
                                 </div>

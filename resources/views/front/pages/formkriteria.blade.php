@@ -86,7 +86,7 @@
                     <option value="" disabled selected>Pilih</option>
                     <option value="laki-laki">Laki-laki</option>
                     <option value="perempuan">Perempuan</option>
-                    <option value="All">Laki/Perempuan</option>
+                    <option value="Laki/Perempuan">Laki/Perempuan</option>
                     
 
                 </select>

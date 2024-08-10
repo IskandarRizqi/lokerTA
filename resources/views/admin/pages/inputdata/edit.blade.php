@@ -44,8 +44,8 @@
                                                 Laki-laki</option>
                                             <option value="perempuan" {{$edit['jk']=='perempuan' ? 'selected' : '' }}>
                                                 Perempuan</option>
-                                            <option value="ALL" {{$edit['jk']=='ALL' ? 'selected' : '' }}>
-                                                ALL</option>
+                                            <option value="Laki/Perempuan" {{$edit['jk']=='Laki/Perempuan' ? 'selected' : '' }}>
+                                                Laki/Perempuan</option>
 
                                         </select>
                                     </div>
